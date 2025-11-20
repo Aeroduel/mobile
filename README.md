@@ -1,2 +1,1 @@
-# mobile
-Aeroduel mobile app
+# Welcome to Aeroduel!
