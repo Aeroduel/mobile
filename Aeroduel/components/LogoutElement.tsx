@@ -1,0 +1,41 @@
+import { router } from "expo-router";
+import { Text, View, Image, StyleSheet, Pressable } from "react-native";
+import logoutIcon from "../assets/images/log-out.png";
+
+export default function LogoutElement() {
+  const logout = () => {
+    router.push("/");
+  };
+
+  return (
+    <View style={styles.logoutContainer}>
+      <Pressable onPress={logout} style={styles.logoutPressable}>
+        <Text style={styles.logoutText}>Logout</Text>
+        <Image source={logoutIcon} style={styles.logoutIcon}></Image>
+      </Pressable>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  logoutContainer: {
+    display: "flex",
+    marginLeft: 24,
+  },
+  logoutPressable: {
+    flexDirection: 'row',
+  },
+  logoutText: {
+    color: "#FFFFFF",
+    fontSize: 20,
+    marginTop: 10,
+    marginLeft: 65,
+    fontWeight: "bold",
+  },
+  logoutIcon: {
+    width: 25,
+    height: 25,
+    marginTop: 9,
+    marginLeft: 5,
+  },
+});

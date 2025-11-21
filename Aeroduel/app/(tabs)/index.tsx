@@ -12,7 +12,12 @@ import {
   ScrollView,
 } from "react-native";
 import whitePlaneIcon from "../../assets/images/aeroduel-plane-white.png";
-import logout from "../../assets/images/log-out.png";
+import MatchButtons from '../../components/MatchButtons';
+import LogoutElement from "@/components/LogoutElement";
+import DuelCard from "@/components/DuelCard";
+import SpectateCard from "@/components/SpectateCard";
+import NewsCard from "@/components/NewsCard";
+
 
 SplashScreen.preventAutoHideAsync();
 
@@ -60,66 +65,12 @@ export default function HomeScreen() {
       >
         <View style={styles.homePageHeader}>
           <Text style={styles.headerText}>Welcome, [user]</Text>
-          <View style={styles.logoutContainer}>
-            <Text style={styles.logoutText}>Logout</Text>
-            <Image source={logout} style={styles.logoutIcon}></Image>
-          </View>
+          <LogoutElement />
         </View>
         <View>
-          <View style={styles.enterDuel}>
-            <View style={styles.topRow}>
-              <View style={styles.blockText}>
-                <Text style={styles.blockHeader}>Enter the Duel</Text>
-                <Text style={styles.blockSubtitle}>
-                  Join with a QR code, or start a new match
-                </Text>
-              </View>
-              <Image
-                source={whitePlaneIcon}
-                style={styles.whitePlaneIcon}
-              ></Image>
-            </View>
-            <View style={styles.bottomRow}>
-              <Pressable style={styles.joinButton} onPress={joinMatch}>
-                <Text style={styles.buttonText}>Join Match</Text>
-              </Pressable>
-              <Pressable style={styles.startButton}>
-                <Text style={styles.buttonText}>Start Match</Text>
-              </Pressable>
-            </View>
-          </View>
-          <View style={styles.enterDuel}>
-            <View style={styles.topRow}>
-              <View style={styles.blockText}>
-                <Text style={styles.blockHeader}>Spectate</Text>
-                <Text style={styles.blockSubtitle}>
-                  View the scoreboards of ongoing duels
-                </Text>
-              </View>
-              {/* <Image (Need to get a higher quality icon)
-              source={eye}
-              style={styles.eyeIcon}
-            ></Image> */}
-            </View>
-            <View style={styles.bottomRow}>
-              <Pressable style={styles.qrButton}>
-                <Text style={styles.buttonText}>Join with QR</Text>
-              </Pressable>
-              <Pressable style={styles.pinButton}>
-                <Text style={styles.buttonText}>Enter Pin</Text>
-              </Pressable>
-            </View>
-          </View>
-          <View style={styles.enterDuel}>
-            <View style={styles.topRow}>
-              <View style={styles.blockText}>
-                <Text style={styles.blockHeader}>Latest News</Text>
-                <Text style={styles.blockSubtitle}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque sapien ligula, accumsan lectus tincidunt quis. Sed faucibus laoreet nibh, ac euismod metus molestie. Dolor sit amet, consectetur adipisc
-                </Text>
-              </View>
-            </View>
-          </View>
+          <DuelCard />
+          <SpectateCard />
+          <NewsCard />
         </View>
       </ScrollView>
     </View>
@@ -142,13 +93,6 @@ const styles = StyleSheet.create({
     fontSize: 35,
     color: "#FFFFFF",
     marginLeft: 20,
-  },
-  logoutText: {
-    color: "#FFFFFF",
-    fontSize: 20,
-    marginTop: 10,
-    marginLeft: 65,
-    fontWeight: "bold",
   },
   backgroundGradient: {
     position: "absolute",
@@ -176,17 +120,6 @@ const styles = StyleSheet.create({
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: "700",
-  },
-  logoutContainer: {
-    display: "flex",
-    flexDirection: "row",
-    marginLeft: 24,
-  },
-  logoutIcon: {
-    width: 25,
-    height: 25,
-    marginTop: 9,
-    marginLeft: 5,
   },
   enterDuel: {
     backgroundColor: "#595959ff",
