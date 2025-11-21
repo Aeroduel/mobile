@@ -3,7 +3,6 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Link } from 'expo-router';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -26,7 +25,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={['#000000', '#00CEFF']}
+        colors={['#000000', '#FF0000']}
         start={{ x:0, y:0 }}
         end={{ x:1, y:1 }}
         style={styles.backgroundGradient}>
@@ -35,14 +34,14 @@ export default function HomeScreen() {
         <Text style={styles.headerText}>Welcome, [user]</Text>
         <Text style={styles.logoutText}>Logout</Text>
       </View>
-      <View style={styles.appBlocks}>
-        <View style={styles.enterDuel}>
+      <View>
+        <View>
           <Text style={styles.blockHeader}>Enter the Duel</Text>
         </View>
-        <View style={styles.spectateDuel}>
+        <View>
           <Text style={styles.blockHeader}>Spectate</Text>
         </View>
-        <View style={styles.latestNews}>
+        <View>
           <Text style={styles.blockHeader}>Latest News</Text>
         </View>
       </View>
