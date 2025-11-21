@@ -1,6 +1,6 @@
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-// import { router } from 'expo-router';
+import { router } from 'expo-router';
 import { LinearGradient } from "expo-linear-gradient";
 import { useEffect } from "react";
 import {
@@ -13,7 +13,6 @@ import {
 } from "react-native";
 import whitePlaneIcon from "../../assets/images/aeroduel-plane-white.png";
 import logout from "../../assets/images/log-out.png";
-import eye from "../../assets/images/eye.png";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -39,6 +38,10 @@ export default function HomeScreen() {
 
   // Event Handler
   // onPress={signOut}
+
+  const joinMatch = () => {
+    router.push('/join')
+  }
 
   return (
     <View style={{ flex: 1 }}>
@@ -77,7 +80,7 @@ export default function HomeScreen() {
               ></Image>
             </View>
             <View style={styles.bottomRow}>
-              <Pressable style={styles.joinButton}>
+              <Pressable style={styles.joinButton} onPress={joinMatch}>
                 <Text style={styles.buttonText}>Join Match</Text>
               </Pressable>
               <Pressable style={styles.startButton}>
