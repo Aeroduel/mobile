@@ -1,22 +1,22 @@
 import { router } from "expo-router";
-import { Pressable, View, Text, StyleSheet } from "react-native";
+import { Text, View, Pressable, StyleSheet } from "react-native";
 
-export default function MatchButtons() {
-  const joinMatch = () => {
-    router.push("/join");
+export default function SpectateButtons() {
+  const scanQR = () => {
+    router.push("/qrEntry");
   };
 
-  const startMatch = () => {
-    router.push("/start");
-  }
+  const enterPin = () => {
+    router.push("/pinEntry");
+  };
 
   return (
     <View style={styles.bottomRow}>
-      <Pressable style={styles.joinButton} onPress={joinMatch}>
-        <Text style={styles.buttonText}>Join Match</Text>
+      <Pressable style={styles.qrButton} onPress={scanQR}>
+        <Text style={styles.buttonText}>Join with QR</Text>
       </Pressable>
-      <Pressable style={styles.startButton} onPress={startMatch}>
-        <Text style={styles.buttonText}>Start Match</Text>
+      <Pressable style={styles.pinButton} onPress={enterPin}>
+        <Text style={styles.buttonText}>Enter Pin</Text>
       </Pressable>
     </View>
   );
@@ -30,15 +30,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingBottom: 10,
   },
-  joinButton: {
+  qrButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 45,
+    paddingHorizontal: 38,
     paddingVertical: 20,
     borderBottomLeftRadius: 15,
   },
-  startButton: {
+  pinButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 45,
+    paddingHorizontal: 58,
     paddingVertical: 20,
     borderBottomRightRadius: 15,
   },

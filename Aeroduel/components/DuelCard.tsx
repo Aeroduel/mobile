@@ -23,8 +23,7 @@ export default function DuelCard() {
 
 const styles = StyleSheet.create({
   duelContainer: {
-    backgroundColor: "#595959ff",
-    opacity: 100,
+    backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
     marginLeft: 10,
     marginRight: 10,
     marginTop: 5,
@@ -37,6 +36,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "column",
     paddingTop: 35,
+    // Need to play with the shadow colors
+    // shadowColor: '#512929ff',
+    // shadowOffset: { width: 10, height: 10 },
+    // shadowOpacity: 10,
+    // shadowRadius: 5,
   },
   topRow: {
     flexDirection: "row",

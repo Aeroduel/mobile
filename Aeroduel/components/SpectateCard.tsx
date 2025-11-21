@@ -1,4 +1,5 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
+import SpectateButtons from "./SpectateButtons";
 
 export default function SpectateCard() {
   return (
@@ -15,21 +16,14 @@ export default function SpectateCard() {
               style={styles.eyeIcon}
             ></Image> */}
       </View>
-      <View style={styles.bottomRow}>
-        <Pressable style={styles.qrButton}>
-          <Text style={styles.buttonText}>Join with QR</Text>
-        </Pressable>
-        <Pressable style={styles.pinButton}>
-          <Text style={styles.buttonText}>Enter Pin</Text>
-        </Pressable>
-      </View>
+      <SpectateButtons />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   spectateContainer: {
-    backgroundColor: "#595959ff",
+    backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
     opacity: 100,
     marginLeft: 10,
     marginRight: 10,
@@ -43,6 +37,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "column",
     paddingTop: 35,
+    // Need to play with the shadow colors
+    // shadowColor: '#512929ff',
+    // shadowOffset: { width: 10, height: 10 },
+    // shadowOpacity: 10,
+    // shadowRadius: 5,
   },
   topRow: {
     flexDirection: "row",
