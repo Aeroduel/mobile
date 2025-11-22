@@ -1,5 +1,4 @@
 import { Text, View, Image, StyleSheet } from "react-native";
-import MatchButtons from "./MatchButtons";
 import joinArrow from "../assets/images/arrow-right-white.png";
 import PinInput from "../components/PinInput";
 
@@ -15,7 +14,7 @@ export default function PinJoin() {
         </View>
         <Image source={joinArrow} style={styles.joinArrows}></Image>
       </View>
-      <View>
+      <View style={styles.pinInputBlock}>
         <PinInput />
       </View>
     </View>
@@ -25,18 +24,18 @@ export default function PinJoin() {
 const styles = StyleSheet.create({
   pinContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
-    marginLeft: 10,
-    marginRight: 10,
+    display: "flex",
+    justifyContent: 'space-between',
+    flexDirection: "column",
+    height: 220,
     marginTop: 5,
     marginBottom: 5,
+    marginLeft: 10,
+    marginRight: 10,
+    paddingTop: 35,
     paddingLeft: 20,
     paddingRight: 20,
-    height: 220,
     borderRadius: 15,
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "column",
-    paddingTop: 35,
     // Need to play with the shadow colors
     // shadowColor: '#512929ff',
     // shadowOffset: { width: 10, height: 10 },
@@ -61,5 +60,9 @@ const styles = StyleSheet.create({
   joinArrows: {
     transform: [{ scale: 0.6}],
     marginLeft: 10,
+  },
+  pinInputBlock: {
+    display: 'flex',
+    alignItems: 'center',
   }
 })

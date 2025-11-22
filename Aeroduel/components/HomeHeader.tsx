@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     fontSize: 35,
     color: "#FFFFFF",
     marginLeft: 20,
-    marginRight: -9,
   },
   logoutBlock: {
     marginTop: 2,

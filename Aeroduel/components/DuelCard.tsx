@@ -9,7 +9,7 @@ export default function DuelCard() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Enter a Duel</Text>
           <Text style={styles.blockSubtitle}>
-            Join with a QR code, or start a new match
+            Join an existing duel, or start your own
           </Text>
         </View>
         <Image source={whitePlaneIcon} style={styles.whitePlaneIcon}></Image>
@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   whitePlaneIcon: {
-    width: 90,
-    height: 90,
+    width: 100,
+    height: 100,
+    marginLeft: 20,
   },
 })

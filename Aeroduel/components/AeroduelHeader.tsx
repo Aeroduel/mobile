@@ -36,4 +36,8 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     marginLeft: 20,
   },
+  logoutBlock: {
+    paddingRight: 2,
+    paddingTop: 2,
+  }
 })

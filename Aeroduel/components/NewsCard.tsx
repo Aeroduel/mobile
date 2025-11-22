@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from "react-native";
 
 export default function NewsCard() {
   return (
@@ -6,11 +6,14 @@ export default function NewsCard() {
       <View style={styles.topRow}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Latest News</Text>
+          <Text style={styles.blockSubtitle}>Under Construction!</Text>
           <Text style={styles.blockSubtitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            scelerisque sapien ligula, accumsan lectus tincidunt quis. Sed
-            faucibus laoreet nibh, ac euismod metus molestie. Dolor sit amet,
-            consectetur adipisc
+            Welcome to Aeroduel mobile! Great things are coming. We are busy
+            putting the finishing touches on our app. Check back soon for the
+            official launch!
+          </Text>
+          <Text style={[styles.blockSubtitle, styles.blockAuthor]}>
+            - AeroDuel Mobile Development Team 🛩️
           </Text>
         </View>
       </View>
@@ -28,7 +31,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     paddingLeft: 20,
     paddingRight: 20,
-    height: 220,
+    paddingBottom: 20,
     borderRadius: 15,
     display: "flex",
     justifyContent: "space-between",
@@ -54,5 +57,10 @@ const styles = StyleSheet.create({
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: "700",
+    paddingTop: 15,
   },
-})
+  blockAuthor: {
+    paddingTop: 20,
+    fontSize: 17,
+  },
+});

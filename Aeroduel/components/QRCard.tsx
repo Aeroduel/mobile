@@ -1,5 +1,5 @@
 import { Text, View, Image, StyleSheet } from "react-native";
-import joinArrow from "../assets/images/arrow-right-white.png"
+import joinArrow from "../assets/images/arrow-right-white.png";
 import OpenCameraButton from "./OpenCameraButton";
 
 export default function QRJoin() {

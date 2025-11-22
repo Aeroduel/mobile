@@ -13,10 +13,10 @@ export default function MatchButtons() {
   return (
     <View style={styles.bottomRow}>
       <Pressable style={styles.joinButton} onPress={joinMatch}>
-        <Text style={styles.buttonText}>Join Match</Text>
+        <Text style={styles.buttonText}>Join Duel</Text>
       </Pressable>
       <Pressable style={styles.startButton} onPress={startMatch}>
-        <Text style={styles.buttonText}>Start Match</Text>
+        <Text style={styles.buttonText}>Start Duel</Text>
       </Pressable>
     </View>
   );
@@ -32,14 +32,18 @@ const styles = StyleSheet.create({
   },
   joinButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 45,
-    paddingVertical: 20,
+    paddingLeft: 55,
+    paddingRight: 55,
+    paddingTop: 20,
+    paddingBottom: 20,
     borderBottomLeftRadius: 15,
   },
   startButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 45,
-    paddingVertical: 20,
+    paddingLeft: 55,
+    paddingRight: 55,
+    paddingTop: 20,
+    paddingBottom: 20,
     borderBottomRightRadius: 15,
   },
   buttonText: {
