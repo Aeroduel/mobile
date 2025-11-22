@@ -2,8 +2,10 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import HomeHeader from '@/components/HomeHeader';
 import DuelCard from '@/components/DuelCard';
+import PinJoin from '@/components/PinCard';
 import SpectateCard from '@/components/SpectateCard';
 import NewsCard from '@/components/NewsCard';
+import QRJoin from '@/components/QRCard';
 
 export default function TabTwoScreen() {
   return (
@@ -25,8 +27,8 @@ export default function TabTwoScreen() {
             <HomeHeader />
             {/* MAIN CONTENT */}
             <View>
-              <DuelCard />
-              <SpectateCard />
+              <PinJoin />
+              <QRJoin />
               <NewsCard />
             </View>
           </ScrollView>
