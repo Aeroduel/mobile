@@ -6,14 +6,14 @@ export default function NewsCard() {
       <View style={styles.topRow}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Latest News</Text>
-          <Text style={styles.blockSubtitle}>Under Construction!</Text>
+          <Text style={styles.blockSubtitle}>Under Construction! 🚧</Text>
           <Text style={styles.blockSubtitle}>
-            Welcome to Aeroduel mobile! Great things are coming. We are busy
+            Welcome to Aeroduel Mobile! Great things are coming. We are busy
             putting the finishing touches on our app. Check back soon for the
             official launch!
           </Text>
           <Text style={[styles.blockSubtitle, styles.blockAuthor]}>
-            - AeroDuel Mobile Development Team 🛩️
+            - Aeroduel Mobile Development Team 🛩️
           </Text>
         </View>
       </View>

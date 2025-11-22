@@ -7,7 +7,7 @@ export default function OpenCameraButton() {
   // };
 
   const startMatch = () => {
-    router.push("/start");
+    router.push("/qrEntry");
   }
 
   return (

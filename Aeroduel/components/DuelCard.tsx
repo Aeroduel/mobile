@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   whitePlaneIcon: {
-    width: 100,
+    width: 110,
     height: 100,
-    marginLeft: 20,
+    marginLeft: 10,
   },
 })

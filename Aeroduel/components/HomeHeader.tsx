@@ -3,14 +3,11 @@ import LogoutElement from "./LogoutElement";
 import { router } from "expo-router";
 
 export default function HomeHeader() {
-  const signOut = () => {
-    router.replace('/');
-  }
 
   return (
     <View style={styles.homePageHeader}>
       <Text style={styles.headerText}>Welcome, [user]</Text>
-      <Pressable onPress={signOut} style={styles.logoutBlock}>
+      <Pressable style={styles.logoutBlock}>
         <LogoutElement />
       </Pressable>
     </View>
@@ -21,6 +18,7 @@ const styles = StyleSheet.create({
   homePageHeader: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: 'space-between',
     marginTop: 80,
   },
   headerText: {
@@ -30,6 +28,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   logoutBlock: {
-    marginTop: 2,
+    paddingRight: 12,
+    paddingTop: 2,
   }
 })

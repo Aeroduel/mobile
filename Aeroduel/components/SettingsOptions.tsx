@@ -6,37 +6,37 @@ export default function SettingsOptions() {
     <View style={styles.settingsContainer}>
       <Pressable style={styles.settingsOption}>
         <View>
-          <Text style={styles.settingsHeader}>Username</Text>
+          <Text style={styles.settingsTitle}>Username</Text>
         </View>
       </Pressable>
       <Pressable style={styles.settingsOption}>
         <View>
-          <Text style={styles.settingsHeader}>Password</Text>
+          <Text style={styles.settingsTitle}>Password</Text>
         </View>
       </Pressable>
       <Pressable style={styles.settingsOption}>
         <View>
-          <Text style={styles.settingsHeader}>Clear Cache</Text>
+          <Text style={styles.settingsTitle}>Clear Cache</Text>
         </View>
       </Pressable>
       <Pressable style={styles.settingsOption}>
         <View>
-          <Text style={styles.settingsHeader}>FAQ</Text>
+          <Text style={styles.settingsTitle}>FAQ</Text>
         </View>
       </Pressable>
       <Pressable style={styles.settingsOption}>
         <View>
-          <Text style={styles.settingsHeader}>Help</Text>
+          <Text style={styles.settingsTitle}>Help</Text>
         </View>
       </Pressable>
       <Pressable style={styles.settingsOption}>
         <View>
-          <Text style={styles.settingsHeader}>About</Text>
+          <Text style={styles.settingsTitle}>About</Text>
         </View>
       </Pressable>
       <Pressable style={styles.settingsOption}>
         <View>
-          <Text style={styles.settingsHeader}>Delete Account</Text>
+          <Text style={styles.settingsTitle}>Delete Account</Text>
         </View>
       </Pressable>
     </View>
@@ -66,20 +66,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     display: "flex",
   },
-  settingsHeader: {
+  settingsTitle: {
     color: "#FFFFFF",
-    fontSize: 40,
-
+    fontSize: 30,
     fontFamily: "Coolvetica-Regular",
-  },
-  settingsSubtitle: {
-    color: "#FFFFFF",
-    fontWeight: "700",
-    paddingTop: 10,
-    paddingBottom: 20,
-  },
-  blockAuthor: {
-    paddingTop: 20,
-    fontSize: 17,
   },
 });

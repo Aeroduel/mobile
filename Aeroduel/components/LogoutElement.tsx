@@ -4,7 +4,7 @@ import logoutIcon from "../assets/images/logout-icon-white.png";
 
 export default function LogoutElement() {
   const logout = () => {
-    router.push("/");
+    router.replace("/login");
   };
 
   return (
