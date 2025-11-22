@@ -3,7 +3,7 @@ import { Pressable, View, Text, StyleSheet } from "react-native";
 
 export default function MatchButtons() {
   const joinMatch = () => {
-    router.push("/join");
+    router.push("/duel");
   };
 
   const startMatch = () => {

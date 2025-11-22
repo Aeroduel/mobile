@@ -1,20 +1,20 @@
-import { Pressable, View, Text, StyleSheet } from "react-native";
+import { Pressable, View, Text, StyleSheet, TextInput } from "react-native";
 
 export default function PinInput() {
   return (
     <View style={styles.pinInputContainer}>
       <View style={styles.pinInputRow}>
         <View style={styles.roundedLeftInputButton}>
-          <Text style={styles.pinInputText}>1</Text>
+          <TextInput style={styles.pinInputText} keyboardType="numeric"></TextInput>
         </View>
         <View style={styles.squareInputButton}>
-          <Text style={styles.pinInputText}>2</Text>
+          <TextInput style={styles.pinInputText} keyboardType="numeric"></TextInput>
         </View>
         <View style={styles.squareInputButton}>
-          <Text style={styles.pinInputText}>3</Text>
+          <TextInput style={styles.pinInputText} keyboardType="numeric"></TextInput>
         </View>
         <View style={styles.roundedRightInputButton}>
-          <Text style={styles.pinInputText}>4</Text>
+          <TextInput style={styles.pinInputText} keyboardType="numeric"></TextInput>
         </View>
       </View>
     </View>
@@ -33,29 +33,31 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    gap: 10,
+    gap: 5,
     paddingBottom: 10,
   },
   roundedLeftInputButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 15,
+    width: 55,
     paddingVertical: 5,
     borderBottomLeftRadius: 15,
   },
   squareInputButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 15,
+    width: 55,
     paddingVertical: 5,
   },
   roundedRightInputButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 15,
+    width: 55,
     paddingVertical: 5,
     borderBottomRightRadius: 15,
   },
   pinInputText: {
     color: "white",
     fontWeight: "bold",
-    fontSize: 30,
+    fontSize: 35,
+    textAlign: 'center',
+    textAlignVertical: 'center',
   },
 });

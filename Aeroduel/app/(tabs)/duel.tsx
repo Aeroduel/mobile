@@ -6,6 +6,7 @@ import PinJoin from '@/components/PinCard';
 import SpectateCard from '@/components/SpectateCard';
 import NewsCard from '@/components/NewsCard';
 import QRJoin from '@/components/QRCard';
+import AeroduelHeader from '@/components/AeroduelHeader';
 
 export default function TabTwoScreen() {
   return (
@@ -24,12 +25,11 @@ export default function TabTwoScreen() {
             }}
           >
             {/* PAGE HEADER */}
-            <HomeHeader />
+            <AeroduelHeader />
             {/* MAIN CONTENT */}
             <View>
               <PinJoin />
               <QRJoin />
-              <NewsCard />
             </View>
           </ScrollView>
         </View>

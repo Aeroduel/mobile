@@ -10,7 +10,7 @@ export default function HomeHeader() {
   return (
     <View style={styles.homePageHeader}>
       <Text style={styles.headerText}>Welcome, [user]</Text>
-      <Pressable onPress={signOut}>
+      <Pressable onPress={signOut} style={styles.logoutBlock}>
         <LogoutElement />
       </Pressable>
     </View>
@@ -28,5 +28,9 @@ const styles = StyleSheet.create({
     fontSize: 35,
     color: "#FFFFFF",
     marginLeft: 20,
+    marginRight: -9,
   },
+  logoutBlock: {
+    marginTop: 2,
+  }
 })

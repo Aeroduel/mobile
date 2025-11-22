@@ -1,23 +1,34 @@
-import { Text, View, Image, StyleSheet } from "react-native";
-import logoutIcon from "../assets/images/log-out.png";
+import { Text, View, Pressable, StyleSheet } from "react-native";
+import LogoutElement from "./LogoutElement";
+import { router } from "expo-router";
 
 export default function AeroduelHeader() {
+  const signOut = () => {
+    router.replace('/');
+  }
+
   return (
-    <View style={styles.homePageHeader}>
-      <Text style={styles.headerText}>Aeroduel</Text>
-      <View style={styles.logoutContainer}>
-        <Text style={styles.logoutText}>Logout</Text>
-        <Image source={logoutIcon} style={styles.logoutIcon}></Image>
+    <View style={styles.aeroduelHeader}>
+      <View style={styles.aeroduelTitle}>
+        <Text style={styles.headerText}>Aeroduel</Text>
       </View>
+      <Pressable onPress={signOut} style={styles.logoutBlock}>
+        <LogoutElement />
+      </Pressable>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  homePageHeader: {
+  aeroduelHeader: {
     display: "flex",
     flexDirection: "row",
     marginTop: 80,
+    justifyContent: 'space-between',
+    marginRight: 10,
+  },
+  aeroduelTitle: {
+
   },
   headerText: {
     fontFamily: "Coolvetica-Regular",
@@ -25,15 +36,4 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     marginLeft: 20,
   },
-  logoutContainer: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  logoutText: {
-    color: "#FFFFFF",
-    fontSize: 20,
-    marginTop: 10,
-    marginLeft: 65,
-    fontWeight: "bold",
-  },
-});
+})
