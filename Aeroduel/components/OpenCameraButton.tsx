@@ -2,9 +2,9 @@ import { router } from "expo-router";
 import { Pressable, View, Text, StyleSheet } from "react-native";
 
 export default function OpenCameraButton() {
-  const joinMatch = () => {
-    router.push("/join");
-  };
+  // const joinMatch = () => {
+  //   router.push("/join");
+  // };
 
   const startMatch = () => {
     router.push("/start");

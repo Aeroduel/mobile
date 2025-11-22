@@ -1,4 +1,4 @@
-import { Pressable, View, Text, StyleSheet, TextInput } from "react-native";
+import { View, StyleSheet, TextInput } from "react-native";
 
 export default function PinInput() {
   // Max length for individual text input box
