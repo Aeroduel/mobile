@@ -58,11 +58,11 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   joinArrows: {
-    transform: [{ scale: 0.6}],
+    transform: [{ scale: 0.6 }],
     marginLeft: 10,
   },
   pinInputBlock: {
-    display: 'flex',
-    alignItems: 'center',
-  }
-})
+    display: "flex",
+    alignItems: "center",
+  },
+});
