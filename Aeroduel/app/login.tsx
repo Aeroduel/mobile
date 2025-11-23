@@ -38,9 +38,9 @@ export default function LoginPage() {
         </Pressable>
         <View style={styles.signInRedirect}>
           <Text style={styles.redirectText}>
-            Don&apos;t have an account? Create one
+            Don&apos;t have an account?
             <Pressable onPress={routeToRegister}>
-              <Text style={[styles.redirectText, styles.here]}>here</Text>
+              <Text style={[styles.redirectText, styles.here]}>Get Started</Text>
             </Pressable>
           </Text>
         </View>
@@ -61,6 +61,7 @@ export default function LoginPage() {
               autoCapitalize="none"
               placeholder="Password..."
               placeholderTextColor={"white"}
+              secureTextEntry={true}
             ></TextInput>
             <Pressable onPress={login} style={styles.signInButton}>
               <LinearGradient
@@ -114,15 +115,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     display: "flex",
   },
-  signInRedirect: {
-    backgroundColor: "#782d33",
-    width: 380,
-    height: 45,
-    marginTop: 30,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    flexDirection: "row",
-  },
   loginForm: {
     backgroundColor: "#944148",
     width: "100%",
@@ -141,11 +133,7 @@ const styles = StyleSheet.create({
     fontFamily: "Coolvetica-Regular",
     flexDirection: "row",
     marginHorizontal: "auto",
-    paddingBottom: 15,
-  },
-  here: {
-    marginLeft: 4,
-    lineHeight: 50,
+    paddingBottom: 11,
   },
   formHeading: {
     fontSize: 40,
@@ -179,11 +167,24 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
     borderRadius: 10,
     opacity: 50,
+  },signInRedirect: {
+    backgroundColor: "#782d33",
+    width: 380,
+    height: 30,
+    marginTop: 50,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    flexDirection: "row",
+    display: 'flex',
   },
   signInText: {
     color: "white",
     fontFamily: "Coolvetica-Regular",
     fontSize: 17,
+  },
+  here: {
+    marginLeft: 10,
+    marginTop: 6,
   },
   formOptions: {
     fontFamily: "Coolvetica-Regular",
