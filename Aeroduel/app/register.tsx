@@ -8,10 +8,10 @@ import {
   Pressable,
   TextInput,
 } from "react-native";
-import AeroduelLogo from "../assets/images/aeroduel-banner.png";
 import { router } from "expo-router";
-import google from "../assets/images/google.png";
-import facebook from "../assets/images/facebook.png";
+const AeroduelLogo = require("../assets/images/aeroduel-banner.png");
+const google = require("../assets/images/google.png");
+const facebook = require("../assets/images/facebook.png");
 
 SplashScreen.preventAutoHideAsync();
 

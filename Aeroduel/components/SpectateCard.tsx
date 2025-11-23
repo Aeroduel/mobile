@@ -24,19 +24,16 @@ export default function SpectateCard() {
 const styles = StyleSheet.create({
   spectateContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
     opacity: 100,
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 5,
-    marginBottom: 5,
-    paddingLeft: 20,
-    paddingRight: 20,
+    marginHorizontal: 10,
+    marginVertical: 5,
+    paddingHorizontal: 20,
+    paddingTop: 35,
     height: 220,
     borderRadius: 15,
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "column",
-    paddingTop: 35,
     // Need to play with the shadow colors
     // shadowColor: '#512929ff',
     // shadowOffset: { width: 10, height: 10 },

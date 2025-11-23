@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 import { Text, View, Image, StyleSheet, Pressable } from "react-native";
-import logoutIcon from "../assets/images/logout-icon-white.png";
+const logoutIcon = require("../assets/images/logout-icon-white.png");
 
 export default function LogoutElement() {
   const logout = () => {

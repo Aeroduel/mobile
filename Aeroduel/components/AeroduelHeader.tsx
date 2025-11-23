@@ -9,7 +9,7 @@ export default function AeroduelHeader() {
 
   return (
     <View style={styles.aeroduelHeader}>
-      <View style={styles.aeroduelTitle}>
+      <View>
         <Text style={styles.headerText}>Aeroduel</Text>
       </View>
       <Pressable onPress={signOut} style={styles.logoutBlock}>
@@ -27,9 +27,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginRight: 10,
   },
-  aeroduelTitle: {
-
-  },
   headerText: {
     fontFamily: "Coolvetica-Regular",
     fontSize: 35,
@@ -37,7 +34,6 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   logoutBlock: {
-    paddingRight: 2,
     paddingTop: 2,
   }
 })

@@ -22,9 +22,9 @@ export default function OpenCameraButton() {
 const styles = StyleSheet.create({
   cameraBlock: {
     display: "flex",
+    justifyContent: "center",
     flexDirection: "row",
     gap: 7,
-    justifyContent: "center",
     paddingBottom: 10,
   },
   cameraButton: {

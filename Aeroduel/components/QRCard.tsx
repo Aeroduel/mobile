@@ -1,6 +1,7 @@
 import { Text, View, Image, StyleSheet } from "react-native";
-import joinArrow from "../assets/images/arrow-right-white.png";
 import OpenCameraButton from "./OpenCameraButton";
+const joinArrow = require("../assets/images/arrow-right-white.png");
+
 
 export default function QRJoin() {
   return (
@@ -24,18 +25,15 @@ export default function QRJoin() {
 const styles = StyleSheet.create({
   qrContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 5,
-    marginBottom: 5,
-    paddingLeft: 20,
-    paddingRight: 20,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    marginHorizontal: 10,
+    marginVertical: 5,
+    paddingHorizontal: 20,
+    paddingTop: 35,
     height: 220,
     borderRadius: 15,
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "column",
-    paddingTop: 35,
     // Need to play with the shadow colors
     // shadowColor: '#512929ff',
     // shadowOffset: { width: 10, height: 10 },

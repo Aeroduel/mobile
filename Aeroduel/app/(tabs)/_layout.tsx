@@ -1,14 +1,12 @@
 import { Tabs } from 'expo-router';
-import React from 'react';
-import { StyleSheet, Image } from 'react-native';
+import { Image } from 'react-native';
 import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-import houseIcon from "../../assets/images/house-icon-white.png";
-import crosshairIcon from "../../assets/images/crosshair-white.png";
-import eyeIcon from "../../assets/images/scan-eye-quarter-white.png";
-import gearIcon from "../../assets/images/settings-gear-white.png"; 
+const houseIcon = require("../../assets/images/house-icon-white.png");
+const crosshairIcon = require("../../assets/images/crosshair-white.png");
+const eyeIcon = require("../../assets/images/scan-eye-quarter-white.png");
+const gearIcon = require("../../assets/images/settings-gear-white.png");
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -26,6 +24,10 @@ export default function TabLayout() {
           // borderTopLeftRadius: 25,
           // borderTopRightRadius: 25,
         },
+        tabBarLabelStyle: {
+          fontFamily: 'Coolvetica-Regular',
+          fontSize: 12,
+        }
       }}>
       <Tabs.Screen
         name="index"
@@ -58,6 +60,3 @@ export default function TabLayout() {
     </Tabs>
   );
 }
-
-const styles = StyleSheet.create({
-})

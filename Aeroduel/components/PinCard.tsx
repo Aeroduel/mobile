@@ -1,6 +1,7 @@
 import { Text, View, Image, StyleSheet } from "react-native";
-import joinArrow from "../assets/images/arrow-right-white.png";
 import PinInput from "../components/PinInput";
+const joinArrow = require("../assets/images/arrow-right-white.png");
+
 
 export default function PinJoin() {
   return (
@@ -28,13 +29,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: "column",
     height: 220,
-    marginTop: 5,
-    marginBottom: 5,
-    marginLeft: 10,
-    marginRight: 10,
+    marginVertical: 5,
+    marginHorizontal: 10,
+    paddingHorizontal: 20,
     paddingTop: 35,
-    paddingLeft: 20,
-    paddingRight: 20,
     borderRadius: 15,
     // Need to play with the shadow colors
     // shadowColor: '#512929ff',

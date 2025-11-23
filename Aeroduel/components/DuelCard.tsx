@@ -1,11 +1,12 @@
 import { Text, View, Image, StyleSheet } from "react-native";
-import whitePlaneIcon from "../assets/images/aeroduel-plane-white.png"
 import MatchButtons from "./MatchButtons";
+const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
+
 
 export default function DuelCard() {
   return (
     <View style={styles.duelContainer}>
-      <View style={styles.topRow}>
+      <View style={styles.duelContent}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Enter a Duel</Text>
           <Text style={styles.blockSubtitle}>
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     // shadowOpacity: 10,
     // shadowRadius: 5,
   },
-  topRow: {
+  duelContent: {
     flexDirection: "row",
   },
   blockText: {

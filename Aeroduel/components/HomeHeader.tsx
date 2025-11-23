@@ -1,6 +1,5 @@
 import { Text, View, Pressable, StyleSheet } from "react-native";
 import LogoutElement from "./LogoutElement";
-import { router } from "expo-router";
 
 export default function HomeHeader() {
 

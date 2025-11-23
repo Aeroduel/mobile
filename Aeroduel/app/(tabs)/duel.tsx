@@ -1,10 +1,6 @@
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import HomeHeader from '@/components/HomeHeader';
-import DuelCard from '@/components/DuelCard';
 import PinJoin from '@/components/PinCard';
-import SpectateCard from '@/components/SpectateCard';
-import NewsCard from '@/components/NewsCard';
 import QRJoin from '@/components/QRCard';
 import AeroduelHeader from '@/components/AeroduelHeader';
 
@@ -37,12 +33,6 @@ export default function TabTwoScreen() {
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
-  },
   titleContainer: {
     flexDirection: 'row',
     gap: 8,

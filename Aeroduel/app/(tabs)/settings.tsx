@@ -17,14 +17,12 @@ export default function TabTwoScreen() {
           <ScrollView
             contentContainerStyle={{
               flexGrow: 1,
-              justifyContent: "flex-start",
-              position: "relative",
             }}
           >
             {/* PAGE HEADER */}
             <AeroduelHeader />
             {/* MAIN CONTENT */}
-            <View>
+            <View style={{ flex: 1}}>
               <SettingsHeader />
               <SettingsOptions />
             </View>

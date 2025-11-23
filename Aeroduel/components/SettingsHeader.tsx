@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet, Image } from "react-native";
-import settingsGear from "../assets/images/settings-gear-white.png"
+const settingsGear = require("../assets/images/settings-gear-white.png");
 
 export default function SettingsHeader() {
   return (
@@ -23,12 +23,9 @@ const styles = StyleSheet.create({
   settingsContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
     opacity: 100,
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 5,
-    marginBottom: 5,
-    paddingLeft: 20,
-    paddingRight: 20,
+    marginHorizontal: 10,
+    marginVertical: 5,
+    paddingHorizontal: 20,
     paddingBottom: 20,
     borderRadius: 15,
     paddingTop: 35,
