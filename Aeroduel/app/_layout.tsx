@@ -26,6 +26,7 @@ export default function RootLayout() {
           options={{ presentation: "modal", title: "Modal", animation: "fade" }}
         />
         <Stack.Screen name="register" options={{ headerShown: false }} />
+        <Stack.Screen name="qrEntry" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

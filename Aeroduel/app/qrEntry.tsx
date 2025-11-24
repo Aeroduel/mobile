@@ -1,13 +1,82 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
-import { Camera, CameraType, useCameraPermissions } from 'expo-camera';
+import { Text, View, StyleSheet, Pressable, TouchableOpacity, Button } from "react-native";
+import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
 import { useState } from "react";
+import { router } from "expo-router";
 
 export default function QrEntry() {
-  const [cameraSide, setCameraSide] = useState(CameraType.back);
-  const [permissions, requestPermissions] = useCameraPermissions();
+  const [facing, setFacing] = useState<CameraType>('back');
+  const [permission, requestPermission] = useCameraPermissions();
+
+  if (!permission) {
+    return <View />
+  }
+
+  if (permission.granted) {
+    return (
+      <View style={styles.permissionsContainer}>
+        <Text>To scan a QR code, we need access to your camera. This allows you to quickly connect to a duel.</Text>
+        <Button onPress={requestPermission} title="Grant Permissions"></Button>
+      </View>
+    )
+  }
+
+  const toggleCameraDirection = () => {
+    setFacing(current => (current === 'back' ? 'front' : 'back'));
+  }
+  const goBack = () => {
+    router.push("/");
+  }
+
   return (
-    <View>
-      <Text style={{ color: 'white'}}>QR Entry Page (Will open the camera, just a route for now)</Text>
+    <View style={styles.container}>
+      <Pressable>
+        
+      </Pressable>
+      <CameraView style={styles.camera} facing={facing} />
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.button} onPress={goBack}>
+          <Text style={styles.text}>Go Back</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={toggleCameraDirection}>
+          <Text style={styles.text}>Flip Camera</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  permissionsContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  message: {
+    textAlign: 'center',
+    paddingBottom: 10,
+  },
+  camera: {
+    flex: 1,
+  },
+  buttonContainer: {
+    position: 'absolute',
+    bottom: 64,
+    flexDirection: 'row',
+    backgroundColor: 'tranparent',
+    width: '100%',
+    paddingHorizontal: 64,
+  },
+  button: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'white',
+  }
+})
