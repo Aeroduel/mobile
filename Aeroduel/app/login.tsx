@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     display: "flex",
   },
   loginForm: {
-    backgroundColor: "#944148",
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
     width: "100%",
     height: 650,
     position: "absolute",
@@ -158,6 +158,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     color: "white",
     fontFamily: "Coolvetica-Regular",
+    fontSize: 18,
   },
   signInButton: {
     backgroundColor: "red",
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
     opacity: 50,
   },
   signInRedirect: {
-    backgroundColor: "#782d33",
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
     width: 380,
     height: 40,
     marginTop: 36,

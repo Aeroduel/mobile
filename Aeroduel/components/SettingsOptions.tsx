@@ -1,21 +1,27 @@
+import { router } from "expo-router";
 import { Text, View, StyleSheet, Pressable } from "react-native";
 
 export default function SettingsOptions() {
   // We might need to move every settings option to a seperate component for spacing and formatting.
   const settings = [
-    'Username',
-    'Password',
-    'Clear Cache',
-    'FAQ',
-    'Help',
-    'About',
-    'Delete Account'
-  ]
+    { title: 'Username', route: '' },
+    { title: 'Password', route: '' },
+    { title: 'Clear Cache', route: ''},
+    { title: 'FAQ', route: ''},
+    { title: 'Help', route: ''},
+    { title: 'About', route: '/about'},
+    { title: 'Delete Account', route: ''}
+  ];
+
+  const settingsRouter = (route) => {
+    router.push(route)
+  }
+
   return (
     <View style={styles.settingsContainer}>
-      {settings.map((title, index) => (
-        <Pressable key={index}>
-            <Text style={styles.settingsTitle}>{title}</Text>
+      {settings.map((setting, index) => (
+        <Pressable key={index} onPress={() => settingsRouter(setting.route)}>
+            <Text style={styles.settingsTitle}>{setting.title}</Text>
         </Pressable>
       ))}
     </View>
