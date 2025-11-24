@@ -39,7 +39,7 @@ export default function LoginPage() {
         <View style={styles.signInRedirect}>
           <Text style={styles.redirectText}>
             Don&apos;t have an account?
-            <Pressable onPress={routeToRegister}>
+            <Pressable onPress={routeToRegister} style={styles.redirectButton}>
               <Text style={[styles.redirectText, styles.here]}>Get Started</Text>
             </Pressable>
           </Text>
@@ -128,11 +128,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginVertical: 30,
   },
+  redirectButton: {
+    borderRadius: 5,
+  },
   redirectText: {
     color: "white",
     fontFamily: "Coolvetica-Regular",
     flexDirection: "row",
-    marginHorizontal: "auto",
     paddingBottom: 11,
   },
   formHeading: {
@@ -167,15 +169,18 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
     borderRadius: 10,
     opacity: 50,
-  },signInRedirect: {
+  },
+  signInRedirect: {
     backgroundColor: "#782d33",
     width: 380,
-    height: 30,
-    marginTop: 50,
+    height: 40,
+    marginTop: 36,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     flexDirection: "row",
     display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   signInText: {
     color: "white",
@@ -184,7 +189,7 @@ const styles = StyleSheet.create({
   },
   here: {
     marginLeft: 10,
-    marginTop: 6,
+    marginTop: 15,
   },
   formOptions: {
     fontFamily: "Coolvetica-Regular",

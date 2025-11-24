@@ -137,12 +137,14 @@ const styles = StyleSheet.create({
   signInRedirect: {
     backgroundColor: "#782d33",
     width: 380,
-    height: 30,
-    marginTop: 50,
+    height: 40,
+    marginTop: 36,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     flexDirection: "row",
     display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   redirectText: {
     color: "white",
@@ -153,7 +155,7 @@ const styles = StyleSheet.create({
   },
   here: {
     marginLeft: 10,
-    marginTop: 6,
+    marginTop: 15,
   },
   formHeading: {
     fontSize: 40,
