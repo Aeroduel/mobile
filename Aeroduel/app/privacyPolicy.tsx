@@ -5,7 +5,7 @@ import { ScrollView, StyleSheet, View, Text } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
-export default function AboutPage() {
+export default function PrivacyPolicy() {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -25,30 +25,17 @@ export default function AboutPage() {
         <AeroduelHeader />
         {/* MAIN CONTENT */}
         <View style={styles.aboutContainer}>
-          <Text style={styles.aboutHeader}>About Aeroduel</Text>
+          <Text style={styles.aboutHeader}>Privacy Policy</Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
-            Aeroduel merges cutting-edge software engineering with RC model
-            aircraft to create the an advanced aerial combat system for RC
-            aircraft.
+            Cool privacy policy
           </Text>
           <Text style={styles.aboutText}>
-            We&apos;re equipping high-performance RC fighter jets with camera
-            systems that automatically detect targets equipped with Aeroduel
-            detection lights. This allows aircraft to use advanced computer
-            vision to lock onto targets and simulate aerial combat, keeping
-            score via a Wi-Fi connection to the host server back on the ground.
-            Add FPV cameras and pilots can get a true cockpit experience and aim
-            like a pro.
+            More text
           </Text>
           <Text style={styles.aboutText}>
-            Our mobile app will allow users to register their planes equipped
-            with Aeroduel equipment and enter dogfights by scanning a QR code or
-            entering a game pin displayed on the host computer. This requires at
-            least one player to have our desktop app installed and all players
-            to have our mobile app installed, as well as the proper Aeroduel
-            equipment installed on their plane of choice.
+            More text
           </Text>
         </View>
         <View style={styles.aboutContainer}>

@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet, Image } from "react-native";
 const settingsGear = require("../assets/images/settings-gear-white.png");
+const wrenchWhite = require("../assets/images/wrench-white.png");
 
 export default function SettingsHeader() {
   return (
@@ -60,5 +61,6 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     justifyContent: 'flex-end',
+    marginRight: 15,
   }
 });

@@ -54,7 +54,7 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: 'Settings',
-          tabBarIcon: ({ color }) => <Image source={gearIcon}></Image>,
+          tabBarIcon: ({ color }) => <Image source={gearIcon} style={{ width: 25, height: 25 }}></Image>,
         }}
       />
     </Tabs>

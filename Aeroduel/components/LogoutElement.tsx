@@ -20,7 +20,7 @@ export default function LogoutElement() {
 const styles = StyleSheet.create({
   logoutContainer: {
     display: "flex",
-    marginLeft: 24,
+    paddingRight: 15,
   },
   logoutPressable: {
     flexDirection: 'row',
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 20,
     marginTop: 10,
-    marginLeft: 65,
+    marginLeft: 30,
     fontWeight: "bold",
   },
   logoutIcon: {

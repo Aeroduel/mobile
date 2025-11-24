@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   joinArrows: {
-    transform: [{ scale: 0.6}],
-    marginLeft: 60,
+    transform: [{ scale: 0.6 }],
+    marginLeft: 20
   }
 })

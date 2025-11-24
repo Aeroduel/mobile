@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   cameraButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 135,
+    paddingHorizontal: 115,
     paddingVertical: 20,
     borderBottomRightRadius: 15,
     borderBottomLeftRadius: 15,

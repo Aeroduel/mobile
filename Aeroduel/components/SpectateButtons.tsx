@@ -13,7 +13,7 @@ export default function SpectateButtons() {
   return (
     <View style={styles.bottomRow}>
       <Pressable style={styles.qrButton} onPress={scanQR}>
-        <Text style={styles.buttonText}>Join with QR</Text>
+        <Text style={styles.buttonText}>Scan QR</Text>
       </Pressable>
       <Pressable style={styles.pinButton} onPress={enterPin}>
         <Text style={styles.buttonText}>Enter Pin</Text>
@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
   },
   qrButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 38,
+    paddingHorizontal: 47,
     paddingVertical: 20,
     borderBottomLeftRadius: 15,
   },
   pinButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 58,
+    paddingHorizontal: 47,
     paddingVertical: 20,
     borderBottomRightRadius: 15,
   },

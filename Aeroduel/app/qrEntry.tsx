@@ -11,10 +11,11 @@ export default function QrEntry() {
     return <View />
   }
 
-  if (!permission.granted) {
+  if (permission.granted) {
     return (
       <View style={styles.permissionsContainer}>
-        <Text>To scan a QR code, we need access to your camera. This allows you to quickly connect to a duel.</Text>
+        <Text style={styles.permissionsText}>To scan a QR code, we need access to your camera. This allows you to quickly connect to a duel.</Text>
+        <Text style={[styles.permissionsText, styles.privacyPolicy]}> View our privacy policy <Text style={styles.policyLink}>here</Text></Text>
         <Button onPress={requestPermission} title="Grant Permissions"></Button>
       </View>
     )
@@ -78,5 +79,18 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
+  },
+  permissionsText: {
+    fontFamily: 'Coolvetica-Regular',
+    fontSize: 24,
+    width: 350,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  privacyPolicy: {
+    fontSize: 16,
+  },
+  policyLink: {
+    color: '#007AFF',
   }
 })

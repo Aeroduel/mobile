@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
   },
   joinButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 53,
+    paddingHorizontal: 43,
     paddingVertical: 20,
     borderBottomLeftRadius: 15,
   },
   startButton: {
     backgroundColor: "rgba(225, 225, 225, 0.22)",
-    paddingHorizontal: 53,
+    paddingHorizontal: 43,
     paddingVertical: 20,
     borderBottomRightRadius: 15,
   },

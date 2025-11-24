@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 15,
     borderBottomRightRadius: 15,
     display: "flex",
-    width: 400,
+    width: 360,
   },
   pinInputRow: {
     flexDirection: "row",

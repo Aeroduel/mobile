@@ -6,10 +6,10 @@ export default function SettingsOptions() {
   const settings = [
     { title: 'Username', route: '' },
     { title: 'Password', route: '' },
-    { title: 'Clear Cache', route: ''},
     { title: 'FAQ', route: ''},
     { title: 'Help', route: ''},
     { title: 'About', route: '/about'},
+    { title: 'Privacy Policy', route: '/privacyPolicy'},
     { title: 'Delete Account', route: ''}
   ];
 

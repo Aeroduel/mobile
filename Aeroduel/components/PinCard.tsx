@@ -10,7 +10,7 @@ export default function PinJoin() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Join By Pin</Text>
           <Text style={styles.blockSubtitle}>
-            Enter your pin below to connect to a match
+            Enter your pin to connect to a match
           </Text>
         </View>
         <Image source={joinArrow} style={styles.joinArrows}></Image>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   joinArrows: {
     transform: [{ scale: 0.6 }],
-    marginLeft: 10,
+    marginLeft: 20,
   },
   pinInputBlock: {
     display: "flex",

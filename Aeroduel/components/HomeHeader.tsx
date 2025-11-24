@@ -22,12 +22,10 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontFamily: "Coolvetica-Regular",
-    fontSize: 35,
+    fontSize: 30,
     color: "#FFFFFF",
     marginLeft: 20,
   },
   logoutBlock: {
-    paddingRight: 12,
-    paddingTop: 2,
   }
 })

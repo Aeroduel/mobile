@@ -1,5 +1,6 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Image } from "react-native";
 import SpectateButtons from "./SpectateButtons";
+const eyeIcon = require("../assets/images/scan-eye-half-white.png");
 
 export default function SpectateCard() {
   return (
@@ -11,10 +12,7 @@ export default function SpectateCard() {
             View the scoreboards of ongoing duels
           </Text>
         </View>
-        {/* <Image (Need to get a higher quality icon)
-              source={eye}
-              style={styles.eyeIcon}
-            ></Image> */}
+        <Image source={eyeIcon} style={styles.eyeIcon}></Image>
       </View>
       <SpectateButtons />
     </View>
@@ -42,9 +40,11 @@ const styles = StyleSheet.create({
   },
   topRow: {
     flexDirection: "row",
+    gap: 20,
   },
   blockText: {
     paddingTop: 10,
+    width: 220,
   },
   blockHeader: {
     color: "#FFFFFF",
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: "700",
+    fontSize: 14,
   },
   bottomRow: {
     display: "flex",
@@ -79,4 +80,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
   },
+  eyeIcon: {
+    width: 60,
+    height: 60,
+  }
 });
