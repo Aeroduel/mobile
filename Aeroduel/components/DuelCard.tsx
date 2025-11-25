@@ -14,7 +14,7 @@ export default function DuelCard() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Start a Match</Text>
           <Text style={styles.blockSubtitle}>
-            Duel it out with your friends, up to 3 players.
+            Duel it out with your friends. Join with up to 3 players.
           </Text>
         </View>
         <View>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   blockText: {
     paddingTop: 15,
-    width: 180,
+    width: 190,
     marginLeft: 10,
   },
   blockHeader: {
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: "700",
-    fontSize: 12,
+    fontSize: 13,
   },
   whitePlaneIcon: {
     width: 80,
@@ -93,5 +93,7 @@ const styles = StyleSheet.create({
   smallScreen: {
     width: 80,
     height: 75,
+    marginTop: 15,
+    marginLeft: 50,
   }
 })

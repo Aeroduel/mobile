@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: "700",
-    fontSize: 12,
+    fontSize: 13,
     width: 200,
   },
   bottomRow: {
@@ -88,24 +88,24 @@ const styles = StyleSheet.create({
     height: 60,
   },
   buttonContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-    bottom: 45
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    bottom: 45,
   },
   qrCodeButton: {
     width: 200,
     height: 64,
     transform: [{ scale: 0.7 }],
-    position: 'absolute',
+    position: "absolute",
     left: -20,
   },
   pinButton: {
     width: 200,
     height: 64,
     transform: [{ scale: 0.7 }],
-    position: 'absolute',
+    position: "absolute",
     right: -20,
-  }
+  },
 });
