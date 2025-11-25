@@ -3,6 +3,7 @@ import { Text, View, Image, StyleSheet, useWindowDimensions, Pressable } from "r
 const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
 const startButton = require("../assets/images/start-match.png");
 const startingButton = require("../assets/images/starting-btn.png");
+import * as Haptics from 'expo-haptics';
 
 
 export default function DuelCard() {
@@ -13,6 +14,7 @@ export default function DuelCard() {
   const [isPressed, setIsPressed] = useState(false);
 
   const changeImage = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     const image = !isPressed;
     setStarting(image ? startButton : startingButton);
     setIsPressed(image);

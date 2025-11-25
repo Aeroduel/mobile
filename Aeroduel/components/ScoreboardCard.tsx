@@ -5,10 +5,15 @@ const eyeIcon = require("../assets/images/scan-eye-half-white.png");
 const startButton = require("../assets/images/start-match.png");
 const qrButton = require("../assets/images/qrcode-btn.png");
 const pinButton = require("../assets/images/pin-btn.png");
+import * as Haptics from "expo-haptics";
 
 export default function SpectateCard() {
   const openCamera = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     router.push("/qrEntry");
+  }
+  const enterPin = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
   }
 
   return (
@@ -25,7 +30,7 @@ export default function SpectateCard() {
         <Pressable onPress={openCamera}>
           <Image source={qrButton} style={styles.qrCodeButton} />
         </Pressable>
-        <Pressable>
+        <Pressable onPress={enterPin}>
           <Image source={pinButton} style={styles.pinButton} />
         </Pressable>
       </View>

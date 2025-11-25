@@ -20,7 +20,10 @@ export default function NewsCard() {
             Welcome to Aeroduel Mobile! 
           </Text>
           <Text style={[styles.blockSubtitle, styles.appStatus]}>
-            Great things are coming! Please be patient, as we are still developing this app! Check back soon for the official launch!
+            Great things are coming! Please be patient, as we are still developing this app!
+          </Text>
+          <Text style={[styles.blockSubtitle, styles.appStatus]}>
+            An exact date of completion is not yet known, however, a demo will be available by Thursday, December 11th, 2025.
           </Text>
           <Text style={[styles.blockSubtitle, styles.appStatus]}>
             Learn more about Aeroduel and our team here
