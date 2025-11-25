@@ -1,11 +1,16 @@
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import SpectateButtons from "./SpectateButtons";
+import { router } from "expo-router";
 const eyeIcon = require("../assets/images/scan-eye-half-white.png");
 const startButton = require("../assets/images/start-match.png");
 const qrButton = require("../assets/images/qrcode-btn.png");
 const pinButton = require("../assets/images/pin-btn.png");
 
 export default function SpectateCard() {
+  const openCamera = () => {
+    router.push("/qrEntry");
+  }
+
   return (
     <View style={styles.spectateContainer}>
       <View style={styles.topRow}>
@@ -17,8 +22,12 @@ export default function SpectateCard() {
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <Image source={qrButton} style={styles.qrCodeButton} />
-        <Image source={pinButton} style={styles.pinButton} />
+        <Pressable onPress={openCamera}>
+          <Image source={qrButton} style={styles.qrCodeButton} />
+        </Pressable>
+        <Pressable>
+          <Image source={pinButton} style={styles.pinButton} />
+        </Pressable>
       </View>
     </View>
   );
@@ -89,10 +98,10 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
-    bottom: 45,
+    bottom: 75,
   },
   qrCodeButton: {
     width: 200,

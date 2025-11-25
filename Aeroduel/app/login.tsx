@@ -37,7 +37,7 @@ export default function LoginPage() {
         style={styles.backgroundGradient}
       ></LinearGradient>
       <View style={styles.loginContainer}>
-        <Pressable onPress={login}>
+        <Pressable>
           <Image source={AeroduelLogo} style={styles.aeroduelLogo} />
         </Pressable>
         <View style={styles.signInRedirect}>

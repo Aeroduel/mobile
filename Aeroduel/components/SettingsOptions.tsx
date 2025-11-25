@@ -13,7 +13,7 @@ export default function SettingsOptions() {
     { title: 'Delete Account', route: ''}
   ];
 
-  const settingsRouter = (route) => {
+  const settingsRouter = (route: string) => {
     router.push(route)
   }
 

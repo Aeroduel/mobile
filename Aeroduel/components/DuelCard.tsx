@@ -1,12 +1,22 @@
-import { Text, View, Image, StyleSheet, useWindowDimensions } from "react-native";
-import MatchButtons from "./MatchButtons";
+import { useState } from "react";
+import { Text, View, Image, StyleSheet, useWindowDimensions, Pressable } from "react-native";
 const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
 const startButton = require("../assets/images/start-match.png");
+const startingButton = require("../assets/images/starting-btn.png");
 
 
 export default function DuelCard() {
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
+
+  const [starting, setStarting] = useState(startButton);
+  const [isPressed, setIsPressed] = useState(false);
+
+  const changeImage = () => {
+    const image = !isPressed;
+    setStarting(image ? startButton : startingButton);
+    setIsPressed(image);
+  };
   
   return (
     <View style={styles.duelContainer}>
@@ -21,9 +31,9 @@ export default function DuelCard() {
           <Image source={whitePlaneIcon} style={biggerDevice ? styles.largeScreen : styles.smallScreen} />
         </View>
       </View>
-      <View style={styles.buttonContainer}>
-        <Image source={startButton} style={styles.startButton} />
-      </View>
+      <Pressable style={styles.buttonContainer} onPress={changeImage}>
+        <Image source={starting} style={styles.startButton} />
+      </Pressable>
     </View>
   );
 }
