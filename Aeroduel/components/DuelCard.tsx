@@ -82,13 +82,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   largeScreen: {
-    width: 80,
-    height: 75,
+    width: 75,
+    height: 70,
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
-    borderWidth: 2,
-    borderColor: '#FF0F88'
+    marginTop: 13,
+    marginLeft: 80,
   },
   smallScreen: {
     width: 80,
