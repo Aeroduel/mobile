@@ -1,13 +1,18 @@
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import SpectateButtons from "./SpectateButtons";
+import { router } from "expo-router";
 const eyeIcon = require("../assets/images/scan-eye-half-white.png");
 const startButton = require("../assets/images/start-match.png");
 const qrButton = require("../assets/images/qrcode-btn.png");
 const pinButton = require("../assets/images/pin-btn.png");
 
-export default function SpectateCard() {
+export default function NewsCard() {
+  const aboutRedirect = () => {
+    router.push('/about');
+  };
+  
   return (
-    <View style={styles.spectateContainer}>
+    <View style={styles.newsContainer}>
       <View style={styles.topRow}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Latest News</Text>
@@ -16,6 +21,9 @@ export default function SpectateCard() {
           </Text>
           <Text style={[styles.blockSubtitle, styles.appStatus]}>
             Great things are coming! Please be patient, as we are still developing this app! Check back soon for the official launch!
+          </Text>
+          <Text style={[styles.blockSubtitle, styles.appStatus]}>
+            Learn more about Aeroduel and our team here
           </Text>
           <Text style={styles.blockSubtitle}>
             - Aeroduel Mobile Development Team 🛩️🎯
@@ -27,20 +35,18 @@ export default function SpectateCard() {
 }
 
 const styles = StyleSheet.create({
-  spectateContainer: {
+  newsContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
     marginLeft: 10,
     marginRight: 10,
     marginTop: 5,
     marginBottom: 5,
-    paddingLeft: 20,
-    paddingRight: 20,
-    height: 170,
+    paddingHorizontal: 20,
     borderRadius: 15,
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
-    paddingTop: 0,
+    paddingBottom: 15,
     // Need to play with the shadow colors
     // shadowColor: '#512929ff',
     // shadowOffset: { width: 10, height: 10 },

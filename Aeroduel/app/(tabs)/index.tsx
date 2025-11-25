@@ -1,6 +1,6 @@
 import AeroduelHeader from "@/components/AeroduelHeader";
 import DuelCard from "@/components/DuelCard";
-import HomeHeader from "@/components/HomeHeader";
+// import HomeHeader from "@/components/HomeHeader";
 import NewsCard from "@/components/NewsCard";
 import ScoreboardCard from "@/components/ScoreboardCard";
 import { useFonts } from "expo-font";
@@ -12,7 +12,6 @@ import { ScrollView, StyleSheet, View } from "react-native";
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
-
   const [fontsLoaded] = useFonts({
     "Coolvetica-Regular": require("../../assets/fonts/coolvetica-regular.otf"),
   });
@@ -35,6 +34,8 @@ export default function HomeScreen() {
         end={{ x: 1, y: 1 }}
         style={styles.backgroundGradient}
       ></LinearGradient>
+      {/* PAGE HEADER */}
+      <AeroduelHeader />
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
@@ -42,8 +43,6 @@ export default function HomeScreen() {
           position: "relative",
         }}
       >
-        {/* PAGE HEADER */}
-        <AeroduelHeader />
         {/* MAIN CONTENT */}
         <View>
           <DuelCard />

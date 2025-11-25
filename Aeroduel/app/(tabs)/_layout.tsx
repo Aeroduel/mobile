@@ -44,9 +44,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="spectate"
+        name="scoreboard"
         options={{
-          title: 'Spectate',
+          title: 'Scoreboard',
           tabBarIcon: ({ color }) => <Image source={eyeIcon}></Image>,
         }}
       />

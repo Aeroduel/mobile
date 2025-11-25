@@ -13,6 +13,8 @@ export default function TabTwoScreen() {
             end={{ x: 1, y: 1 }}
             style={styles.backgroundGradient}
           ></LinearGradient>
+          {/* PAGE HEADER */}
+          <AeroduelHeader />
           <ScrollView
             contentContainerStyle={{
               flexGrow: 1,
@@ -20,8 +22,6 @@ export default function TabTwoScreen() {
               position: "relative",
             }}
           >
-            {/* PAGE HEADER */}
-            <AeroduelHeader />
             {/* MAIN CONTENT */}
             <View>
               <PinJoin />
