@@ -9,14 +9,13 @@ import {
   TextInput,
 } from "react-native";
 import { router } from "expo-router";
-import ForgotPassword from './forgotPassword';
 const AeroduelLogo = require("../assets/images/aeroduel-banner.png");
 const google = require("../assets/images/google.png");
 const facebook = require("../assets/images/facebook.png");
 
 SplashScreen.preventAutoHideAsync();
 
-export default function LoginPage() {
+export default function ForgotPassword() {
   // route to the home screen for now
   const login = () => {
     router.push("/");
@@ -24,9 +23,6 @@ export default function LoginPage() {
   const routeToRegister = () => {
     router.push("/register");
   };
-  const forgotPassword = () => {
-    router.push("/forgotPassword");
-  }
 
   return (
     <View style={{ flex: 1 }}>
@@ -52,7 +48,7 @@ export default function LoginPage() {
         </View>
         <View style={styles.loginForm}>
           <View style={styles.formHeaderText}>
-            <Text style={styles.formHeading}>Welcome Back</Text>
+            <Text style={styles.formHeading}>Recover Your Password</Text>
             <Text style={styles.formSubtitle}>Enter your details below</Text>
           </View>
           <View>
@@ -82,9 +78,7 @@ export default function LoginPage() {
           </View>
           <View>
             <View style={styles.formOptions}>
-              <Pressable onPress={forgotPassword}>
-                <Text style={[styles.forgotPassword, styles.continueWith]}>Forgot your password?</Text>
-              </Pressable>
+              <Text style={[styles.forgotPassword, styles.continueWith]}>Forgot your password?</Text>
             </View>
             <View style={styles.formOptions}>
               <Text style={styles.continueWith}>Or continue with</Text>
