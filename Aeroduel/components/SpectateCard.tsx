@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   blockText: {
-    paddingTop: 10,
+    paddingTop: 0,
     width: 220,
   },
   blockHeader: {
