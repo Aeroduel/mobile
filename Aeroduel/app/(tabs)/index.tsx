@@ -2,7 +2,7 @@ import AeroduelHeader from "@/components/AeroduelHeader";
 import DuelCard from "@/components/DuelCard";
 import HomeHeader from "@/components/HomeHeader";
 import NewsCard from "@/components/NewsCard";
-import SpectateCard from "@/components/ScoreboardCard";
+import ScoreboardCard from "@/components/ScoreboardCard";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
@@ -12,6 +12,7 @@ import { ScrollView, StyleSheet, View } from "react-native";
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
+
   const [fontsLoaded] = useFonts({
     "Coolvetica-Regular": require("../../assets/fonts/coolvetica-regular.otf"),
   });
@@ -46,7 +47,7 @@ export default function HomeScreen() {
         {/* MAIN CONTENT */}
         <View>
           <DuelCard />
-          <SpectateCard />
+          <ScoreboardCard />
           <NewsCard />
         </View>
       </ScrollView>

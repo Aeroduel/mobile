@@ -2,6 +2,8 @@ import { Text, View, StyleSheet, Image } from "react-native";
 import SpectateButtons from "./SpectateButtons";
 const eyeIcon = require("../assets/images/scan-eye-half-white.png");
 const startButton = require("../assets/images/start-match.png");
+const qrButton = require("../assets/images/qrcode-btn.png");
+const pinButton = require("../assets/images/pin-btn.png");
 
 export default function SpectateCard() {
   return (
@@ -15,7 +17,8 @@ export default function SpectateCard() {
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <Image source={startButton} style={styles.startButton} />
+        <Image source={qrButton} style={styles.qrCodeButton} />
+        <Image source={pinButton} style={styles.pinButton} />
       </View>
     </View>
   );
@@ -60,7 +63,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: "700",
     fontSize: 12,
-    width: 220,
+    width: 200,
   },
   bottomRow: {
     display: "flex",
@@ -75,12 +78,6 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     borderBottomLeftRadius: 15,
   },
-  pinButton: {
-    backgroundColor: "#333333ff",
-    paddingHorizontal: 55,
-    paddingVertical: 20,
-    borderBottomRightRadius: 15,
-  },
   buttonText: {
     color: "white",
     fontWeight: "bold",
@@ -94,10 +91,21 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
+    bottom: 45
   },
-  startButton: {
+  qrCodeButton: {
     width: 200,
-    height: 46,
-    marginBottom: 20,
+    height: 64,
+    transform: [{ scale: 0.7 }],
+    position: 'absolute',
+    left: -20,
+  },
+  pinButton: {
+    width: 200,
+    height: 64,
+    transform: [{ scale: 0.7 }],
+    position: 'absolute',
+    right: -20,
   }
 });

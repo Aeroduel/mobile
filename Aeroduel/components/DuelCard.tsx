@@ -1,10 +1,13 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet, useWindowDimensions } from "react-native";
 import MatchButtons from "./MatchButtons";
 const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
 const startButton = require("../assets/images/start-match.png");
 
 
 export default function DuelCard() {
+  const { width } = useWindowDimensions();
+  const biggerDevice = width >= 439;
+  
   return (
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
@@ -15,7 +18,7 @@ export default function DuelCard() {
           </Text>
         </View>
         <View>
-          <Image source={whitePlaneIcon} style={styles.whitePlaneIcon} />
+          <Image source={whitePlaneIcon} style={biggerDevice ? styles.largeScreen : styles.smallScreen} />
         </View>
       </View>
       <View style={styles.buttonContainer}>
@@ -67,8 +70,6 @@ const styles = StyleSheet.create({
   whitePlaneIcon: {
     width: 80,
     height: 75,
-    marginTop: 15,
-    marginLeft: 50,
   },
   buttonContainer: {
     display: 'flex',
@@ -79,5 +80,18 @@ const styles = StyleSheet.create({
     width: 200,
     height: 46,
     marginBottom: 20,
+  },
+  largeScreen: {
+    width: 80,
+    height: 75,
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    borderWidth: 2,
+    borderColor: '#FF0F88'
+  },
+  smallScreen: {
+    width: 80,
+    height: 75,
   }
 })

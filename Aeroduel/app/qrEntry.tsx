@@ -11,7 +11,7 @@ export default function QrEntry() {
     return <View />
   }
 
-  if (permission.granted) {
+  if (!permission.granted) {
     return (
       <View style={styles.permissionsContainer}>
         <Text style={styles.permissionsText}>To scan a QR code, we need access to your camera. This allows you to quickly connect to a duel.</Text>
