@@ -4,7 +4,7 @@ import PinJoin from '@/components/PinCard';
 import QRJoin from '@/components/QRCard';
 import AeroduelHeader from '@/components/AeroduelHeader';
 
-export default function TabTwoScreen() {
+export default function JoinPage() {
   return (
         <View style={{ flex: 1 }}>
           <LinearGradient

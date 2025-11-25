@@ -37,9 +37,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="duel"
+        name="join"
         options={{
-          title: 'Duel',
+          title: 'Join',
           tabBarIcon: ({ color }) => <Image source={crosshairIcon}></Image>,
         }}
       />

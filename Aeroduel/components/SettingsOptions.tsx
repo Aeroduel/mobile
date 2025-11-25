@@ -6,8 +6,8 @@ export default function SettingsOptions() {
   const settings = [
     { title: 'Username', route: '' },
     { title: 'Password', route: '' },
+    { title: 'App Apperance', route: '' },
     { title: 'FAQ', route: ''},
-    { title: 'Help', route: ''},
     { title: 'About', route: '/about'},
     { title: 'Privacy Policy', route: '/privacyPolicy'},
     { title: 'Delete Account', route: ''}
