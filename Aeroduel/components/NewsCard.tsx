@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   blockHeader: {
     color: "#FFFFFF",
-    fontSize: 40,
+    fontSize: 30,
     fontFamily: "Coolvetica-Regular",
   },
   blockSubtitle: {

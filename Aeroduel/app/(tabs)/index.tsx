@@ -1,7 +1,8 @@
+import AeroduelHeader from "@/components/AeroduelHeader";
 import DuelCard from "@/components/DuelCard";
 import HomeHeader from "@/components/HomeHeader";
 import NewsCard from "@/components/NewsCard";
-import SpectateCard from "@/components/SpectateCard";
+import SpectateCard from "@/components/ScoreboardCard";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
@@ -41,7 +42,7 @@ export default function HomeScreen() {
         }}
       >
         {/* PAGE HEADER */}
-        <HomeHeader />
+        <AeroduelHeader />
         {/* MAIN CONTENT */}
         <View>
           <DuelCard />

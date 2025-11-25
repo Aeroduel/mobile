@@ -1,20 +1,22 @@
 import { Text, View, StyleSheet, Image } from "react-native";
 import SpectateButtons from "./SpectateButtons";
 const eyeIcon = require("../assets/images/scan-eye-half-white.png");
+const startButton = require("../assets/images/start-match.png");
 
 export default function SpectateCard() {
   return (
     <View style={styles.spectateContainer}>
       <View style={styles.topRow}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Spectate</Text>
+          <Text style={styles.blockHeader}>Scoreboard</Text>
           <Text style={styles.blockSubtitle}>
-            View the scoreboards of ongoing duels
+            View ongoing match statistics. Scan QR code or enter pin.
           </Text>
         </View>
-        <Image source={eyeIcon} style={styles.eyeIcon}></Image>
       </View>
-      <SpectateButtons />
+      <View style={styles.buttonContainer}>
+        <Image source={startButton} style={styles.startButton} />
+      </View>
     </View>
   );
 }
@@ -22,16 +24,18 @@ export default function SpectateCard() {
 const styles = StyleSheet.create({
   spectateContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    opacity: 100,
-    marginHorizontal: 10,
-    marginVertical: 5,
-    paddingHorizontal: 20,
-    paddingTop: 35,
-    height: 220,
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 5,
+    marginBottom: 5,
+    paddingLeft: 20,
+    paddingRight: 20,
+    height: 170,
     borderRadius: 15,
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    paddingTop: 0,
     // Need to play with the shadow colors
     // shadowColor: '#512929ff',
     // shadowOffset: { width: 10, height: 10 },
@@ -43,18 +47,20 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   blockText: {
-    paddingTop: 0,
-    width: 220,
+    paddingTop: 15,
+    width: 180,
+    marginLeft: 10,
   },
   blockHeader: {
     color: "#FFFFFF",
-    fontSize: 40,
+    fontSize: 30,
     fontFamily: "Coolvetica-Regular",
   },
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: "700",
-    fontSize: 14,
+    fontSize: 12,
+    width: 220,
   },
   bottomRow: {
     display: "flex",
@@ -83,5 +89,15 @@ const styles = StyleSheet.create({
   eyeIcon: {
     width: 60,
     height: 60,
+  },
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  startButton: {
+    width: 200,
+    height: 46,
+    marginBottom: 20,
   }
 });

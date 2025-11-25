@@ -1,6 +1,7 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 import MatchButtons from "./MatchButtons";
 const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
+const startButton = require("../assets/images/start-match.png");
 
 
 export default function DuelCard() {
@@ -8,15 +9,17 @@ export default function DuelCard() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Enter a Duel</Text>
+          <Text style={styles.blockHeader}>Start a Match</Text>
           <Text style={styles.blockSubtitle}>
-            Join an existing duel, or start your own
+            Duel it out with your friends, up to 3 players.
           </Text>
         </View>
-        <Image source={whitePlaneIcon} style={styles.whitePlaneIcon}></Image>
+        <View>
+          <Image source={whitePlaneIcon} style={styles.whitePlaneIcon} />
+        </View>
       </View>
-      <View>
-        <MatchButtons />
+      <View style={styles.buttonContainer}>
+        <Image source={startButton} style={styles.startButton} />
       </View>
     </View>
   );
@@ -31,12 +34,12 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     paddingLeft: 20,
     paddingRight: 20,
-    height: 220,
+    height: 170,
     borderRadius: 15,
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
-    paddingTop: 35,
+    paddingTop: 0,
     // Need to play with the shadow colors
     // shadowColor: '#512929ff',
     // shadowOffset: { width: 10, height: 10 },
@@ -47,20 +50,34 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   blockText: {
-    paddingTop: 10,
+    paddingTop: 15,
+    width: 180,
+    marginLeft: 10,
   },
   blockHeader: {
     color: "#FFFFFF",
-    fontSize: 40,
+    fontSize: 30,
     fontFamily: "Coolvetica-Regular",
   },
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: "700",
+    fontSize: 12,
   },
   whitePlaneIcon: {
-    width: 110,
-    height: 100,
-    marginLeft: 10,
+    width: 80,
+    height: 75,
+    marginTop: 15,
+    marginLeft: 50,
   },
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  startButton: {
+    width: 200,
+    height: 46,
+    marginBottom: 20,
+  }
 })
