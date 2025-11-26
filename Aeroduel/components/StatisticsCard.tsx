@@ -3,22 +3,20 @@ import { Text, View, Image, StyleSheet, useWindowDimensions, Pressable } from "r
 const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
 const startButton = require("../assets/images/start-match.png");
 const startingButton = require("../assets/images/starting-btn.png");
-const joinButton = require("../assets/images/join-btn.png");
-const joiningButton = require("../assets/images/joining-btn.png");
 import * as Haptics from 'expo-haptics';
 
 
-export default function DuelCard() {
+export default function StatisticsCard() {
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
 
-  const [joining, setJoining] = useState(joinButton);
+  const [starting, setStarting] = useState(startButton);
   const [isPressed, setIsPressed] = useState(false);
 
   const changeImage = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     const image = !isPressed;
-    setJoining(image ? joinButton : joiningButton);
+    setStarting(image ? startButton : startingButton);
     setIsPressed(image);
   };
   
@@ -26,19 +24,15 @@ export default function DuelCard() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Join a Match</Text>
+          <Text style={styles.blockHeader}>Match Statistics</Text>
           <Text style={styles.blockSubtitle}>
-            Challenge Friends, Win Glory. Join with up to 3 players.
+            View the statistics of your past matches.
           </Text>
         </View>
         <View>
           <Image source={whitePlaneIcon} style={biggerDevice ? styles.largeScreen : styles.smallScreen} />
         </View>
       </View>
-      <Pressable style={styles.buttonContainer} onPress={changeImage}>
-        <Image source={joinButton} style={styles.startButton} />
-        {/* Join match button here */}
-      </Pressable>
     </View>
   );
 }
@@ -69,7 +63,7 @@ const styles = StyleSheet.create({
   },
   blockText: {
     paddingTop: 15,
-    width: 200,
+    width: 220,
     marginLeft: 10,
   },
   blockHeader: {

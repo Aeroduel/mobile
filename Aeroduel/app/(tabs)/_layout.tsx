@@ -7,6 +7,7 @@ const houseIcon = require("../../assets/images/house-icon-white.png");
 const crosshairIcon = require("../../assets/images/crosshair-white.png");
 const eyeIcon = require("../../assets/images/scan-eye-quarter-white.png");
 const gearIcon = require("../../assets/images/settings-gear-white.png");
+const graph = require("../../assets/images/stats.png");
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -27,7 +28,7 @@ export default function TabLayout() {
         tabBarLabelStyle: {
           fontFamily: 'Coolvetica-Regular',
           fontSize: 12,
-        }
+        },
       }}>
       <Tabs.Screen
         name="index"
@@ -37,17 +38,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="join"
+        name="statistics"
         options={{
-          title: 'Join',
-          tabBarIcon: ({ color }) => <Image source={crosshairIcon}></Image>,
-        }}
-      />
-      <Tabs.Screen
-        name="scoreboard"
-        options={{
-          title: 'Scoreboard',
-          tabBarIcon: ({ color }) => <Image source={eyeIcon}></Image>,
+          title: 'Statistics',
+          tabBarIcon: ({ color }) => <Image source={graph} style={{ width: 25, height: 25 }}></Image>,
         }}
       />
       <Tabs.Screen
