@@ -1,6 +1,8 @@
+![Aeroduel Logo](Aeroduel/assets/images/logo-jet-center.png);
+
 # Welcome to Aeroduel!
 
-* This is the mobile app that is used to view the scoreboard and statistics of our aeriel combat simulation, Aeroduel.
+* The **Aeroduel** mobile app provides a dedicated interface for viewing the aerial combat simulation's scoreboard and statistics.
 
 ## Usage
-![Usage](Aeroduel/assets/images/AeroduelUsage.png);
+![Aeroduel Usage](Aeroduel/assets/images/AeroduelUsage.png);
