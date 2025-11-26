@@ -6,6 +6,7 @@ const startingButton = require("../assets/images/starting-btn.png");
 const joinButton = require("../assets/images/join-btn.png");
 const joiningButton = require("../assets/images/joining-btn.png");
 import * as Haptics from 'expo-haptics';
+import { router } from "expo-router";
 
 
 export default function DuelCard() {
@@ -21,6 +22,10 @@ export default function DuelCard() {
     setJoining(image ? joinButton : joiningButton);
     setIsPressed(image);
   };
+
+  const viewScoreboard = () => {
+    router.push('/scoreboard')
+  }
   
   return (
     <View style={styles.duelContainer}>
@@ -31,12 +36,12 @@ export default function DuelCard() {
             Challenge Friends, Win Glory. Join with up to 3 players.
           </Text>
         </View>
-        <View>
+        <Pressable onPress={viewScoreboard}>
           <Image source={whitePlaneIcon} style={biggerDevice ? styles.largeScreen : styles.smallScreen} />
-        </View>
+        </Pressable>
       </View>
       <Pressable style={styles.buttonContainer} onPress={changeImage}>
-        <Image source={joinButton} style={styles.startButton} />
+        <Image source={joining} style={styles.startButton} />
         {/* Join match button here */}
       </Pressable>
     </View>
@@ -110,5 +115,5 @@ const styles = StyleSheet.create({
     height: 75,
     marginTop: 15,
     marginLeft: 35,
-  }
+  },
 })

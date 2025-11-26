@@ -1,24 +1,11 @@
-import { useState } from "react";
-import { Text, View, Image, StyleSheet, useWindowDimensions, Pressable } from "react-native";
-const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
-const startButton = require("../assets/images/start-match.png");
-const startingButton = require("../assets/images/starting-btn.png");
 import * as Haptics from 'expo-haptics';
-
+import { useState } from "react";
+import { Image, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
 
 export default function StatisticsCard() {
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
-
-  const [starting, setStarting] = useState(startButton);
-  const [isPressed, setIsPressed] = useState(false);
-
-  const changeImage = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    const image = !isPressed;
-    setStarting(image ? startButton : startingButton);
-    setIsPressed(image);
-  };
   
   return (
     <View style={styles.duelContainer}>
@@ -46,7 +33,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     paddingLeft: 20,
     paddingRight: 20,
-    height: 170,
+    height: 110,
     borderRadius: 15,
     display: "flex",
     justifyContent: "space-between",
@@ -80,11 +67,6 @@ const styles = StyleSheet.create({
     width: 80,
     height: 75,
   },
-  buttonContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   startButton: {
     width: 200,
     height: 46,
@@ -103,6 +85,6 @@ const styles = StyleSheet.create({
     width: 80,
     height: 75,
     marginTop: 15,
-    marginLeft: 35,
+    marginLeft: 15,
   }
 })

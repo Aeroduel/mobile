@@ -6,12 +6,15 @@ export default function AeroduelHeader() {
   const signOut = () => {
     router.replace('/');
   }
+  const goHome = () => {
+    router.replace('/index')
+  }
 
   return (
     <View style={styles.aeroduelHeader}>
-      <View>
+      <Pressable>
         <Text style={styles.headerText}>Aeroduel</Text>
-      </View>
+      </Pressable>
       <Pressable onPress={signOut}>
         <LogoutElement />
       </Pressable>

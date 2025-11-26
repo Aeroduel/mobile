@@ -21,14 +21,12 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="login" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="modal"
-          options={{ presentation: "modal", title: "Modal", animation: "fade" }}
-        />
+        <Stack.Screen name="modal" options={{ presentation: "modal", title: "Modal", animation: "fade" }} />
         <Stack.Screen name="register" options={{ headerShown: false }} />
         <Stack.Screen name="qrEntry" options={{ headerShown: false }} />
         <Stack.Screen name="about" options={{ headerShown: false }} />
         <Stack.Screen name="privacyPolicy" options={{ headerShown: false }} />
+        <Stack.Screen name="scoreboard" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
