@@ -25,9 +25,11 @@ export default function NewsCard() {
           <Text style={[styles.blockSubtitle, styles.appStatus]}>
             An exact date of completion is not yet known, however, a demo will be available by Thursday, December 11th, 2025.
           </Text>
-          <Text style={[styles.blockSubtitle, styles.appStatus]}>
-            Learn more about Aeroduel and our team here
-          </Text>
+          <Pressable onPress={aboutRedirect}>
+            <Text style={[styles.blockSubtitle, styles.appStatus]}>
+              Learn more about Aeroduel and our team here
+            </Text>
+          </Pressable>
           <Text style={styles.blockSubtitle}>
             - Aeroduel Mobile Development Team 🛩️🎯
           </Text>

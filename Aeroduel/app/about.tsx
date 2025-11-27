@@ -52,17 +52,6 @@ export default function AboutPage() {
           </Text>
         </View>
         <View style={styles.aboutContainer}>
-          <Text style={styles.aboutHeader}>About Our Team</Text>
-        </View>
-        <View style={styles.aboutTextContainer}>
-          <Text style={styles.aboutText}>
-            Aeroduel is being built by a team of 5 Full-Stack Developers from
-            Atlas School in Tulsa, Oklahoma. We are currently working on our
-            promotional website, desktop server app, and mobile app, in addition
-            to building and testing our RC fighter jets. 🛩️
-          </Text>
-        </View>
-        <View style={styles.aboutContainer}>
           <Text style={styles.aboutHeader}>How It Works</Text>
         </View>
         <View style={styles.aboutTextContainer}>
@@ -72,12 +61,25 @@ export default function AboutPage() {
             the color pattern of a participating plane, it locks on for several
             seconds.
           </Text>
-          <Text style={styles.aboutText}>If it can maintain that lock for several seconds, it
-            registers a hit, sending a signal to the server, which then sends an
-            updated score to the mobile app. The planes, server, and mobile apps
+          <Text style={styles.aboutText}>
+            If it can maintain that lock for several seconds, it registers a
+            hit, sending a signal to the server, which then sends an updated
+            score to the mobile app. The planes, server, and mobile apps
             communicate with each other via a WebSocket connection, allowing for
             low-latency communication between the entire system during the
-            match.</Text>
+            match.
+          </Text>
+        </View>
+        <View style={styles.aboutContainer}>
+          <Text style={styles.aboutHeader}>About Our Team</Text>
+        </View>
+        <View style={styles.aboutTextContainer}>
+          <Text style={styles.aboutText}>
+            Aeroduel is being built by a team of 5 Full-Stack Developers from
+            Atlas School in Tulsa, Oklahoma. We are currently working on our
+            promotional website, desktop server app, and mobile app, in addition
+            to building and testing our RC fighter jets. 🛩️
+          </Text>
         </View>
       </ScrollView>
     </View>
@@ -105,7 +107,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     fontFamily: "Coolvetica-Regular",
-    fontSize: 50,
+    fontSize: 45,
     paddingBottom: 10,
   },
   aboutTextContainer: {
@@ -124,5 +126,5 @@ const styles = StyleSheet.create({
   },
   howItWorks: {
     fontSize: 44,
-  }
+  },
 });
