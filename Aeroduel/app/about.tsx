@@ -1,7 +1,7 @@
 import AeroduelHeader from "@/components/AeroduelHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View, Text } from "react-native";
+import { ScrollView, StyleSheet, View, Text, Image } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -43,8 +43,8 @@ export default function AboutPage() {
             like a pro.
           </Text>
           <Text style={styles.aboutText}>
-            Our mobile app will allow users to register their planes equipped
-            with Aeroduel equipment and enter dogfights by scanning a QR code or
+            Our mobile app allows users to register their planes equipped with
+            Aeroduel equipment and enter dogfights by scanning a QR code or
             entering a game pin displayed on the host computer. This requires at
             least one player to have our desktop app installed and all players
             to have our mobile app installed, as well as the proper Aeroduel
@@ -52,13 +52,33 @@ export default function AboutPage() {
           </Text>
         </View>
         <View style={styles.aboutContainer}>
-          <Text style={styles.aboutHeader}>Our Team</Text>
+          <Text style={styles.aboutHeader}>About Our Team</Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
-            Aeroduel is being built by a team of 5 Full-Stack Developers from Atlas School in Tulsa, Oklahoma. We are currently working on our promotional website, desktop server app, and mobile app, in addition to building and testing our RC fighter jets. 🛩️
+            Aeroduel is being built by a team of 5 Full-Stack Developers from
+            Atlas School in Tulsa, Oklahoma. We are currently working on our
+            promotional website, desktop server app, and mobile app, in addition
+            to building and testing our RC fighter jets. 🛩️
           </Text>
-          </View>
+        </View>
+        <View style={styles.aboutContainer}>
+          <Text style={styles.aboutHeader}>How It Works</Text>
+        </View>
+        <View style={styles.aboutTextContainer}>
+          <Text style={styles.aboutText}>
+            Onboard each plane is a computer vision camera, several LED lights,
+            a LoRa WiFi receiver, and an ESP32 arduino. When the camera detects
+            the color pattern of a participating plane, it locks on for several
+            seconds.
+          </Text>
+          <Text style={styles.aboutText}>If it can maintain that lock for several seconds, it
+            registers a hit, sending a signal to the server, which then sends an
+            updated score to the mobile app. The planes, server, and mobile apps
+            communicate with each other via a WebSocket connection, allowing for
+            low-latency communication between the entire system during the
+            match.</Text>
+        </View>
       </ScrollView>
     </View>
   );
@@ -86,18 +106,23 @@ const styles = StyleSheet.create({
     color: "white",
     fontFamily: "Coolvetica-Regular",
     fontSize: 50,
+    paddingBottom: 10,
   },
   aboutTextContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   aboutText: {
-    color: 'white',
-    textAlign: 'center',
-    width: '80%',
-    fontFamily: 'Coolvetica-Regular',
+    color: "white",
+    textAlign: "left",
+    fontFamily: "Coolvetica-Regular",
     lineHeight: 35,
-    fontSize: 20,
+    fontSize: 15,
+    paddingBottom: 10,
+    paddingHorizontal: 33,
+  },
+  howItWorks: {
+    fontSize: 44,
   }
 });
