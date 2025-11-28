@@ -1,7 +1,11 @@
 import BackHeader from "@/components/BackHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View, Text } from "react-native";
+import { ScrollView, StyleSheet, View, Text, Image } from "react-native";
+const animatedAeroduelLogo = require("../assets/gifs/aeroduel-logo-animated.gif");
+const arduino = require("../assets/images/arduino-circle.png");
+const camera = require("../assets/images/camera-circle.png");
+const lora = require("../assets/images/lora-receiver-circle.png");
 
 SplashScreen.preventAutoHideAsync();
 
@@ -24,6 +28,9 @@ export default function AboutPage() {
         {/* PAGE HEADER */}
         <BackHeader />
         {/* MAIN CONTENT */}
+        <View style={styles.gifContainer}>
+          <Image source={animatedAeroduelLogo} style={styles.animatedAeroduel} resizeMode="contain"></Image>
+        </View>
         <View style={styles.aboutContainer}>
           <Text style={styles.aboutHeader}>What is Aeroduel?</Text>
         </View>
@@ -53,6 +60,16 @@ export default function AboutPage() {
         </View>
         <View style={styles.aboutContainer}>
           <Text style={styles.aboutHeader}>How It Works</Text>
+        </View>
+        <View style={styles.imagesContainer}>
+          <Image source={camera} style={[styles.techImage, styles.biggerTechImage]} resizeMode="contain"></Image>
+          <Image source={lora} style={styles.techImage} resizeMode="contain"></Image>
+          <Image source={arduino} style={[styles.techImage, styles.biggerTechImage]} resizeMode="contain"></Image>
+        </View>
+        <View style={styles.imageDescriptionContainer}>
+          <Text style={styles.descriptionText}>Vision Camera</Text>
+          <Text style={styles.descriptionText}>LoRa Receiver</Text>
+          <Text style={styles.descriptionText}>ESP32 Arduino</Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
@@ -101,7 +118,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 50,
+    marginTop: 20,
   },
   aboutHeader: {
     fontWeight: "bold",
@@ -127,4 +144,41 @@ const styles = StyleSheet.create({
   howItWorks: {
     fontSize: 44,
   },
+  gifContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 20,
+  },
+  animatedAeroduel: {
+    width: 350,
+    height: 40,
+  },
+  imagesContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 10,
+  },
+  techImage: {
+    width: 100,
+    height: 100,
+  },
+  biggerTechImage: {
+    width: 120,
+    height: 120,
+  },
+  imageDescriptionContainer: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    flexDirection: 'row',
+    paddingVertical: 20,
+  },
+  descriptionText: {
+    fontFamily: 'Coolvetica-Regular',
+    color: 'white',
+    fontSize: 16,
+  }
 });

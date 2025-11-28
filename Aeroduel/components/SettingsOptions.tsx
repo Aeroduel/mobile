@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   settingsTitle: {
     color: "#FFFFFF",
-    fontSize: 30,
+    fontSize: 28,
     fontFamily: "Coolvetica-Regular",
   },
 });
