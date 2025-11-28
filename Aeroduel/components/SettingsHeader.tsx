@@ -1,7 +1,4 @@
-import * as Haptics from 'expo-haptics';
-import { useState } from "react";
 import { Image, StyleSheet, Text, useWindowDimensions, View } from "react-native";
-const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
 const whiteSettingsGear = require("../assets/images/settings-header-gear-white.png");
 
 export default function StatisticsCard() {

@@ -1,14 +1,27 @@
 import { Text, View, Pressable, StyleSheet } from "react-native";
 import LogoutElement from "./LogoutElement";
-import { router } from "expo-router";
+import { router, SplashScreen } from "expo-router";
+import { useEffect } from "react";
+import { useFonts } from "expo-font";
 
 export default function AeroduelHeader() {
+  const [fontsLoaded] = useFonts({
+    "Xirod": require("../assets/fonts/Xirod.otf"),
+  });
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   const signOut = () => {
-    router.replace('/');
-  }
-  const goHome = () => {
-    router.replace('/index')
-  }
+    router.replace("/");
+  };
 
   return (
     <View style={styles.aeroduelHeader}>
@@ -27,12 +40,13 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     marginTop: 80,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   headerText: {
-    fontFamily: "Coolvetica-Regular",
-    fontSize: 30,
+    fontFamily: "Xirod",
+    fontSize: 24,
     color: "#FFFFFF",
     marginLeft: 20,
+    marginTop: 7,
   },
-})
+});

@@ -1,11 +1,8 @@
-import { Text, View, StyleSheet, Image, Pressable } from "react-native";
-import SpectateButtons from "./SpectateButtons";
+import * as Haptics from "expo-haptics";
 import { router } from "expo-router";
-const eyeIcon = require("../assets/images/scan-eye-half-white.png");
-const startButton = require("../assets/images/start-match.png");
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 const qrButton = require("../assets/images/qrcode-btn.png");
 const pinButton = require("../assets/images/pin-btn.png");
-import * as Haptics from "expo-haptics";
 
 export default function SpectateCard() {
   const openCamera = () => {

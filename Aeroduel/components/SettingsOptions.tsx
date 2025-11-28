@@ -14,7 +14,7 @@ export default function SettingsOptions() {
   ];
 
   const settingsRouter = (route: string) => {
-    router.push(route)
+    router.push(route as any)
   }
 
   return (

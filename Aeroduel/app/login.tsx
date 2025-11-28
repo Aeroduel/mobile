@@ -9,7 +9,6 @@ import {
   TextInput,
 } from "react-native";
 import { router } from "expo-router";
-import ForgotPassword from './forgotPassword';
 const AeroduelLogo = require("../assets/images/aeroduel-banner.png");
 const google = require("../assets/images/google.png");
 const facebook = require("../assets/images/facebook.png");

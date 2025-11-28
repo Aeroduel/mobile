@@ -1,12 +1,10 @@
-import { useState } from "react";
-import { Text, View, Image, StyleSheet, useWindowDimensions, Pressable } from "react-native";
-const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
-const startButton = require("../assets/images/start-match.png");
-const startingButton = require("../assets/images/starting-btn.png");
-const joinButton = require("../assets/images/join-btn.png");
-const joiningButton = require("../assets/images/joining-btn.png");
 import * as Haptics from 'expo-haptics';
 import { router } from "expo-router";
+import { useState } from "react";
+import { Image, Pressable, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+const whitePlaneIcon = require("../assets/images/plane-white.png");
+const joinButton = require("../assets/images/join-btn.png");
+const joiningButton = require("../assets/images/joining-btn.png");
 
 
 export default function DuelCard() {

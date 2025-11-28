@@ -1,6 +1,5 @@
 import AeroduelHeader from "@/components/AeroduelHeader";
 import DuelCard from "@/components/DuelCard";
-// import HomeHeader from "@/components/HomeHeader";
 import NewsCard from "@/components/NewsCard";
 import ScoreboardCard from "@/components/ScoreboardCard";
 import { useFonts } from "expo-font";

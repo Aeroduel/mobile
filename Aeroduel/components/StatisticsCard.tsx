@@ -1,7 +1,7 @@
-import * as Haptics from 'expo-haptics';
-import { useState } from "react";
+// import * as Haptics from 'expo-haptics';
+// import { useState } from "react";
 import { Image, StyleSheet, Text, useWindowDimensions, View } from "react-native";
-const whitePlaneIcon = require("../assets/images/aeroduel-plane-white.png");
+const whitePlaneIcon = require("../assets/images/plane-white.png");
 
 export default function StatisticsCard() {
   const { width } = useWindowDimensions();

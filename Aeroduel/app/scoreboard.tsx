@@ -1,7 +1,7 @@
 import AeroduelHeader from "@/components/AeroduelHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View, Text } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import ScoreboardHeaderCard from "@/components/ScoreboardHeaderCard";
 import ScoreboardStats from "@/components/ScoreboardStats";
 

@@ -10,18 +10,13 @@ import {
 } from "react-native";
 import { router } from "expo-router";
 const AeroduelLogo = require("../assets/images/aeroduel-banner.png");
-const google = require("../assets/images/google.png");
-const facebook = require("../assets/images/facebook.png");
 
 SplashScreen.preventAutoHideAsync();
 
 export default function ForgotPassword() {
   // route to the home screen for now
-  const login = () => {
-    router.push("/");
-  };
-  const routeToRegister = () => {
-    router.push("/register");
+  const routeToLogin = () => {
+    router.push("/login");
   };
 
   return (
@@ -33,15 +28,15 @@ export default function ForgotPassword() {
         style={styles.backgroundGradient}
       ></LinearGradient>
       <View style={styles.loginContainer}>
-        <Pressable onPress={login}>
+        <Pressable>
           <Image source={AeroduelLogo} style={styles.aeroduelLogo} />
         </Pressable>
         <View style={styles.signInRedirect}>
           <Text style={styles.redirectText}>
-            Don&apos;t have an account?
-            <Pressable onPress={routeToRegister} style={styles.redirectButton}>
+            Remember your password?
+            <Pressable onPress={routeToLogin} style={styles.redirectButton}>
               <Text style={[styles.redirectText, styles.here]}>
-                Get Started
+                Sign in Here
               </Text>
             </Pressable>
           </Text>
@@ -58,40 +53,15 @@ export default function ForgotPassword() {
               placeholder="Email..."
               placeholderTextColor={"white"}
             ></TextInput>
-            <TextInput
-              style={styles.textInput}
-              autoCapitalize="none"
-              placeholder="Password..."
-              placeholderTextColor={"white"}
-              secureTextEntry={true}
-            ></TextInput>
-            <Pressable onPress={login} style={styles.signInButton}>
+            <Pressable style={styles.signInButton}>
               <LinearGradient
                 colors={["#640000", "#dc0202ff"]}
                 start={{ x: 1, y: 0 }}
                 end={{ x: 1, y: 1 }}
                 style={styles.buttonGradient}
               >
-                <Text style={styles.signInText}>Sign in</Text>
+                <Text style={styles.signInText}>Recover</Text>
               </LinearGradient>
-            </Pressable>
-          </View>
-          <View>
-            <View style={styles.formOptions}>
-              <Text style={[styles.forgotPassword, styles.continueWith]}>Forgot your password?</Text>
-            </View>
-            <View style={styles.formOptions}>
-              <Text style={styles.continueWith}>Or continue with</Text>
-            </View>
-          </View>
-          <View style={styles.authOptions}>
-            <Pressable style={styles.googleButton}>
-              <Image source={google} style={styles.googleIcon}></Image>
-              <Text style={styles.google}>Google</Text>
-            </Pressable>
-            <Pressable style={styles.facebookButton}>
-              <Image source={facebook} style={styles.facebookIcon}></Image>
-              <Text style={styles.facebook}>Facebook</Text>
             </Pressable>
           </View>
         </View>
@@ -145,7 +115,7 @@ const styles = StyleSheet.create({
     paddingBottom: 11,
   },
   formHeading: {
-    fontSize: 40,
+    fontSize: 34,
     fontWeight: "bold",
     color: "white",
     fontFamily: "Coolvetica-Regular",

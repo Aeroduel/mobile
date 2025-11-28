@@ -1,15 +1,9 @@
-import AeroduelHeader from "@/components/AeroduelHeader";
 import BackHeader from "@/components/BackHeader";
 import { LinearGradient } from "expo-linear-gradient";
-import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View, Text, Pressable } from "react-native";
+import { ScrollView, StyleSheet, View, Text } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
-
-const goBack = () => {
-  router.replace("/");
-}
 
 export default function AboutPage() {
   return (

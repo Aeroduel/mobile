@@ -1,10 +1,5 @@
-import { Text, View, StyleSheet, Image, Pressable } from "react-native";
-import SpectateButtons from "./SpectateButtons";
+import { Text, View, StyleSheet, Pressable } from "react-native";
 import { router } from "expo-router";
-const eyeIcon = require("../assets/images/scan-eye-half-white.png");
-const startButton = require("../assets/images/start-match.png");
-const qrButton = require("../assets/images/qrcode-btn.png");
-const pinButton = require("../assets/images/pin-btn.png");
 
 export default function NewsCard() {
   const aboutRedirect = () => {
