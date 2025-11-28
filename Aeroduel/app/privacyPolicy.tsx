@@ -1,4 +1,5 @@
 import AeroduelHeader from "@/components/AeroduelHeader";
+import BackHeader from "@/components/BackHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { ScrollView, StyleSheet, View, Text } from "react-native";
@@ -22,28 +23,33 @@ export default function PrivacyPolicy() {
         }}
       >
         {/* PAGE HEADER */}
-        <AeroduelHeader />
+        <BackHeader />
         {/* MAIN CONTENT */}
         <View style={styles.aboutContainer}>
-          <Text style={styles.aboutHeader}>Privacy Policy</Text>
+          <Text style={styles.privacyMainHeader}>Privacy Policy</Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
-            Cool privacy policy
-          </Text>
-          <Text style={styles.aboutText}>
-            More text
-          </Text>
-          <Text style={styles.aboutText}>
-            More text
+            This Privacy policy describes how Aeroduel collects, uses, and discloses your information with your use of our mobile application.
+            By accessing or using the Aeroduel mobile app, you agree to be bound by the terms and conditions of this Privacy Policy.
+            We are committed to protecting the privacy of our users. This policy is to help you understand the data that we collect, why we collect it, and what we do with it.
           </Text>
         </View>
         <View style={styles.aboutContainer}>
-          <Text style={styles.aboutHeader}>Our Team</Text>
+          <Text style={styles.privacyHeader}>Collected Information</Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
-            Aeroduel is being built by a team of 5 Full-Stack Developers from Atlas School in Tulsa, Oklahoma. We are currently working on our promotional website, desktop server app, and mobile app, in addition to building and testing our RC fighter jets. 🛩️
+            This information is collected when you intentionally provide it, such as when you create an account.
+          </Text>
+          <Text style={styles.aboutText}>
+            - Email Address
+          </Text>
+          <Text style={styles.aboutText}>
+            - Username
+          </Text>
+          <Text style={styles.aboutText}>
+            - Password
           </Text>
           </View>
       </ScrollView>
@@ -74,6 +80,11 @@ const styles = StyleSheet.create({
     fontFamily: "Coolvetica-Regular",
     fontSize: 50,
   },
+  privacyMainHeader: {
+    color: 'white',
+    fontFamily: 'Coolvetica-Regular',
+    fontSize: 50
+  },
   aboutTextContainer: {
     display: 'flex',
     justifyContent: 'center',
@@ -81,10 +92,15 @@ const styles = StyleSheet.create({
   },
   aboutText: {
     color: 'white',
-    textAlign: 'center',
+    textAlign: 'left',
     width: '80%',
     fontFamily: 'Coolvetica-Regular',
     lineHeight: 35,
-    fontSize: 20,
+    fontSize: 15,
+  },
+  privacyHeader: {
+    fontSize: 36,
+    color: 'white',
+    fontFamily: 'Coolvetica-Regular',
   }
 });
