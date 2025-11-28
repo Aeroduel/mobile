@@ -4,8 +4,6 @@ import { HapticTab } from '@/components/haptic-tab';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 const houseIcon = require("../../assets/images/house-icon-white.png");
-const crosshairIcon = require("../../assets/images/crosshair-white.png");
-const eyeIcon = require("../../assets/images/scan-eye-quarter-white.png");
 const gearIcon = require("../../assets/images/settings-gear-white.png");
 const graph = require("../../assets/images/stats.png");
 

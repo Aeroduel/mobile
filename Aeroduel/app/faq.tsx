@@ -11,7 +11,7 @@ const goBack = () => {
   router.replace("/");
 }
 
-export default function AboutPage() {
+export default function FAQPage() {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -31,7 +31,7 @@ export default function AboutPage() {
         <BackHeader />
         {/* MAIN CONTENT */}
         <View style={styles.aboutContainer}>
-          <Text style={styles.aboutHeader}>What is Aeroduel?</Text>
+          <Text style={styles.aboutHeader}>FAQ</Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>

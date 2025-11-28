@@ -22,16 +22,13 @@ export default function NewsCard() {
           <Text style={[styles.blockSubtitle, styles.appStatus]}>
             Great things are coming! Please be patient, as we are still developing this app!
           </Text>
-          <Text style={[styles.blockSubtitle, styles.appStatus]}>
-            An exact date of completion is not yet known, however, a demo will be available by Thursday, December 11th, 2025.
-          </Text>
           <Pressable onPress={aboutRedirect}>
             <Text style={[styles.blockSubtitle, styles.appStatus]}>
               Learn more about Aeroduel and our team here
             </Text>
           </Pressable>
           <Text style={styles.blockSubtitle}>
-            - Aeroduel Mobile Development Team 🛩️🎯
+            - Aeroduel Mobile Development Team 🛩️
           </Text>
         </View>
       </View>
@@ -42,10 +39,8 @@ export default function NewsCard() {
 const styles = StyleSheet.create({
   newsContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 5,
-    marginBottom: 5,
+    marginHorizontal: 10,
+    marginVertical: 5,
     paddingHorizontal: 20,
     borderRadius: 15,
     display: "flex",

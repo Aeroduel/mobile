@@ -4,13 +4,13 @@ import { Text, View, StyleSheet, Pressable } from "react-native";
 export default function SettingsOptions() {
   // We might need to move every settings option to a seperate component for spacing and formatting.
   const settings = [
-    { title: 'Username', route: '' },
-    { title: 'Password', route: '' },
-    { title: 'App Apperance', route: '' },
-    { title: 'FAQ', route: ''},
+    { title: 'Username', route: '/username.tsx' },
+    { title: 'Password', route: '/password.tsx' },
+    { title: 'App Apperance', route: '/appearance.tsx' },
+    { title: 'FAQ', route: '/faq'},
     { title: 'About', route: '/about'},
     { title: 'Privacy Policy', route: '/privacyPolicy'},
-    { title: 'Delete Account', route: ''}
+    { title: 'Delete Account', route: '/deleteAccount.tsx'}
   ];
 
   const settingsRouter = (route: string) => {

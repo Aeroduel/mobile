@@ -27,8 +27,8 @@ export default function RootLayout() {
         <Stack.Screen name="about" options={{ headerShown: false }} />
         <Stack.Screen name="privacyPolicy" options={{ headerShown: false }} />
         <Stack.Screen name="scoreboard" options={{ headerShown: false }} />
+        <Stack.Screen name="faq" options={{ headerShown: false }} />
       </Stack>
-      <StatusBar style="auto" />
     </ThemeProvider>
   );
 }
