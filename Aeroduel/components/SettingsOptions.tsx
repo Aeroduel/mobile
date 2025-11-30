@@ -10,7 +10,7 @@ export default function SettingsOptions() {
     { title: 'FAQ', route: '/faq'},
     { title: 'About', route: '/about'},
     { title: 'Privacy Policy', route: '/privacyPolicy'},
-    { title: 'Delete Account', route: '/deleteAccount.tsx'}
+    { title: 'Advanced', route: '/deleteAccount.tsx'}
   ];
 
   const settingsRouter = (route: string) => {

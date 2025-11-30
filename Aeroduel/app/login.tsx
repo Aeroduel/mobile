@@ -1,14 +1,21 @@
+import { auth } from "../config/FirebaseConfig";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import {
-  StyleSheet,
-  View,
+  Alert,
   Image,
-  Text,
   Pressable,
+  StyleSheet,
+  Text,
   TextInput,
+  View,
 } from "react-native";
-import { router } from "expo-router";
+import { useState } from "react";
 const AeroduelLogo = require("../assets/images/aeroduel-banner.png");
 const google = require("../assets/images/google.png");
 const facebook = require("../assets/images/facebook.png");
@@ -18,7 +25,7 @@ SplashScreen.preventAutoHideAsync();
 export default function LoginPage() {
   // route to the home screen for now
   const login = () => {
-    router.push("/");
+    router.push("/login");
   };
   const routeToRegister = () => {
     router.push("/register");
@@ -26,6 +33,21 @@ export default function LoginPage() {
   const forgotPassword = () => {
     router.push("/forgotPassword");
   }
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = async () => {
+    try {
+      const user = await signInWithEmailAndPassword(auth, email, password);
+      if (user) {
+        router.replace("/(tabs)");
+      }
+    } catch (error: any) {
+      console.error(error);
+      Alert.alert("Sign in Failed", "Invalid Credentials");
+    }
+  };
 
   return (
     <View style={{ flex: 1 }}>
@@ -60,6 +82,8 @@ export default function LoginPage() {
               autoCapitalize="none"
               placeholder="Email..."
               placeholderTextColor={"white"}
+              value={email}
+              onChangeText={(text) => setEmail(text)}
             ></TextInput>
             <TextInput
               style={styles.textInput}
@@ -67,8 +91,10 @@ export default function LoginPage() {
               placeholder="Password..."
               placeholderTextColor={"white"}
               secureTextEntry={true}
+              value={password}
+              onChangeText={(text) => setPassword(text)}
             ></TextInput>
-            <Pressable onPress={login} style={styles.signInButton}>
+            <Pressable onPress={signIn} style={styles.signInButton}>
               <LinearGradient
                 colors={["#640000", "#dc0202ff"]}
                 start={{ x: 1, y: 0 }}
@@ -82,7 +108,9 @@ export default function LoginPage() {
           <View>
             <View style={styles.formOptions}>
               <Pressable onPress={forgotPassword}>
-                <Text style={[styles.forgotPassword, styles.continueWith]}>Forgot your password?</Text>
+                <Text style={[styles.forgotPassword, styles.continueWith]}>
+                  Forgot your password?
+                </Text>
               </Pressable>
             </View>
             <View style={styles.formOptions}>
@@ -260,5 +288,5 @@ const styles = StyleSheet.create({
   forgotPassword: {
     paddingTop: 10,
     fontSize: 18,
-  }
+  },
 });
