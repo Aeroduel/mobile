@@ -1,14 +1,18 @@
+import { createUserWithEmailAndPassword } from "@firebase/auth";
 import { LinearGradient } from "expo-linear-gradient";
-import * as SplashScreen from "expo-splash-screen";
-import {
-  StyleSheet,
-  View,
-  Image,
-  Text,
-  Pressable,
-  TextInput,
-} from "react-native";
 import { router } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import { useState } from "react";
+import {
+  Alert,
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
+import { auth } from "../config/FirebaseConfig";
 const AeroduelLogo = require("../assets/images/aeroduel-banner.png");
 const google = require("../assets/images/google.png");
 const facebook = require("../assets/images/facebook.png");
@@ -16,12 +20,25 @@ const facebook = require("../assets/images/facebook.png");
 SplashScreen.preventAutoHideAsync();
 
 export default function RegisterPage() {
-  // route to the home screen for now
-  const login = () => {
-    router.push("/");
-  };
+  // Push to login page
   const routeToLogin = () => {
     router.push("/login");
+  };
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+
+  const createAccount = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(auth, email, password);
+      if (user) {
+        router.replace("/(tabs)");
+      }
+    } catch (error: any) {
+      console.error(error);
+      Alert.alert("Account creation failed", "Please try again")
+    }
   };
 
   return (
@@ -33,9 +50,7 @@ export default function RegisterPage() {
         style={styles.backgroundGradient}
       ></LinearGradient>
       <View style={styles.loginContainer}>
-        <Pressable onPress={login}>
-          <Image source={AeroduelLogo} style={styles.aeroduelLogo} />
-        </Pressable>
+        <Image source={AeroduelLogo} style={styles.aeroduelLogo} />
         <View style={styles.signInRedirect}>
           <Text style={styles.redirectText}>
             Already have an account?
@@ -55,12 +70,16 @@ export default function RegisterPage() {
               autoCapitalize="none"
               placeholder="Name..."
               placeholderTextColor={"white"}
+              value={name}
+              onChangeText={(text) => setName(text)}
             ></TextInput>
             <TextInput
               style={styles.textInput}
               autoCapitalize="none"
               placeholder="Email..."
               placeholderTextColor={"white"}
+              value={email}
+              onChangeText={(text) => setEmail(text)}
             ></TextInput>
             <TextInput
               style={styles.textInput}
@@ -68,8 +87,10 @@ export default function RegisterPage() {
               placeholder="Password..."
               placeholderTextColor={"white"}
               secureTextEntry={true}
+              value={password}
+              onChangeText={(text) => setPassword(text)}
             ></TextInput>
-            <Pressable onPress={login} style={styles.signInButton}>
+            <Pressable onPress={createAccount} style={styles.signInButton}>
               <LinearGradient
                 colors={["#640000", "#dc0202ff"]}
                 start={{ x: 1, y: 0 }}

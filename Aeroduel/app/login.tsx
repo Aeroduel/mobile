@@ -1,8 +1,5 @@
 import { auth } from "../config/FirebaseConfig";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -23,20 +20,19 @@ const facebook = require("../assets/images/facebook.png");
 SplashScreen.preventAutoHideAsync();
 
 export default function LoginPage() {
-  // route to the home screen for now
-  const login = () => {
-    router.push("/login");
-  };
+  // Push to create account page
   const routeToRegister = () => {
     router.push("/register");
   };
+  // Push to forgot password page (not yet implemented)
   const forgotPassword = () => {
     router.push("/forgotPassword");
   }
-
+  // State variables and setters for email and password (Firebase auth)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // Validate credentials and sign in (Firebase auth)
   const signIn = async () => {
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
