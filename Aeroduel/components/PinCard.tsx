@@ -1,7 +1,6 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import PinInput from "../components/PinInput";
 const joinArrow = require("../assets/images/arrow-right-white.png");
-
 
 export default function PinJoin() {
   return (
@@ -26,7 +25,7 @@ const styles = StyleSheet.create({
   pinContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
     display: "flex",
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     flexDirection: "column",
     height: 220,
     marginVertical: 5,

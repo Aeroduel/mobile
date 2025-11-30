@@ -4,13 +4,16 @@ import { useState } from "react";
 import { router } from "expo-router";
 
 export default function QrEntry() {
+  // State variables and setters for camera direction and permissions
   const [facing, setFacing] = useState<CameraType>('back');
   const [permission, requestPermission] = useCameraPermissions();
 
+  // If no permissions
   if (!permission) {
     return <View />
   }
 
+  // If permissions are not granted
   if (!permission.granted) {
     return (
       <View style={styles.permissionsContainer}>
@@ -21,18 +24,18 @@ export default function QrEntry() {
     )
   }
 
+  // Set the direction the camera is facing
   const toggleCameraDirection = () => {
     setFacing(current => (current === 'back' ? 'front' : 'back'));
   }
+
+  // Return to the previous page
   const goBack = () => {
     router.push("/");
   }
 
   return (
     <View style={styles.container}>
-      <Pressable>
-        
-      </Pressable>
       <CameraView style={styles.camera} facing={facing} />
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={goBack}>

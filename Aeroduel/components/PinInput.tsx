@@ -1,4 +1,4 @@
-import { View, StyleSheet, TextInput } from "react-native";
+import { StyleSheet, TextInput, View } from "react-native";
 
 export default function PinInput() {
   // Max length for individual text input box
@@ -9,16 +9,32 @@ export default function PinInput() {
     <View style={styles.pinInputContainer}>
       <View style={styles.pinInputRow}>
         <View style={styles.roundedLeftInputButton}>
-          <TextInput style={styles.pinInputText} keyboardType="numeric" maxLength={maxLength}></TextInput>
+          <TextInput
+            style={styles.pinInputText}
+            keyboardType="numeric"
+            maxLength={maxLength}
+          ></TextInput>
         </View>
         <View style={styles.squareInputButton}>
-          <TextInput style={styles.pinInputText} keyboardType="numeric" maxLength={maxLength}></TextInput>
+          <TextInput
+            style={styles.pinInputText}
+            keyboardType="numeric"
+            maxLength={maxLength}
+          ></TextInput>
         </View>
         <View style={styles.squareInputButton}>
-          <TextInput style={styles.pinInputText} keyboardType="numeric" maxLength={maxLength}></TextInput>
+          <TextInput
+            style={styles.pinInputText}
+            keyboardType="numeric"
+            maxLength={maxLength}
+          ></TextInput>
         </View>
         <View style={styles.roundedRightInputButton}>
-          <TextInput style={styles.pinInputText} keyboardType="numeric" maxLength={maxLength}></TextInput>
+          <TextInput
+            style={styles.pinInputText}
+            keyboardType="numeric"
+            maxLength={maxLength}
+          ></TextInput>
         </View>
       </View>
     </View>
@@ -27,7 +43,7 @@ export default function PinInput() {
 
 const styles = StyleSheet.create({
   pinInputContainer: {
-    backgroundColor: 'rgba(225, 225, 225, 0.25)',
+    backgroundColor: "rgba(225, 225, 225, 0.25)",
     paddingTop: 0,
     marginBottom: 10,
     borderBottomLeftRadius: 15,
@@ -62,6 +78,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     fontSize: 40,
-    textAlign: 'center',
+    textAlign: "center",
   },
 });

@@ -1,12 +1,19 @@
 // import * as Haptics from 'expo-haptics';
 // import { useState } from "react";
-import { Image, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
 const whitePlaneIcon = require("../assets/images/plane-white.png");
 
 export default function StatisticsCard() {
+  // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
-  
+
   return (
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
@@ -17,7 +24,10 @@ export default function StatisticsCard() {
           </Text>
         </View>
         <View>
-          <Image source={whitePlaneIcon} style={biggerDevice ? styles.largeScreen : styles.smallScreen} />
+          <Image
+            source={whitePlaneIcon}
+            style={biggerDevice ? styles.largeScreen : styles.smallScreen}
+          />
         </View>
       </View>
     </View>
@@ -75,9 +85,9 @@ const styles = StyleSheet.create({
   largeScreen: {
     width: 75,
     height: 70,
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
     marginTop: 13,
     marginLeft: 80,
   },
@@ -86,5 +96,5 @@ const styles = StyleSheet.create({
     height: 75,
     marginTop: 15,
     marginLeft: 15,
-  }
-})
+  },
+});

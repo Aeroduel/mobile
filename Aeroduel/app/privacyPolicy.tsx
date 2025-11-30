@@ -1,8 +1,7 @@
-import AeroduelHeader from "@/components/AeroduelHeader";
 import BackHeader from "@/components/BackHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View, Text } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 

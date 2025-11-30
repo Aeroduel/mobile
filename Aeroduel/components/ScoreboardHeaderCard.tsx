@@ -1,7 +1,6 @@
-import { Text, View, StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function SpectateCard() {
-
   return (
     <View style={styles.spectateContainer}>
       <View style={styles.topRow}>

@@ -25,19 +25,23 @@ export default function RegisterPage() {
     router.push("/login");
   };
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
+  // State variables and setters for email, name, and password
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
+  // Creates an account in Firebase
   const createAccount = async () => {
     try {
       const user = await createUserWithEmailAndPassword(auth, email, password);
+      // If the user is already registered, re-route to "tabs"
       if (user) {
         router.replace("/(tabs)");
       }
     } catch (error: any) {
+      // Log error
       console.error(error);
-      Alert.alert("Account creation failed", "Please try again")
+      Alert.alert("Account creation failed", "Please try again");
     }
   };
 
@@ -110,8 +114,8 @@ export default function RegisterPage() {
               <Text style={styles.google}>Google</Text>
             </Pressable>
             <Pressable style={styles.facebookButton}>
-                <Image source={facebook} style={styles.facebookIcon}></Image>
-                <Text style={styles.facebook}>Facebook</Text>
+              <Image source={facebook} style={styles.facebookIcon}></Image>
+              <Text style={styles.facebook}>Facebook</Text>
             </Pressable>
           </View>
         </View>
@@ -128,8 +132,8 @@ const styles = StyleSheet.create({
   },
   buttonGradient: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   aeroduelLogo: {
     width: 360,
@@ -190,7 +194,7 @@ const styles = StyleSheet.create({
   signInButton: {
     backgroundColor: "red",
     height: 60,
-    overflow:'hidden',
+    overflow: "hidden",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -206,9 +210,9 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     flexDirection: "row",
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   signInText: {
     color: "white",
@@ -221,46 +225,46 @@ const styles = StyleSheet.create({
   },
   formOptions: {
     fontFamily: "Coolvetica-Regular",
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     paddingVertical: 20,
   },
   continueWith: {
-    color: 'white',
-    fontFamily: 'Coolvetica-Regular',
+    color: "white",
+    fontFamily: "Coolvetica-Regular",
   },
   authOptions: {
-    display: 'flex',
-    flexDirection: 'row',
+    display: "flex",
+    flexDirection: "row",
     justifyContent: "center",
     gap: 10,
   },
   google: {
     fontFamily: "Coolvetica-Regular",
-    color: 'white',
+    color: "white",
   },
   googleButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    overflow: 'hidden',
+    flexDirection: "row",
+    alignItems: "center",
+    overflow: "hidden",
     backgroundColor: "rgba(169, 99, 105, 100)",
     paddingVertical: 10,
     paddingHorizontal: 55,
     borderRadius: 10,
   },
   facebookButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     backgroundColor: "rgba(169, 99, 105, 100)",
     paddingVertical: 10,
     paddingHorizontal: 45,
     borderRadius: 10,
-    display: 'flex',
+    display: "flex",
   },
   facebook: {
     fontFamily: "Coolvetica-Regular",
-    color: 'white',
+    color: "white",
   },
   googleIcon: {
     width: 24,
@@ -271,6 +275,5 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     marginRight: 8,
-  }
+  },
 });
-

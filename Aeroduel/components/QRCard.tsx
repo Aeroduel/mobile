@@ -1,7 +1,6 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import OpenCameraButton from "./OpenCameraButton";
 const joinArrow = require("../assets/images/arrow-right-white.png");
-
 
 export default function QRJoin() {
   return (
@@ -57,6 +56,6 @@ const styles = StyleSheet.create({
   },
   joinArrows: {
     transform: [{ scale: 0.6 }],
-    marginLeft: 20
-  }
-})
+    marginLeft: 20,
+  },
+});

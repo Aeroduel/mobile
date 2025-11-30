@@ -1,14 +1,14 @@
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import {
-  StyleSheet,
-  View,
   Image,
-  Text,
   Pressable,
+  StyleSheet,
+  Text,
   TextInput,
+  View,
 } from "react-native";
-import { router } from "expo-router";
 const AeroduelLogo = require("../assets/images/aeroduel-banner.png");
 
 SplashScreen.preventAutoHideAsync();
@@ -225,5 +225,5 @@ const styles = StyleSheet.create({
   forgotPassword: {
     paddingTop: 10,
     fontSize: 18,
-  }
+  },
 });

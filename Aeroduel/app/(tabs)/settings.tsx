@@ -1,8 +1,8 @@
-import { ScrollView, StyleSheet, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import AeroduelHeader from "@/components/AeroduelHeader";
+import SettingsHeader from "@/components/SettingsHeader";
 import SettingsOptions from "@/components/SettingsOptions";
-import SettingsHeader from "@/components/SettingsHeader"; 
+import { LinearGradient } from "expo-linear-gradient";
+import { ScrollView, StyleSheet, View } from "react-native";
 
 export default function TabTwoScreen() {
   return (

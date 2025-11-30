@@ -1,8 +1,7 @@
 import BackHeader from "@/components/BackHeader";
 import { LinearGradient } from "expo-linear-gradient";
-// import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View, Text } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,7 +32,9 @@ export default function FAQPage() {
             Do the planes fly autonomously?
           </Text>
           <Text style={styles.faqText}>
-            No. Humans are required to pilot the planes. This involves training and should not be attempted by someone who has never flown an RC plane before.
+            No. Humans are required to pilot the planes. This involves training
+            and should not be attempted by someone who has never flown an RC
+            plane before.
           </Text>
         </View>
         <View style={styles.faqTextContainer}>
@@ -53,9 +54,10 @@ export default function FAQPage() {
           </Text>
           <Text style={styles.faqText}>
             While the goal is to work with RC planes, it should just as easily
-            work on RC cars and other remote-controlled vehicles. You can even 
-            build your own equipment to improve on ours and, for example, simulate
-            surface to air combat with custom-built turrets. The possibilities are endless.
+            work on RC cars and other remote-controlled vehicles. You can even
+            build your own equipment to improve on ours and, for example,
+            simulate surface to air combat with custom-built turrets. The
+            possibilities are endless.
           </Text>
         </View>
       </ScrollView>
@@ -81,10 +83,10 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   faqQuestion: {
-    color: 'white',
-    fontFamily: 'Coolvetica-Regular',
+    color: "white",
+    fontFamily: "Coolvetica-Regular",
     fontSize: 24,
-    textAlign: 'left',
+    textAlign: "left",
   },
   faqTitle: {
     fontWeight: "bold",
@@ -113,5 +115,5 @@ const styles = StyleSheet.create({
   },
   justPlanes: {
     marginLeft: -25,
-  }
+  },
 });

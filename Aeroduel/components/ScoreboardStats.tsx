@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 export default function ScoreboardStats() {
   return (
@@ -79,10 +79,10 @@ const styles = StyleSheet.create({
     fontSize: 36,
   },
   playerContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    flexDirection: 'row',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+    flexDirection: "row",
     paddingTop: 5,
   },
   player1: {
@@ -100,17 +100,17 @@ const styles = StyleSheet.create({
     width: 180,
   },
   playerTitle: {
-    color: 'white',
-    fontFamily: 'Coolvetica-Regular',
+    color: "white",
+    fontFamily: "Coolvetica-Regular",
     fontSize: 15,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   statsContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-evenly",
     paddingTop: 10,
   },
   player1Stats: {
@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
     width: 180,
     height: 180,
     borderRadius: 15,
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
+    flexDirection: "column",
+    justifyContent: "space-evenly",
     paddingLeft: 15,
   },
   player2Stats: {
@@ -127,13 +127,13 @@ const styles = StyleSheet.create({
     width: 180,
     height: 180,
     borderRadius: 15,
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
+    flexDirection: "column",
+    justifyContent: "space-evenly",
     paddingLeft: 15,
   },
   statsText: {
-    color: 'white',
-    fontFamily: 'Coolvetica-Regular',
+    color: "white",
+    fontFamily: "Coolvetica-Regular",
     fontSize: 25,
-  }
+  },
 });

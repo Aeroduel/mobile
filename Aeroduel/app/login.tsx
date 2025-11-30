@@ -24,10 +24,12 @@ export default function LoginPage() {
   const routeToRegister = () => {
     router.push("/register");
   };
+  
   // Push to forgot password page (not yet implemented)
-  const forgotPassword = () => {
-    router.push("/forgotPassword");
-  }
+  // const forgotPassword = () => {
+  //   router.push("/forgotPassword");
+  // }
+
   // State variables and setters for email and password (Firebase auth)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -36,10 +38,12 @@ export default function LoginPage() {
   const signIn = async () => {
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
+      // If the user is already registered, re-route to "tabs"
       if (user) {
         router.replace("/(tabs)");
       }
     } catch (error: any) {
+      // Log error
       console.error(error);
       Alert.alert("Sign in Failed", "Invalid Credentials");
     }
@@ -102,13 +106,6 @@ export default function LoginPage() {
             </Pressable>
           </View>
           <View>
-            <View style={styles.formOptions}>
-              <Pressable onPress={forgotPassword}>
-                <Text style={[styles.forgotPassword, styles.continueWith]}>
-                  Forgot your password?
-                </Text>
-              </Pressable>
-            </View>
             <View style={styles.formOptions}>
               <Text style={styles.continueWith}>Or continue with</Text>
             </View>

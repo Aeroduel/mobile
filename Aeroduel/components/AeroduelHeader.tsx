@@ -1,14 +1,16 @@
-import { Text, View, Pressable, StyleSheet } from "react-native";
-import LogoutElement from "./LogoutElement";
+import { useFonts } from "expo-font";
 import { router, SplashScreen } from "expo-router";
 import { useEffect } from "react";
-import { useFonts } from "expo-font";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import LogoutElement from "./LogoutElement";
 
 export default function AeroduelHeader() {
+  // Load the custom font
   const [fontsLoaded] = useFonts({
     "Xirod": require("../assets/fonts/Xirod.otf"),
   });
 
+  // Check if the fonts are loaded
   useEffect(() => {
     if (fontsLoaded) {
       SplashScreen.hideAsync();
@@ -19,6 +21,7 @@ export default function AeroduelHeader() {
     return null;
   }
 
+  // Sign out
   const signOut = () => {
     router.replace("/");
   };

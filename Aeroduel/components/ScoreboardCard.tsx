@@ -8,10 +8,10 @@ export default function SpectateCard() {
   const openCamera = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     router.push("/qrEntry");
-  }
+  };
   const enterPin = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-  }
+  };
 
   return (
     <View style={styles.spectateContainer}>

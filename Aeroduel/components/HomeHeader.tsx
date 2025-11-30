@@ -1,8 +1,7 @@
-import { Text, View, Pressable, StyleSheet } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import LogoutElement from "./LogoutElement";
 
 export default function HomeHeader() {
-
   return (
     <View style={styles.homePageHeader}>
       <Text style={styles.headerText}>Welcome, [user]</Text>
@@ -17,7 +16,7 @@ const styles = StyleSheet.create({
   homePageHeader: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     marginTop: 80,
   },
   headerText: {
@@ -26,6 +25,5 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     marginLeft: 20,
   },
-  logoutBlock: {
-  }
-})
+  logoutBlock: {},
+});

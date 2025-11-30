@@ -1,7 +1,7 @@
 import BackHeader from "@/components/BackHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View, Text, Image } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 const animatedAeroduelLogo = require("../assets/gifs/aeroduel-logo-animated.gif");
 const arduino = require("../assets/images/arduino-circle.png");
 const camera = require("../assets/images/camera-circle.png");

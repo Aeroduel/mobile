@@ -2,10 +2,12 @@ import { router } from "expo-router";
 import { Text, View, Pressable, StyleSheet } from "react-native";
 
 export default function SpectateButtons() {
+  // Push to QR scanner page
   const scanQR = () => {
     router.push("/qrEntry");
   };
 
+  // Push to pin entry page
   const enterPin = () => {
     router.push("/pinEntry");
   };

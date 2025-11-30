@@ -1,11 +1,12 @@
-import { Text, View, Pressable, StyleSheet, Image } from "react-native";
 import { router } from "expo-router";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 const whiteBackArrow = require("../assets/images/arrow-left-white.png");
 
 export default function BackHeader() {
+  // Route back to settings page
   const goBack = () => {
-    router.replace('/settings')
-  }
+    router.replace("/settings");
+  };
 
   return (
     <View style={styles.aeroduelHeader}>
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     marginTop: 80,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   backText: {
     fontFamily: "Coolvetica-Regular",
@@ -37,8 +38,8 @@ const styles = StyleSheet.create({
     height: 30,
   },
   backContainer: {
-    display: 'flex',
-    flexDirection: 'row',
+    display: "flex",
+    flexDirection: "row",
     marginLeft: 15,
-  }
-})
+  },
+});

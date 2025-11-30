@@ -1,27 +1,27 @@
 import { router } from "expo-router";
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function SettingsOptions() {
-  // We might need to move every settings option to a seperate component for spacing and formatting.
+  // Declare settings options
   const settings = [
-    { title: 'Username', route: '/username.tsx' },
-    { title: 'Password', route: '/password.tsx' },
-    { title: 'App Apperance', route: '/appearance.tsx' },
-    { title: 'FAQ', route: '/faq'},
-    { title: 'About', route: '/about'},
-    { title: 'Privacy Policy', route: '/privacyPolicy'},
-    { title: 'Advanced', route: '/deleteAccount.tsx'}
+    { title: "Username", route: "/username.tsx" },
+    { title: "Password", route: "/password.tsx" },
+    { title: "App Apperance", route: "/appearance.tsx" },
+    { title: "FAQ", route: "/faq" },
+    { title: "About", route: "/about" },
+    { title: "Privacy Policy", route: "/privacyPolicy" },
+    { title: "Advanced", route: "/deleteAccount.tsx" },
   ];
 
   const settingsRouter = (route: string) => {
-    router.push(route as any)
-  }
+    router.push(route as any);
+  };
 
   return (
     <View style={styles.settingsContainer}>
       {settings.map((setting, index) => (
         <Pressable key={index} onPress={() => settingsRouter(setting.route)}>
-            <Text style={styles.settingsTitle}>{setting.title}</Text>
+          <Text style={styles.settingsTitle}>{setting.title}</Text>
         </Pressable>
       ))}
     </View>
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   settingsOption: {
     flexDirection: "row",
     display: "flex",
-    backgroundColor: '#015b74ff',
+    backgroundColor: "#015b74ff",
   },
   settingsTitle: {
     color: "#FFFFFF",

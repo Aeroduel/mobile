@@ -1,8 +1,9 @@
 import { router } from "expo-router";
-import { Text, View, Image, StyleSheet, Pressable } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 const logoutIcon = require("../assets/images/logout-icon-white.png");
 
 export default function LogoutElement() {
+  // Route back to the login page
   const logout = () => {
     router.replace("/login");
   };
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     paddingRight: 15,
   },
   logoutPressable: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   logoutText: {
     color: "#FFFFFF",

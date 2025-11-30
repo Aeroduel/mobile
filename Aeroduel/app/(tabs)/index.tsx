@@ -11,10 +11,12 @@ import { ScrollView, StyleSheet, View } from "react-native";
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
+  // Load the custom font
   const [fontsLoaded] = useFonts({
     "Coolvetica-Regular": require("../../assets/fonts/coolvetica-regular.otf"),
   });
 
+  // Check if the fonts are loaded
   useEffect(() => {
     if (fontsLoaded) {
       SplashScreen.hideAsync();

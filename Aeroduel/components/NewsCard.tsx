@@ -1,21 +1,21 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
 import { router } from "expo-router";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function NewsCard() {
+  // Route to the about page
   const aboutRedirect = () => {
-    router.push('/about');
+    router.push("/about");
   };
-  
+
   return (
     <View style={styles.newsContainer}>
       <View style={styles.topRow}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Latest News</Text>
-          <Text style={styles.blockSubtitle}>
-            Welcome to Aeroduel Mobile! 
-          </Text>
+          <Text style={styles.blockSubtitle}>Welcome to Aeroduel Mobile!</Text>
           <Text style={[styles.blockSubtitle, styles.appStatus]}>
-            Great things are coming! Please be patient, as we are still developing this app!
+            Great things are coming! Please be patient, as we are still
+            developing this app!
           </Text>
           <Pressable onPress={aboutRedirect}>
             <Text style={[styles.blockSubtitle, styles.appStatus]}>

@@ -1,13 +1,20 @@
-import * as Haptics from 'expo-haptics';
+import * as Haptics from "expo-haptics";
 import { router } from "expo-router";
 import { useState } from "react";
-import { Image, Pressable, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import {
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
 const whitePlaneIcon = require("../assets/images/plane-white.png");
 const joinButton = require("../assets/images/join-btn.png");
 const joiningButton = require("../assets/images/joining-btn.png");
 
-
 export default function DuelCard() {
+  // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
 
@@ -22,9 +29,9 @@ export default function DuelCard() {
   };
 
   const viewScoreboard = () => {
-    router.push('/scoreboard')
-  }
-  
+    router.push("/scoreboard");
+  };
+
   return (
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
@@ -35,7 +42,10 @@ export default function DuelCard() {
           </Text>
         </View>
         <Pressable onPress={viewScoreboard}>
-          <Image source={whitePlaneIcon} style={biggerDevice ? styles.largeScreen : styles.smallScreen} />
+          <Image
+            source={whitePlaneIcon}
+            style={biggerDevice ? styles.largeScreen : styles.smallScreen}
+          />
         </Pressable>
       </View>
       <Pressable style={styles.buttonContainer} onPress={changeImage}>
@@ -90,9 +100,9 @@ const styles = StyleSheet.create({
     height: 75,
   },
   buttonContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   startButton: {
     width: 200,
@@ -102,9 +112,9 @@ const styles = StyleSheet.create({
   largeScreen: {
     width: 75,
     height: 70,
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
     marginTop: 13,
     marginLeft: 80,
   },
@@ -114,4 +124,4 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginLeft: 35,
   },
-})
+});
