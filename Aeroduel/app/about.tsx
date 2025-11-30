@@ -42,11 +42,11 @@ export default function AboutPage() {
           </Text>
           <Text style={styles.aboutText}>
             We&apos;re equipping high-performance RC fighter jets with camera
-            systems that automatically detect targets equipped with Aeroduel
+            systems that automatically detect targets equipped with
             detection lights. This allows aircraft to use advanced computer
             vision to lock onto targets and simulate aerial combat, keeping
             score via a Wi-Fi connection to the host server back on the ground.
-            Add FPV cameras and pilots can get a true cockpit experience and aim
+            Add FPV cameras and pilots can get a cockpit experience and aim
             like a pro.
           </Text>
           <Text style={styles.aboutText}>
@@ -91,7 +91,7 @@ export default function AboutPage() {
           <Text style={styles.aboutHeader}>About Our Team</Text>
         </View>
         <View style={styles.aboutTextContainer}>
-          <Text style={styles.aboutText}>
+          <Text style={[styles.aboutText, styles.lastText]}>
             Aeroduel is being built by a team of 5 Full-Stack Developers from
             Atlas School in Tulsa, Oklahoma. We are currently working on our
             promotional website, desktop server app, and mobile app, in addition
@@ -125,7 +125,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontFamily: "Coolvetica-Regular",
     fontSize: 45,
-    paddingBottom: 10,
   },
   aboutTextContainer: {
     display: "flex",
@@ -180,5 +179,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Coolvetica-Regular',
     color: 'white',
     fontSize: 16,
+  },
+  lastText: {
+    paddingBottom: 60,
   }
 });
