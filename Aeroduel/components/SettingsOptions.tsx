@@ -4,13 +4,13 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 export default function SettingsOptions() {
   // Declare settings options
   const settings = [
-    { title: "Username", route: "/username.tsx" },
-    { title: "Password", route: "/password.tsx" },
-    { title: "App Apperance", route: "/appearance.tsx" },
+    { title: "Username", route: "/username" },
+    { title: "Password", route: "/password" },
+    { title: "App Apperance", route: "/appAppearance" },
     { title: "FAQ", route: "/faq" },
     { title: "About", route: "/about" },
     { title: "Privacy Policy", route: "/privacyPolicy" },
-    { title: "Advanced", route: "/deleteAccount.tsx" },
+    { title: "Advanced", route: "/deleteAccount" },
   ];
 
   const settingsRouter = (route: string) => {

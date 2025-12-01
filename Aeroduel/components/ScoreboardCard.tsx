@@ -17,9 +17,9 @@ export default function SpectateCard() {
     <View style={styles.spectateContainer}>
       <View style={styles.topRow}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Scoreboard</Text>
+          <Text style={styles.blockHeader}>Link Plane</Text>
           <Text style={styles.blockSubtitle}>
-            View ongoing match statistics. Scan QR code or enter pin.
+            View online planes, and connect to a match.
           </Text>
         </View>
       </View>

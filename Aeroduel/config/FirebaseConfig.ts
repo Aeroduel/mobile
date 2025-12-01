@@ -11,6 +11,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyAWB2JAB0p1KpwSfZZNIP5nPky742RKlao",
   authDomain: "aeroduel-atlas.firebaseapp.com",
   projectId: "aeroduel-atlas",
+  
   storageBucket: "aeroduel-atlas.firebasestorage.app",
   messagingSenderId: "513384084084",
   appId: "1:513384084084:web:56b25d9d78c3ddd80a1721",
