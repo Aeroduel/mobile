@@ -10,6 +10,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useState } from "react";
@@ -29,6 +30,10 @@ export default function LoginPage() {
   // const forgotPassword = () => {
   //   router.push("/forgotPassword");
   // }
+
+  // // Declare window dimensions
+  // const { width } = useWindowDimensions();
+  // const biggerDevice = width >= 439;
 
   // State variables and setters for email and password (Firebase auth)
   const [email, setEmail] = useState("");
@@ -282,4 +287,8 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     fontSize: 18,
   },
+  largeScreen: {
+    marginTop: 100,
+    paddingTop: 10,
+  }
 });

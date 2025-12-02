@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 10,
     marginLeft: 30,
-    fontWeight: "bold",
+    fontWeight: "light",
   },
   logoutIcon: {
     width: 25,

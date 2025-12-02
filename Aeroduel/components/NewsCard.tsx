@@ -7,23 +7,27 @@ export default function NewsCard() {
     router.push("/about");
   };
 
+  const date = new Date().toLocaleDateString();
+
   return (
     <View style={styles.newsContainer}>
       <View style={styles.topRow}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Latest News</Text>
-          <Text style={styles.blockSubtitle}>Welcome to Aeroduel Mobile!</Text>
-          <Text style={[styles.blockSubtitle, styles.appStatus]}>
-            Great things are coming! Please be patient, as we are still
-            developing this app!
+          <Text style={styles.blockHeader}>Latest News 📰</Text>
+          <Text style={styles.blockSubtitle}>
+            Great features are coming! Please be patient, as we are still
+            developing this app! We&apos;re working behind the scenes to
+            polish every feature and ensure a seamless experience.
+            We&apos;re committed to building a reliable application that
+            you&apos;ll love, and we can&apos;t wait for you to see the final product.
           </Text>
           <Pressable onPress={aboutRedirect}>
-            <Text style={[styles.blockSubtitle, styles.appStatus]}>
-              Learn more about Aeroduel and our team here
+            <Text style={styles.blockSubtitle}>
+              Learn more about Aeroduel and our team <Text style={styles.linkText}>here</Text>
             </Text>
           </Pressable>
           <Text style={styles.blockSubtitle}>
-            - Aeroduel Mobile Development Team 🛩️
+            Updated: <Text>{date}</Text>
           </Text>
         </View>
       </View>
@@ -54,7 +58,7 @@ const styles = StyleSheet.create({
   },
   blockText: {
     paddingTop: 15,
-    width: 180,
+    width: 200,
     marginLeft: 10,
   },
   blockHeader: {
@@ -67,12 +71,12 @@ const styles = StyleSheet.create({
     fontWeight: 400,
     fontSize: 13,
     width: 310,
-    marginVertical: 5,
+    marginVertical: 10,
   },
   appStatus: {
     width: 330,
     fontSize: 10,
-    marginBottom: 15,
+    marginBottom: 8,
   },
   bottomRow: {
     display: "flex",
@@ -117,4 +121,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     right: -20,
   },
+  linkText: {
+    fontWeight: 'bold',
+  }
 });

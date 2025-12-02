@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import LogoutElement from "./LogoutElement";
 
-export default function SettingsHeader() {
+export default function StatisticsHeader() {
   // Load the custom font
   const [fontsLoaded] = useFonts({
     "Xirod": require("../assets/fonts/Xirod.otf"),
@@ -29,7 +29,7 @@ export default function SettingsHeader() {
   return (
     <View style={styles.aeroduelHeader}>
       <Pressable>
-        <Text style={styles.headerText}>Settings</Text>
+        <Text style={styles.headerText}>Statistics</Text>
       </Pressable>
       <Pressable onPress={signOut}>
         <LogoutElement />

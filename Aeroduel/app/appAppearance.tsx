@@ -27,7 +27,7 @@ export default function AppAppearance() {
   }
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <LinearGradient
         colors={["#000000", "#FF0000"]}
         start={{ x: 0, y: 0 }}
@@ -46,13 +46,34 @@ export default function AppAppearance() {
         <AppAppearanceHeader />
         {/* MAIN CONTENT */}
         <Pressable onPress={aeroduelAlert} style={styles.appearanceOption}>
-          <Text style={styles.appearanceTitle}>Aeroduel Theme</Text>
+          <Text style={styles.appearanceTitle}>Aeroduel Theme
+            <View style={styles.themePreviewBlocks}>
+              <View style={[styles.colorPreview, styles.black]}></View>
+              <View style={[styles.colorPreview, styles.red]}></View>
+              <View style={[styles.colorPreview, styles.white]}></View>
+            </View>
+          </Text>
+          <Text style={styles.appearanceSubtitle}>Derived from the colors of our brand</Text>
         </Pressable>
         <Pressable onPress={duskAlert} style={styles.appearanceOption}>
-          <Text style={styles.appearanceTitle}>Dusk Theme</Text>
+          <Text style={styles.appearanceTitle}>Dusk Theme
+            <View style={styles.themePreviewBlocks}>
+              <View style={[styles.colorPreview, styles.darkGrey]}></View>
+              <View style={[styles.colorPreview, styles.lightGrey]}></View>
+              <View style={[styles.colorPreview, styles.white]}></View>
+            </View>
+          </Text>
+          <Text style={styles.appearanceSubtitle}>Darker colors, for those that prefer them.</Text>
         </Pressable>
         <Pressable onPress={lightAlert} style={styles.appearanceOption}>
-          <Text style={styles.appearanceTitle}>Light Theme</Text>
+          <Text style={styles.appearanceTitle}>Light Theme
+            <View style={styles.themePreviewBlocks}>
+              <View style={[styles.colorPreview, styles.skyBlue]}></View>
+              <View style={[styles.colorPreview, styles.white]}></View>
+              <View style={[styles.colorPreview, styles.black]}></View>
+            </View>
+          </Text>
+          <Text style={styles.appearanceSubtitle}>Lighter colors, for those that prefer them.</Text>
         </Pressable>
       </ScrollView>
     </View>
@@ -64,6 +85,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     position: "relative",
+    fontFamily: 'Coolvetica-Regular',
   },
   backgroundGradient: {
     position: "absolute",
@@ -77,21 +99,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 50,
   },
-  appearanceHeader: {
-    fontWeight: "bold",
+  appearanceMainHeader: {
     color: "white",
-    fontFamily: "Coolvetica-Regular",
-    fontSize: 50,
-  },
-  dateContainer: {
-    alignItems: 'center',
-  },
-  dateText: {
-    textAlign: 'center',
-  },
-  privacyMainHeader: {
-    color: "white",
-    fontFamily: "Coolvetica-Regular",
     fontSize: 50,
   },
   appearanceTextContainer: {
@@ -103,36 +112,81 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "left",
     width: "80%",
-    fontFamily: "Coolvetica-Regular",
     lineHeight: 35,
     fontSize: 15,
-  },
-  privacyHeader: {
-    fontSize: 36,
-    color: "white",
-    fontFamily: "Coolvetica-Regular",
-  },
-  privacyContainer: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  informationUse: {
-    fontSize: 33,
-  },
-  policyChanges: {
-    fontSize: 34,
   },
   appearanceOption: {
     backgroundColor: "rgba(145, 72, 72, 0.5)",
     borderRadius: 15,
-    marginVertical: 10,
+    marginVertical: 5,
     marginHorizontal: 10,
   },
   appearanceTitle: {
-    fontFamily: 'Coolvetica Regular',
     color: 'white',
     fontSize: 24,
     paddingLeft: 30,
-    paddingVertical: 15,
-  }
+    paddingTop: 15,
+    paddingBottom: 5,
+    fontFamily: 'Coolvetica-Regular',
+  },
+  appearanceSubtitle: {
+    color: 'white',
+    fontSize: 13,
+    fontWeight: 300,
+    paddingLeft: 30,
+    paddingBottom: 15,
+  },
+  themePreviewBlocks: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 10,
+    paddingLeft: 10,
+  },
+  colorPreview: {
+    width: 20,
+    height: 20,
+    borderRadius: 4,
+  },
+  black: {
+    backgroundColor: 'black',
+    shadowColor: 'black',
+    shadowOffset: { width: 1, height: 1},
+    shadowOpacity: 0.4,
+    shadowRadius: 5,
+  },
+  red: {
+    backgroundColor: 'red',
+    shadowColor: 'red',
+    shadowOffset: { width: 1, height: 1},
+    shadowOpacity: 0.4,
+    shadowRadius: 5,
+  },
+  white: {
+    backgroundColor: 'white',
+    shadowColor: 'white',
+    shadowOffset: { width: 1, height: 1},
+    shadowOpacity: 0.4,
+    shadowRadius: 5,
+  },
+  darkGrey: {
+    backgroundColor: '#242424ff',
+    shadowColor: '#242424ff',
+    shadowOffset: { width: 1, height: 1},
+    shadowOpacity: 0.9,
+    shadowRadius: 5,
+  },
+  lightGrey: {
+    backgroundColor: '#4d4d4dff',
+    shadowColor: '#4d4d4dff',
+    shadowOffset: { width: 1, height: 1},
+    shadowOpacity: 0.9,
+    shadowRadius: 5,
+  },
+  skyBlue: {
+    backgroundColor: '#96eaffff',
+    shadowColor: '#96eaffff',
+    shadowOffset: { width: 1, height: 1},
+    shadowOpacity: 0.4,
+    shadowRadius: 5,
+  },
 });

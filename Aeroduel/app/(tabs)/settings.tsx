@@ -1,5 +1,5 @@
-import AeroduelHeader from "@/components/AeroduelHeader";
 import SettingsHeader from "@/components/SettingsHeader";
+import SettingsHeaderCard from "@/components/SettingsHeaderCard";
 import SettingsOptions from "@/components/SettingsOptions";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollView, StyleSheet, View } from "react-native";
@@ -14,7 +14,7 @@ export default function TabTwoScreen() {
         style={styles.backgroundGradient}
       ></LinearGradient>
       {/* PAGE HEADER */}
-      <AeroduelHeader />
+      <SettingsHeader />
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
@@ -22,7 +22,7 @@ export default function TabTwoScreen() {
       >
         {/* MAIN CONTENT */}
         <View style={{ flex: 1 }}>
-          <SettingsHeader />
+          <SettingsHeaderCard />
           <SettingsOptions />
         </View>
       </ScrollView>

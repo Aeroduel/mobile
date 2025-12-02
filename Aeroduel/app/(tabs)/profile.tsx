@@ -1,5 +1,5 @@
-import AeroduelHeader from "@/components/AeroduelHeader";
 import ProfileHeaderCard from "@/components/ProfileHeaderCard";
+import ProfileHeader from "@/components/ProfileHeader";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
@@ -34,7 +34,7 @@ export default function ProfilePage() {
         style={styles.backgroundGradient}
       ></LinearGradient>
       {/* PAGE HEADER */}
-      <AeroduelHeader />
+      <ProfileHeader />
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,

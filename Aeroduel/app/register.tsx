@@ -33,11 +33,15 @@ export default function RegisterPage() {
   // Creates an account in Firebase
   const createAccount = async () => {
     try {
-      const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredentials = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       // Set the user's display name
       await updateProfile(userCredentials.user, {
         displayName: name,
-      })
+      });
       // If the user is already registered, re-route to "tabs"
       if (userCredentials) {
         router.replace("/(tabs)");

@@ -23,12 +23,12 @@ export default function StatisticsCard() {
             View the statistics of your past matches.
           </Text>
         </View>
-        <View>
+        {/* <View>
           <Image
             source={whitePlaneIcon}
             style={biggerDevice ? styles.largeScreen : styles.smallScreen}
           />
-        </View>
+        </View> */}
       </View>
     </View>
   );
@@ -42,25 +42,17 @@ const styles = StyleSheet.create({
     marginTop: 5,
     marginBottom: 5,
     paddingLeft: 20,
-    paddingRight: 20,
     height: 110,
     borderRadius: 15,
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "center",
     flexDirection: "column",
-    paddingTop: 0,
-    // Need to play with the shadow colors
-    // shadowColor: '#512929ff',
-    // shadowOffset: { width: 10, height: 10 },
-    // shadowOpacity: 10,
-    // shadowRadius: 5,
   },
   duelContent: {
     flexDirection: "row",
   },
   blockText: {
-    paddingTop: 15,
-    width: 220,
+    width: 300,
     marginLeft: 10,
   },
   blockHeader: {
@@ -70,31 +62,23 @@ const styles = StyleSheet.create({
   },
   blockSubtitle: {
     color: "#FFFFFF",
-    fontWeight: "700",
+    fontWeight: 300,
     fontSize: 13,
+    marginBottom: 10,
   },
-  whitePlaneIcon: {
-    width: 80,
-    height: 75,
-  },
-  startButton: {
-    width: 200,
-    height: 46,
-    marginBottom: 20,
-  },
-  largeScreen: {
-    width: 75,
-    height: 70,
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "flex-end",
-    marginTop: 13,
-    marginLeft: 80,
-  },
-  smallScreen: {
-    width: 80,
-    height: 75,
-    marginTop: 15,
-    marginLeft: 15,
-  },
+  // largeScreen: {
+  //   width: 75,
+  //   height: 70,
+  //   display: "flex",
+  //   justifyContent: "flex-end",
+  //   alignItems: "flex-end",
+  //   marginTop: 13,
+  //   marginLeft: 80,
+  // },
+  // smallScreen: {
+  //   width: 80,
+  //   height: 75,
+  //   marginTop: 15,
+  //   marginLeft: 15,
+  // },
 });

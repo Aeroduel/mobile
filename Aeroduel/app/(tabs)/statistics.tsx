@@ -1,4 +1,4 @@
-import AeroduelHeader from "@/components/AeroduelHeader";
+import StatisticsHeader from "@/components/StatisticsHeader";
 import StatisticsCard from "@/components/StatisticsHeaderCard";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
@@ -34,7 +34,7 @@ export default function HomeScreen() {
         style={styles.backgroundGradient}
       ></LinearGradient>
       {/* PAGE HEADER */}
-      <AeroduelHeader />
+      <StatisticsHeader />
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,

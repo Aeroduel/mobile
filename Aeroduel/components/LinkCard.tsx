@@ -17,9 +17,9 @@ export default function SpectateCard() {
     <View style={styles.spectateContainer}>
       <View style={styles.topRow}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Link Plane</Text>
+          <Text style={styles.blockHeader}>Link Your Plane 🛩️</Text>
           <Text style={styles.blockSubtitle}>
-            View nearby planes that are online, and ready to be connected.
+            View nearby planes that are online, and ready to be connected. Lights will flash when successful.
           </Text>
         </View>
       </View>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   blockText: {
     paddingTop: 15,
-    width: 180,
+    width: 250,
     marginLeft: 10,
   },
   blockHeader: {
@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: 400,
     fontSize: 13,
-    width: 230,
+    width: 310,
+    paddingTop: 5,
   },
   bottomRow: {
     display: "flex",

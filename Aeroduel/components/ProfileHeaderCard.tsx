@@ -13,13 +13,19 @@ export default function StatisticsCard() {
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
 
+  // Check if the current user does not exist
+  if (!auth.currentUser) {
+    return
+  }
+
+  // Set the user to the current user from auth
   const user = auth.currentUser;
 
   return (
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Profile Page</Text>
+          <Text style={styles.blockHeader}>{auth.currentUser.displayName}</Text>
           <Text style={styles.blockSubtitle}>
             {user.email}
           </Text>

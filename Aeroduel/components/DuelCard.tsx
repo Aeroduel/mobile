@@ -9,7 +9,6 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-const whitePlaneIcon = require("../assets/images/plane-white.png");
 const joinButton = require("../assets/images/join-btn.png");
 const joiningButton = require("../assets/images/joining-btn.png");
 
@@ -41,7 +40,7 @@ export default function DuelCard() {
             Lock & Load. Initiate Combat.
           </Text>
           <Text style={[styles.blockSubtitle, styles.partySize]}>
-            Maximum Party Size: 3
+            Join with your friends, or enemies. Max Players: 3
           </Text>
         </View>
         <Pressable onPress={viewScoreboard}>
@@ -85,7 +84,7 @@ const styles = StyleSheet.create({
   },
   blockText: {
     paddingTop: 15,
-    width: 230,
+    width: 350,
     marginLeft: 10,
   },
   blockHeader: {

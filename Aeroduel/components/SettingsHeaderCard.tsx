@@ -5,9 +5,9 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-const eyedropper = require("../assets/images/eyedropper.png")
+const whiteSettingsGear = require("../assets/images/settings-header-gear-white.png");
 
-export default function AppAppearanceHeader() {
+export default function StatisticsCard() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
@@ -16,14 +16,14 @@ export default function AppAppearanceHeader() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>App Appearance</Text>
+          <Text style={styles.blockHeader}>Settings</Text>
           <Text style={styles.blockSubtitle}>
-            Change the theme of your Aeroduel app for your optimal experience.
+            Adjust preferences, and control your experience
           </Text>
         </View>
         <View>
           <Image
-            source={eyedropper}
+            source={whiteSettingsGear}
             style={biggerDevice ? styles.largeScreen : styles.smallScreen}
           />
         </View>
@@ -47,6 +47,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "column",
     paddingTop: 0,
+    // Need to play with the shadow colors
+    // shadowColor: '#512929ff',
+    // shadowOffset: { width: 10, height: 10 },
+    // shadowOpacity: 10,
+    // shadowRadius: 5,
   },
   duelContent: {
     flexDirection: "row",
@@ -85,9 +90,9 @@ const styles = StyleSheet.create({
     marginLeft: 80,
   },
   smallScreen: {
-    width: 60,
-    height: 60,
-    marginTop: 25,
-    marginLeft: 30,
+    width: 70,
+    height: 70,
+    marginTop: 18,
+    marginLeft: 20,
   },
 });
