@@ -1,5 +1,5 @@
 import AeroduelHeader from "@/components/AeroduelHeader";
-import StatisticsCard from "@/components/StatisticsHeaderCard";
+import ProfileHeaderCard from "@/components/ProfileHeaderCard";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
@@ -8,7 +8,7 @@ import { ScrollView, StyleSheet, View } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
-export default function HomeScreen() {
+export default function ProfilePage() {
   // Load the custom font
   const [fontsLoaded] = useFonts({
     "Coolvetica-Regular": require("../../assets/fonts/coolvetica-regular.otf"),
@@ -44,7 +44,7 @@ export default function HomeScreen() {
       >
         {/* MAIN CONTENT */}
         <View>
-          <StatisticsCard />
+          <ProfileHeaderCard />
         </View>
       </ScrollView>
     </View>

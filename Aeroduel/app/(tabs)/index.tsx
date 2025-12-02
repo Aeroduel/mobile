@@ -1,7 +1,7 @@
 import AeroduelHeader from "@/components/AeroduelHeader";
 import DuelCard from "@/components/DuelCard";
 import NewsCard from "@/components/NewsCard";
-import ScoreboardCard from "@/components/ScoreboardCard";
+import ScoreboardCard from "@/components/LinkCard";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";

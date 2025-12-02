@@ -5,7 +5,8 @@ import { Tabs } from "expo-router";
 import { Image } from "react-native";
 const houseIcon = require("../../assets/images/house-icon-white.png");
 const gearIcon = require("../../assets/images/settings-gear-white.png");
-const graph = require("../../assets/images/stats.png");
+const graphIcon = require("../../assets/images/stats.png");
+const userIcon = require("../../assets/images/user.png");
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -41,7 +42,16 @@ export default function TabLayout() {
         options={{
           title: "Statistics",
           tabBarIcon: ({ color }) => (
-            <Image source={graph} style={{ width: 25, height: 25 }}></Image>
+            <Image source={graphIcon} style={{ width: 25, height: 25 }}></Image>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
+            <Image source={userIcon} style={{ width: 25, height: 25 }}></Image>
           ),
         }}
       />

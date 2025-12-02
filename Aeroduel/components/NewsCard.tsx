@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   blockSubtitle: {
     color: "#FFFFFF",
-    fontWeight: "700",
+    fontWeight: 400,
     fontSize: 13,
     width: 310,
     marginVertical: 5,

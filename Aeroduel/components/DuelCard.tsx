@@ -36,16 +36,19 @@ export default function DuelCard() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Join a Match</Text>
+          <Text style={styles.blockHeader}>Join a Match 🎯</Text>
           <Text style={styles.blockSubtitle}>
-            Challenge Friends, Win Glory. Join with up to 3 players.
+            Lock & Load. Initiate Combat.
+          </Text>
+          <Text style={[styles.blockSubtitle, styles.partySize]}>
+            Maximum Party Size: 3
           </Text>
         </View>
         <Pressable onPress={viewScoreboard}>
-          <Image
+          {/* <Image
             source={whitePlaneIcon}
             style={biggerDevice ? styles.largeScreen : styles.smallScreen}
-          />
+          /> */}
         </Pressable>
       </View>
       <Pressable style={styles.buttonContainer} onPress={changeImage}>
@@ -82,7 +85,7 @@ const styles = StyleSheet.create({
   },
   blockText: {
     paddingTop: 15,
-    width: 200,
+    width: 230,
     marginLeft: 10,
   },
   blockHeader: {
@@ -92,13 +95,13 @@ const styles = StyleSheet.create({
   },
   blockSubtitle: {
     color: "#FFFFFF",
-    fontWeight: "700",
+    fontWeight: 400,
     fontSize: 13,
   },
-  whitePlaneIcon: {
-    width: 80,
-    height: 75,
-  },
+  // whitePlaneIcon: {
+  //   width: 80,
+  //   height: 75,
+  // },
   buttonContainer: {
     display: "flex",
     justifyContent: "center",
@@ -108,6 +111,9 @@ const styles = StyleSheet.create({
     width: 200,
     height: 46,
     marginBottom: 20,
+  },
+  partySize: {
+    paddingTop: 2,
   },
   largeScreen: {
     width: 75,

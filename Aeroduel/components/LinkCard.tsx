@@ -19,7 +19,7 @@ export default function SpectateCard() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Link Plane</Text>
           <Text style={styles.blockSubtitle}>
-            View online planes, and connect to a match.
+            View nearby planes that are online, and ready to be connected.
           </Text>
         </View>
       </View>
@@ -72,9 +72,9 @@ const styles = StyleSheet.create({
   },
   blockSubtitle: {
     color: "#FFFFFF",
-    fontWeight: "700",
+    fontWeight: 400,
     fontSize: 13,
-    width: 200,
+    width: 230,
   },
   bottomRow: {
     display: "flex",
