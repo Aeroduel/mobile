@@ -4,8 +4,6 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 export default function SettingsOptions() {
   // Declare settings options
   const settings = [
-    { title: "Username", route: "/username" },
-    { title: "Password", route: "/password" },
     { title: "App Apperance", route: "/appAppearance" },
     { title: "FAQ", route: "/faq" },
     { title: "About", route: "/about" },

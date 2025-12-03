@@ -64,12 +64,11 @@ export default function RegisterPage() {
       <View style={styles.loginContainer}>
         <Image source={AeroduelLogo} style={styles.aeroduelLogo} />
         <View style={styles.signInRedirect}>
-          <Text style={styles.redirectText}>
-            Already have an account?
-            <Pressable onPress={routeToLogin}>
-              <Text style={[styles.redirectText, styles.here]}>Sign In</Text>
-            </Pressable>
-          </Text>
+          <Pressable onPress={routeToLogin}>
+            <Text style={styles.redirectText}>
+              Already have an account? Sign in Here
+            </Text>
+          </Pressable>
         </View>
         <View style={styles.loginForm}>
           <View style={styles.formHeaderText}>
@@ -173,8 +172,8 @@ const styles = StyleSheet.create({
   redirectText: {
     color: "white",
     fontFamily: "Coolvetica-Regular",
+    fontWeight: 'light',
     flexDirection: "row",
-    paddingBottom: 11,
   },
   formHeading: {
     fontSize: 40,

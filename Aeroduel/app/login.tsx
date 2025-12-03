@@ -67,14 +67,11 @@ export default function LoginPage() {
           <Image source={AeroduelLogo} style={styles.aeroduelLogo} />
         </Pressable>
         <View style={styles.signInRedirect}>
-          <Text style={styles.redirectText}>
-            Don&apos;t have an account?
             <Pressable onPress={routeToRegister} style={styles.redirectButton}>
-              <Text style={[styles.redirectText, styles.here]}>
-                Get Started
+              <Text style={styles.redirectText}>
+                Don&apos;t have an account? Get Started
               </Text>
             </Pressable>
-          </Text>
         </View>
         <View style={styles.loginForm}>
           <View style={styles.formHeaderText}>
@@ -173,7 +170,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontFamily: "Coolvetica-Regular",
     flexDirection: "row",
-    paddingBottom: 11,
   },
   formHeading: {
     fontSize: 40,

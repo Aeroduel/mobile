@@ -9,7 +9,7 @@ import {
 } from "react-native";
 const whitePlaneIcon = require("../assets/images/plane-white.png");
 
-export default function StatisticsCard() {
+export default function EditAccountCard() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
@@ -18,17 +18,11 @@ export default function StatisticsCard() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Match Statistics</Text>
+          <Text style={styles.blockHeader}>Account Information</Text>
           <Text style={styles.blockSubtitle}>
-            View the statistics of your past matches.
+            Update your personal information.
           </Text>
         </View>
-        {/* <View>
-          <Image
-            source={whitePlaneIcon}
-            style={biggerDevice ? styles.largeScreen : styles.smallScreen}
-          />
-        </View> */}
       </View>
     </View>
   );

@@ -29,7 +29,7 @@ export default function ProfileHeader() {
   return (
     <View style={styles.aeroduelHeader}>
       <Pressable>
-        <Text style={styles.headerText}>Profile</Text>
+        <Text style={styles.headerText}>Account</Text>
       </Pressable>
       <Pressable onPress={signOut}>
         <LogoutElement />

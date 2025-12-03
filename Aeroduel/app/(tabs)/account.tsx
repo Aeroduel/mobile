@@ -1,5 +1,7 @@
-import ProfileHeaderCard from "@/components/ProfileHeaderCard";
-import ProfileHeader from "@/components/ProfileHeader";
+import ProfileHeaderCard from "@/components/AccountHeaderCard";
+import ProfileHeader from "@/components/AccountHeader";
+import StatisticsHeaderCard from "@/components/StatisticsHeaderCard";
+import EditAccountCard from "@/components/EditAccountCard";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
@@ -45,6 +47,8 @@ export default function ProfilePage() {
         {/* MAIN CONTENT */}
         <View>
           <ProfileHeaderCard />
+          <StatisticsHeaderCard />
+          <EditAccountCard />
         </View>
       </ScrollView>
     </View>

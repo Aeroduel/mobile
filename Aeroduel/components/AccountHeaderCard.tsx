@@ -6,7 +6,7 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-const userPlaceholder = require("../assets/images/user-round-white.png");
+const userPlaceholder = require("../assets/images/user.png");
 
 export default function StatisticsCard() {
   // Declare window dimensions
@@ -21,6 +21,10 @@ export default function StatisticsCard() {
   // Set the user to the current user from auth
   const user = auth.currentUser;
 
+  // Year the account was created in Firebase
+  // const accountCreated = user.metadata.creationTime;
+  // const createdAt = new Date(accountCreated).getFullYear();
+
   return (
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
@@ -29,11 +33,15 @@ export default function StatisticsCard() {
           <Text style={styles.blockSubtitle}>
             {user.email}
           </Text>
+          <View style={styles.onlineStatus}>
+            <View style={styles.userStatus}></View>
+            <Text style={styles.blockSubtitle}>Online</Text>
+          </View>
         </View>
-        <View>
+        <View style={styles.imageContainer}>
           <Image
             source={userPlaceholder}
-            style={biggerDevice ? styles.largeScreen : styles.smallScreen}
+            style={styles.userImage}
           />
         </View>
       </View>
@@ -44,22 +52,13 @@ export default function StatisticsCard() {
 const styles = StyleSheet.create({
   duelContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 5,
-    marginBottom: 5,
-    paddingLeft: 20,
-    paddingRight: 20,
+    marginHorizontal: 10,
+    marginVertical: 5,
+    paddingHorizontal: 20,
     height: 110,
     borderRadius: 15,
     display: "flex",
     justifyContent: "center",
-    flexDirection: "column",
-    // Need to play with the shadow colors
-    // shadowColor: '#512929ff',
-    // shadowOffset: { width: 10, height: 10 },
-    // shadowOpacity: 10,
-    // shadowRadius: 5,
   },
   duelContent: {
     flexDirection: "row",
@@ -67,6 +66,7 @@ const styles = StyleSheet.create({
   blockText: {
     width: 220,
     marginLeft: 10,
+    paddingBottom: 10,
   },
   blockHeader: {
     color: "#FFFFFF",
@@ -88,18 +88,27 @@ const styles = StyleSheet.create({
     height: 46,
     marginBottom: 20,
   },
-  largeScreen: {
-    width: 65,
+  onlineStatus: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 5,
+    paddingTop: 5,
+  },
+  userStatus: {
+    backgroundColor: '#1aff00ff',
+    height: 8,
+    width: 8,
+    borderRadius: '100%',
+    marginTop: 6,
+  },
+  userImage: {
+    width: 60,
     height: 60,
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "flex-end",
-    marginTop: 13,
-    marginLeft: 80,
+    marginLeft: 30,
   },
-  smallScreen: {
-    width: 70,
-    height: 65,
-    marginLeft: 20,
-  },
+  imageContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  }
 });

@@ -44,7 +44,7 @@ export default function HomeScreen() {
       >
         {/* MAIN CONTENT */}
         <View>
-          <StatisticsCard />
+          {/* <StatisticsCard /> */}
         </View>
       </ScrollView>
     </View>

@@ -15,7 +15,7 @@ export default function SpectateCard() {
 
 const styles = StyleSheet.create({
   spectateContainer: {
-    backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
+    backgroundColor: "rgba(145, 72, 72, 0.3)", // rgba to set opacity for background
     marginLeft: 10,
     marginRight: 10,
     marginTop: 5,
