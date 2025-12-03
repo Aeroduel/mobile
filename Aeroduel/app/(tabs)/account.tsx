@@ -1,7 +1,7 @@
 import ProfileHeaderCard from "@/components/AccountHeaderCard";
 import ProfileHeader from "@/components/AccountHeader";
 import StatisticsHeaderCard from "@/components/StatisticsHeaderCard";
-import EditAccountCard from "@/components/EditAccountCard";
+import EditAccountCard from "@/components/AccountInformationCard";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
