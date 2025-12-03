@@ -20,12 +20,12 @@ const facebook = require("../assets/images/facebook.png");
 SplashScreen.preventAutoHideAsync();
 
 export default function LoginPage() {
-
   // Push to create account page
   const routeToRegister = () => {
     router.push("/register");
   };
 
+  // Push to forgot password page
   const forgotPassword = () => {
     router.push("/forgotPassword");
   };
@@ -49,7 +49,7 @@ export default function LoginPage() {
     } catch (error: any) {
       // Log error
       console.error(error);
-      Alert.alert("Login Failed", "Invalid email or password");
+      Alert.alert("Login Failed", "Invalid email and password");
     }
   };
 

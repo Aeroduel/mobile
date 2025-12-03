@@ -18,7 +18,7 @@ export default function StatisticsCard() {
     return
   }
 
-  // Set the user to the current user from auth
+  // Set the user to the current user from auth to access properties
   const user = auth.currentUser;
 
   // Year the account was created in Firebase

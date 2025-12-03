@@ -1,15 +1,21 @@
 import ProfileHeaderCard from "@/components/AccountHeaderCard";
 import ProfileHeader from "@/components/AccountHeader";
 import StatisticsHeaderCard from "@/components/StatisticsHeaderCard";
-import EditAccountCard from "@/components/AccountInformationCard";
+import AccountInformationCard from "@/components/AccountInformationCard";
+import AccountCreationDateCard from "@/components/AccountCreationDate";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View, Pressable } from "react-native";
+import { router } from "expo-router";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function ProfilePage() {
+  const statisticsRoute = () => {
+    router.push('/statistics')
+  }
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -30,8 +36,11 @@ export default function ProfilePage() {
         {/* MAIN CONTENT */}
         <View>
           <ProfileHeaderCard />
-          <StatisticsHeaderCard />
-          <EditAccountCard />
+          <AccountCreationDateCard />
+          <Pressable onPress={statisticsRoute}>
+            <StatisticsHeaderCard />
+          </Pressable>
+          <AccountInformationCard />
         </View>
       </ScrollView>
     </View>

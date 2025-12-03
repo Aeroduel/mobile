@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     borderRadius: 10,
     color: "white",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     fontSize: 18,
   },
   signInButton: {
@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
   },
   continueWith: {
     color: "white",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
   },
   authOptions: {
     display: "flex",

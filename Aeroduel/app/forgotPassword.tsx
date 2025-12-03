@@ -2,6 +2,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import {
+  Alert,
   Image,
   Pressable,
   StyleSheet,
@@ -18,6 +19,13 @@ export default function ForgotPassword() {
   const routeToLogin = () => {
     router.push("/login");
   };
+
+  const emailSent = () => {
+    Alert.alert(
+      "Success!",
+      "Check your inbox to reset your password"
+    )
+  }
 
   return (
     <View style={{ flex: 1 }}>
@@ -48,7 +56,7 @@ export default function ForgotPassword() {
               placeholder="Email..."
               placeholderTextColor={"white"}
             ></TextInput>
-            <Pressable style={styles.signInButton}>
+            <Pressable style={styles.signInButton} onPress={emailSent}>
               <LinearGradient
                 colors={["#640000", "#dc0202ff"]}
                 start={{ x: 1, y: 0 }}
@@ -105,7 +113,7 @@ const styles = StyleSheet.create({
   },
   redirectText: {
     color: "white",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     flexDirection: "row",
   },
   formHeading: {
@@ -115,7 +123,7 @@ const styles = StyleSheet.create({
     fontFamily: "Coolvetica-Regular",
   },
   formSubtitle: {
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     color: "white",
     fontSize: 17,
     paddingTop: 10,
@@ -128,7 +136,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     borderRadius: 10,
     color: "white",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     fontSize: 18,
   },
   signInButton: {
