@@ -4,11 +4,11 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 export default function SettingsOptions() {
   // Declare settings options
   const settings = [
-    { title: "App Apperance", route: "/appAppearance" },
-    { title: "FAQ", route: "/faq" },
-    { title: "About", route: "/about" },
-    { title: "Privacy Policy", route: "/privacyPolicy" },
-    { title: "Advanced", route: "/deleteAccount" },
+    { title: "App Appearance", description: "Set the theme of your Aeroduel App", route: "/appAppearance" },
+    { title: "FAQ", description: "Set theme them for your Aeroduel App", route: "/faq" },
+    { title: "About", description: "Learn more about Aeroduel and our vision", route: "/about" },
+    { title: "Privacy Policy", description: "Read our updated privacy policy", route: "/privacyPolicy" },
+    { title: "Advanced", description: "Extended options to manage your account", route: "/deleteAccount" },
   ];
 
   const settingsRouter = (route: string) => {
@@ -20,6 +20,7 @@ export default function SettingsOptions() {
       {settings.map((setting, index) => (
         <Pressable key={index} onPress={() => settingsRouter(setting.route)}>
           <Text style={styles.settingsTitle}>{setting.title}</Text>
+          <Text style={styles.settingsDescription}>{setting.description}</Text>
         </Pressable>
       ))}
     </View>
@@ -36,11 +37,6 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     borderRadius: 15,
     gap: 15,
-    // Need to play with the shadow colors
-    // shadowColor: '#512929ff',
-    // shadowOffset: { width: 10, height: 10 },
-    // shadowOpacity: 10,
-    // shadowRadius: 5,
   },
   settingsOption: {
     flexDirection: "row",
@@ -50,7 +46,14 @@ const styles = StyleSheet.create({
   settingsTitle: {
     color: "#FFFFFF",
     fontSize: 24,
-    fontWeight: 300,
     paddingLeft: 10,
+    fontFamily: 'Coolvetica-Regular',
+  },
+  settingsDescription: {
+    color: "#FFFFFF",
+    fontSize: 13,
+    paddingLeft: 10,
+    paddingTop: 3,
+    fontFamily: 'Coolvetica-Light',
   },
 });

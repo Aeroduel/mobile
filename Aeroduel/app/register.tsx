@@ -49,7 +49,7 @@ export default function RegisterPage() {
     } catch (error: any) {
       // Log error
       console.error(error);
-      Alert.alert("Account creation failed", "Please try again");
+      Alert.alert("Account Creation Failed", "Please provide your name, email address, and password to continue");
     }
   };
 
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
   },
   redirectText: {
     color: "white",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     fontWeight: 'light',
     flexDirection: "row",
   },
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     fontFamily: "Coolvetica-Regular",
   },
   formSubtitle: {
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     color: "white",
     fontSize: 17,
     paddingTop: 10,

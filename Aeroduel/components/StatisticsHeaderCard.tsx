@@ -1,13 +1,11 @@
 // import * as Haptics from 'expo-haptics';
 // import { useState } from "react";
 import {
-  Image,
   StyleSheet,
   Text,
   useWindowDimensions,
   View,
 } from "react-native";
-const whitePlaneIcon = require("../assets/images/plane-white.png");
 
 export default function StatisticsCard() {
   // Declare window dimensions
@@ -62,6 +60,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: 300,
     fontSize: 13,
+    fontFamily: 'Coolvetica-Light',
   },
   // largeScreen: {
   //   width: 75,

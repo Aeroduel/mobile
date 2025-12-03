@@ -1,26 +1,8 @@
-import { useFonts } from "expo-font";
-import { router, SplashScreen } from "expo-router";
-import { useEffect } from "react";
+import { router } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import LogoutElement from "./LogoutElement";
 
 export default function ProfileHeader() {
-  // Load the custom font
-  const [fontsLoaded] = useFonts({
-    "Xirod": require("../assets/fonts/Xirod.otf"),
-  });
-
-  // Check if the fonts are loaded
-  useEffect(() => {
-    if (fontsLoaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
-
-  if (!fontsLoaded) {
-    return null;
-  }
-
   // Sign out
   const signOut = () => {
     router.replace("/");

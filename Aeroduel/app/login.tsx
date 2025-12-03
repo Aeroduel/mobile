@@ -1,8 +1,8 @@
-import { auth } from "../config/FirebaseConfig";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useEffect, useState } from "react";
 import {
   Alert,
   Image,
@@ -10,10 +10,9 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  useWindowDimensions,
   View,
 } from "react-native";
-import { useState } from "react";
+import { auth } from "../config/FirebaseConfig";
 const AeroduelLogo = require("../assets/images/aeroduel-banner.png");
 const google = require("../assets/images/google.png");
 const facebook = require("../assets/images/facebook.png");
@@ -21,15 +20,15 @@ const facebook = require("../assets/images/facebook.png");
 SplashScreen.preventAutoHideAsync();
 
 export default function LoginPage() {
+
   // Push to create account page
   const routeToRegister = () => {
     router.push("/register");
   };
-  
-  // Push to forgot password page (not yet implemented)
-  // const forgotPassword = () => {
-  //   router.push("/forgotPassword");
-  // }
+
+  const forgotPassword = () => {
+    router.push("/forgotPassword");
+  };
 
   // // Declare window dimensions
   // const { width } = useWindowDimensions();
@@ -50,7 +49,7 @@ export default function LoginPage() {
     } catch (error: any) {
       // Log error
       console.error(error);
-      Alert.alert("Sign in Failed", "Invalid Credentials");
+      Alert.alert("Login Failed", "Invalid email or password");
     }
   };
 
@@ -67,11 +66,11 @@ export default function LoginPage() {
           <Image source={AeroduelLogo} style={styles.aeroduelLogo} />
         </Pressable>
         <View style={styles.signInRedirect}>
-            <Pressable onPress={routeToRegister} style={styles.redirectButton}>
-              <Text style={styles.redirectText}>
-                Don&apos;t have an account? Get Started
-              </Text>
-            </Pressable>
+          <Pressable onPress={routeToRegister} style={styles.redirectButton}>
+            <Text style={styles.redirectText}>
+              Don&apos;t have an account? Get Started
+            </Text>
+          </Pressable>
         </View>
         <View style={styles.loginForm}>
           <View style={styles.formHeaderText}>
@@ -106,6 +105,11 @@ export default function LoginPage() {
                 <Text style={styles.signInText}>Sign in</Text>
               </LinearGradient>
             </Pressable>
+            <View style={styles.forgotContainer}>
+              <Pressable onPress={forgotPassword}>
+                <Text style={styles.continueWith}>Forgot Your Password?</Text>
+              </Pressable>
+            </View>
           </View>
           <View>
             <View style={styles.formOptions}>
@@ -168,7 +172,7 @@ const styles = StyleSheet.create({
   },
   redirectText: {
     color: "white",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     flexDirection: "row",
   },
   formHeading: {
@@ -178,7 +182,7 @@ const styles = StyleSheet.create({
     fontFamily: "Coolvetica-Regular",
   },
   formSubtitle: {
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: 'Coolvetica-Light',
     color: "white",
     fontSize: 17,
     paddingTop: 10,
@@ -191,7 +195,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     borderRadius: 10,
     color: "white",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     fontSize: 18,
   },
   signInButton: {
@@ -227,7 +231,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   formOptions: {
-    fontFamily: "Coolvetica-Regular",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -235,7 +238,7 @@ const styles = StyleSheet.create({
   },
   continueWith: {
     color: "white",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
   },
   authOptions: {
     display: "flex",
@@ -286,5 +289,12 @@ const styles = StyleSheet.create({
   largeScreen: {
     marginTop: 100,
     paddingTop: 10,
-  }
+  },
+  forgotContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    paddingTop: 30,
+    paddingBottom: 10,
+  },
 });

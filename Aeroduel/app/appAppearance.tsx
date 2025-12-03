@@ -135,6 +135,7 @@ const styles = StyleSheet.create({
     fontWeight: 300,
     paddingLeft: 30,
     paddingBottom: 15,
+    fontFamily: 'Coolvetica-Light',
   },
   themePreviewBlocks: {
     display: 'flex',

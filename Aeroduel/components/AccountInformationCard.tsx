@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: 300,
     fontSize: 13,
+    fontFamily: 'Coolvetica-Light',
   },
   // largeScreen: {
   //   width: 75,

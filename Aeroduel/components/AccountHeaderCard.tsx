@@ -35,7 +35,7 @@ export default function StatisticsCard() {
           </Text>
           <View style={styles.onlineStatus}>
             <View style={styles.userStatus}></View>
-            <Text style={styles.blockSubtitle}>Online</Text>
+            <Text style={styles.onlineText}>Online</Text>
           </View>
         </View>
         <View style={styles.imageContainer}>
@@ -76,8 +76,16 @@ const styles = StyleSheet.create({
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: 200,
-    fontSize: 12,
+    fontSize: 13,
     paddingTop: 3,
+    fontFamily: 'Coolvetica-Light'
+  },
+  onlineText: {
+    color: "#FFFFFF",
+    fontWeight: 200,
+    fontSize: 13,
+    paddingTop: 2,
+    fontFamily: 'Coolvetica-Light'
   },
   whitePlaneIcon: {
     width: 80,

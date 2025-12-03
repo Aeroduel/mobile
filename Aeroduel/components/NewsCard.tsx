@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     width: 310,
     marginVertical: 10,
+    fontFamily: 'Coolvetica-Light',
   },
   appStatus: {
     width: 330,

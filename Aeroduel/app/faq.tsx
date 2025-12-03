@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   faqText: {
     color: "white",
     textAlign: "left",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: 'Coolvetica-Light',
     lineHeight: 35,
     fontSize: 15,
     paddingBottom: 10,

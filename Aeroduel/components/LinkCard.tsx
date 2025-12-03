@@ -73,9 +73,10 @@ const styles = StyleSheet.create({
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: 400,
-    fontSize: 13,
+    fontSize: 15,
     width: 310,
     paddingTop: 5,
+    fontFamily: "Coolvetica-Light"
   },
   bottomRow: {
     display: "flex",
@@ -104,7 +105,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
-    bottom: 75,
+    bottom: 70,
   },
   qrCodeButton: {
     width: 200,

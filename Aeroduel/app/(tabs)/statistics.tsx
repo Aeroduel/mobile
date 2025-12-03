@@ -1,30 +1,11 @@
 import StatisticsHeader from "@/components/StatisticsHeader";
-import StatisticsCard from "@/components/StatisticsHeaderCard";
-import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
-  // Load the custom font
-  const [fontsLoaded] = useFonts({
-    "Coolvetica-Regular": require("../../assets/fonts/coolvetica-regular.otf"),
-  });
-
-  // Check if the fonts are loaded
-  useEffect(() => {
-    if (fontsLoaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
-
-  if (!fontsLoaded) {
-    return null;
-  }
-
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient

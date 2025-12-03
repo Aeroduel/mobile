@@ -1,32 +1,14 @@
 import AeroduelHeader from "@/components/AeroduelHeader";
 import DuelCard from "@/components/DuelCard";
-import NewsCard from "@/components/NewsCard";
 import ScoreboardCard from "@/components/LinkCard";
-import { useFonts } from "expo-font";
+import NewsCard from "@/components/NewsCard";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
-  // Load the custom font
-  const [fontsLoaded] = useFonts({
-    "Coolvetica-Regular": require("../../assets/fonts/coolvetica-regular.otf"),
-  });
-
-  // Check if the fonts are loaded
-  useEffect(() => {
-    if (fontsLoaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
-
-  if (!fontsLoaded) {
-    return null;
-  }
-
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -56,11 +38,6 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "flex-start",
-    position: "relative",
-  },
   backgroundGradient: {
     position: "absolute",
     width: "100%",

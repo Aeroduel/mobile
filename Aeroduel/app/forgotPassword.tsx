@@ -32,14 +32,9 @@ export default function ForgotPassword() {
           <Image source={AeroduelLogo} style={styles.aeroduelLogo} />
         </Pressable>
         <View style={styles.signInRedirect}>
-          <Text style={styles.redirectText}>
-            Remember your password?
             <Pressable onPress={routeToLogin} style={styles.redirectButton}>
-              <Text style={[styles.redirectText, styles.here]}>
-                Sign in Here
-              </Text>
+              <Text style={styles.redirectText}>Remember your password? Sign in Here</Text>
             </Pressable>
-          </Text>
         </View>
         <View style={styles.loginForm}>
           <View style={styles.formHeaderText}>
@@ -112,7 +107,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontFamily: "Coolvetica-Regular",
     flexDirection: "row",
-    paddingBottom: 11,
   },
   formHeading: {
     fontSize: 34,
@@ -167,63 +161,5 @@ const styles = StyleSheet.create({
   },
   here: {
     marginLeft: 10,
-    marginTop: 15,
-  },
-  formOptions: {
-    fontFamily: "Coolvetica-Regular",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    paddingVertical: 20,
-  },
-  continueWith: {
-    color: "white",
-    fontFamily: "Coolvetica-Regular",
-  },
-  authOptions: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    gap: 10,
-  },
-  google: {
-    fontFamily: "Coolvetica-Regular",
-    color: "white",
-  },
-  googleButton: {
-    flexDirection: "row",
-    alignItems: "center",
-    overflow: "hidden",
-    backgroundColor: "rgba(169, 99, 105, 100)",
-    paddingVertical: 10,
-    paddingHorizontal: 55,
-    borderRadius: 10,
-  },
-  facebookButton: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "rgba(169, 99, 105, 100)",
-    paddingVertical: 10,
-    paddingHorizontal: 45,
-    borderRadius: 10,
-    display: "flex",
-  },
-  facebook: {
-    fontFamily: "Coolvetica-Regular",
-    color: "white",
-  },
-  googleIcon: {
-    width: 24,
-    height: 24,
-    marginRight: 8,
-  },
-  facebookIcon: {
-    width: 30,
-    height: 30,
-    marginRight: 8,
-  },
-  forgotPassword: {
-    paddingTop: 10,
-    fontSize: 18,
   },
 });

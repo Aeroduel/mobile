@@ -20,18 +20,17 @@ export default function LogoutElement() {
 
 const styles = StyleSheet.create({
   logoutContainer: {
-    display: "flex",
     paddingRight: 15,
   },
   logoutPressable: {
     flexDirection: "row",
   },
   logoutText: {
-    color: "#FFFFFF",
+    color: "white",
     fontSize: 20,
-    marginTop: 10,
+    marginTop: 9,
     marginLeft: 30,
-    fontWeight: "light",
+    fontFamily: 'Coolvetica-Light',
   },
   logoutIcon: {
     width: 25,

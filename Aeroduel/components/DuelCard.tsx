@@ -52,7 +52,6 @@ export default function DuelCard() {
       </View>
       <Pressable style={styles.buttonContainer} onPress={changeImage}>
         <Image source={joining} style={styles.startButton} />
-        {/* Join match button here */}
       </Pressable>
     </View>
   );
@@ -94,8 +93,8 @@ const styles = StyleSheet.create({
   },
   blockSubtitle: {
     color: "#FFFFFF",
-    fontWeight: 400,
-    fontSize: 13,
+    fontFamily: 'Coolvetica-Light',
+    fontSize: 15,
   },
   // whitePlaneIcon: {
   //   width: 80,
@@ -109,7 +108,7 @@ const styles = StyleSheet.create({
   startButton: {
     width: 200,
     height: 46,
-    marginBottom: 20,
+    marginBottom: 15,
   },
   partySize: {
     paddingTop: 2,

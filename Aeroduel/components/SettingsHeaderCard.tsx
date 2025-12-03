@@ -47,11 +47,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "column",
     paddingTop: 0,
-    // Need to play with the shadow colors
-    // shadowColor: '#512929ff',
-    // shadowOffset: { width: 10, height: 10 },
-    // shadowOpacity: 10,
-    // shadowRadius: 5,
   },
   duelContent: {
     flexDirection: "row",
@@ -70,6 +65,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: 300,
     fontSize: 13,
+    fontFamily: 'Coolvetica-Light',
   },
   whitePlaneIcon: {
     width: 80,

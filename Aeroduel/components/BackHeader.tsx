@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   backText: {
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     fontSize: 24,
     color: "white",
     marginLeft: 10,
