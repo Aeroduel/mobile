@@ -22,7 +22,8 @@ export default function StatisticsHeaderCard() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>
+          <Text style={styles.blockHeader}>Match Statistics</Text>
+          <Text style={styles.blockSubtitle}>
             View the statistics of your past matches.
           </Text>
         </View>
@@ -52,8 +53,8 @@ const styles = StyleSheet.create({
   },
   blockHeader: {
     color: "#FFFFFF",
-    fontSize: 18,
-    fontFamily: "Coolvetica-Light",
+    fontSize: 24,
+    fontFamily: "Coolvetica-Regular",
   },
   blockSubtitle: {
     color: "#FFFFFF",
