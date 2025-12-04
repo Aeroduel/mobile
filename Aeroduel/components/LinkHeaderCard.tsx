@@ -1,7 +1,7 @@
 import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { auth } from "../config/FirebaseConfig";
 
-export default function StatisticsHeaderCard() {
+export default function LinkHeaderCard() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
@@ -23,7 +23,7 @@ export default function StatisticsHeaderCard() {
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>
-            View the statistics of your past matches.
+            Link your plane to connect to a match.
           </Text>
         </View>
       </View>

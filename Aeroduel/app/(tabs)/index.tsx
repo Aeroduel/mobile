@@ -15,6 +15,7 @@ SplashScreen.preventAutoHideAsync();
 export default function HomeScreen() {
   const user = auth.currentUser;
 
+  // If not logged in, re-route to login
   useEffect(() => {
     if (!user) {
       router.replace("/login");
@@ -23,6 +24,7 @@ export default function HomeScreen() {
 
   const [refreshing, setRefreshing] = useState(false);
 
+  // Refresh Control
   const onRefresh = () => {
     setRefreshing(true);
     setTimeout(() => {

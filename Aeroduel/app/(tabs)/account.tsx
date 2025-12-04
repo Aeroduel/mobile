@@ -45,7 +45,7 @@ export default function ProfilePage() {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            tintColor={'white'}
+            tintColor={'#white'}
           />
         }
       >

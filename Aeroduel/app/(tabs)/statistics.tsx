@@ -1,11 +1,22 @@
 import StatisticsHeader from "@/components/StatisticsHeader";
+import StatisticsHeaderCard from "@/components/StatisticsHeaderCard";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { useState } from "react";
+import { ScrollView, StyleSheet, View, RefreshControl } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
+  const [refreshing, setRefreshing] = useState(false);
+
+  // Refresh Control
+  const onRefresh = () => {
+    setRefreshing(true);
+    setTimeout(() => {
+      setRefreshing(false);
+    }, 1500)
+  }
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -22,10 +33,17 @@ export default function HomeScreen() {
           justifyContent: "flex-start",
           position: "relative",
         }}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={'white'}
+          />
+        }
       >
         {/* MAIN CONTENT */}
         <View>
-          {/* <StatisticsCard /> */}
+          <StatisticsHeaderCard />
         </View>
       </ScrollView>
     </View>

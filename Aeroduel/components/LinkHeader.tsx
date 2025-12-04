@@ -11,7 +11,7 @@ export default function StatisticsHeader() {
   return (
     <View style={styles.aeroduelHeader}>
       <Pressable>
-        <Text style={styles.headerText}>Link Plane</Text>
+        <Text style={styles.headerText}>Link</Text>
       </Pressable>
       <Pressable onPress={signOut}>
         <LogoutElement />
