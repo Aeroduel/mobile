@@ -22,12 +22,12 @@ SplashScreen.preventAutoHideAsync();
 export default function LoginPage() {
   // Push to create account page
   const routeToRegister = () => {
-    router.push("/register");
+    router.replace("/register");
   };
 
   // Push to forgot password page
   const forgotPassword = () => {
-    router.push("/forgotPassword");
+    router.replace("/forgotPassword");
   };
 
   // // Declare window dimensions

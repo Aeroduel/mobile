@@ -7,8 +7,6 @@ export default function NewsCard() {
     router.push("/about");
   };
 
-  const date = new Date().toLocaleDateString();
-
   return (
     <View style={styles.newsContainer}>
       <View style={styles.topRow}>
@@ -27,7 +25,7 @@ export default function NewsCard() {
             </Text>
           </Pressable>
           <Text style={styles.blockSubtitle}>
-            Updated: <Text>{date}</Text>
+            Updated: December 3rd, 2025
           </Text>
         </View>
       </View>

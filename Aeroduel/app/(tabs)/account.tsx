@@ -5,8 +5,9 @@ import AccountInformationCard from "@/components/AccountInformationCard";
 import AccountCreationDateCard from "@/components/AccountCreationDate";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View, Pressable } from "react-native";
+import { ScrollView, StyleSheet, View, Pressable, RefreshControl } from "react-native";
 import { router } from "expo-router";
+import { useState } from "react";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -14,6 +15,15 @@ export default function ProfilePage() {
   const statisticsRoute = () => {
     router.push('/statistics')
   }
+
+  const [refreshing, setRefreshing] = useState(false);
+
+  const onRefresh = () => {
+    setRefreshing(true);
+    setTimeout(() => {
+      setRefreshing(false);
+    }, 1500);
+  };
 
   return (
     <View style={{ flex: 1 }}>
@@ -31,6 +41,13 @@ export default function ProfilePage() {
           justifyContent: "flex-start",
           position: "relative",
         }}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={'white'}
+          />
+        }
       >
         {/* MAIN CONTENT */}
         <View>

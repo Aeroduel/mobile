@@ -22,7 +22,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RegisterPage() {
   // Push to login page
   const routeToLogin = () => {
-    router.push("/login");
+    router.replace("/login");
   };
 
   // State variables and setters for email, name, and password

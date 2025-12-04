@@ -1,10 +1,19 @@
 import SettingsHeader from "@/components/SettingsHeader";
-import SettingsHeaderCard from "@/components/SettingsHeaderCard";
 import SettingsOptions from "@/components/SettingsOptions";
 import { LinearGradient } from "expo-linear-gradient";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { useState } from "react";
+import { ScrollView, StyleSheet, View, RefreshControl } from "react-native";
 
 export default function TabTwoScreen() {
+  const [refreshing, setRefreshing] = useState(false);
+
+  const onRefresh = () => {
+    setRefreshing(true);
+    setTimeout(() => {
+      setRefreshing(false);
+    }, 1500)
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -19,6 +28,13 @@ export default function TabTwoScreen() {
         contentContainerStyle={{
           flexGrow: 1,
         }}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={'white'}
+          />
+        }
       >
         {/* MAIN CONTENT */}
         <View style={{ flex: 1 }}>

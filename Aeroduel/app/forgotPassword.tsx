@@ -17,7 +17,7 @@ SplashScreen.preventAutoHideAsync();
 export default function ForgotPassword() {
   // route to the home screen for now
   const routeToLogin = () => {
-    router.push("/login");
+    router.replace("/login");
   };
 
   const emailSent = () => {
