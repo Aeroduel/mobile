@@ -52,7 +52,7 @@ export default function HomeScreen() {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            tintColor={'white'}
+            tintColor={"white"}
           />
         }
       >

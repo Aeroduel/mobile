@@ -23,14 +23,14 @@ export default function SpectateCard() {
           </Text>
         </View>
       </View>
-      <View style={styles.buttonContainer}>
+      {/* <View style={styles.buttonContainer}>
         <Pressable onPress={openCamera}>
           <Image source={qrButton} style={styles.qrCodeButton} />
         </Pressable>
         <Pressable onPress={enterPin}>
           <Image source={pinButton} style={styles.pinButton} />
         </Pressable>
-      </View>
+      </View> */}
     </View>
   );
 }
@@ -38,13 +38,10 @@ export default function SpectateCard() {
 const styles = StyleSheet.create({
   spectateContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 5,
-    marginBottom: 5,
-    paddingLeft: 20,
-    paddingRight: 20,
-    height: 170,
+    marginHorizontal: 10,
+    marginVertical: 5,
+    paddingHorizontal: 20,
+    height: 115,
     borderRadius: 15,
     display: "flex",
     justifyContent: "space-between",

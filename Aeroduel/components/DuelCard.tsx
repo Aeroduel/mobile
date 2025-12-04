@@ -11,6 +11,7 @@ import {
 } from "react-native";
 const joinButton = require("../assets/images/join-btn.png");
 const joiningButton = require("../assets/images/joining-btn.png");
+const whiteCrosshair = require("../assets/images/crosshair-white.png");
 
 export default function DuelCard() {
   // Declare window dimensions
@@ -20,12 +21,12 @@ export default function DuelCard() {
   const [joining, setJoining] = useState(joinButton);
   const [isPressed, setIsPressed] = useState(false);
 
-  const changeImage = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    const image = !isPressed;
-    setJoining(image ? joinButton : joiningButton);
-    setIsPressed(image);
-  };
+  // const changeImage = () => {
+  //   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+  //   const image = !isPressed;
+  //   setJoining(image ? joinButton : joiningButton);
+  //   setIsPressed(image);
+  // };
 
   const viewScoreboard = () => {
     router.push("/scoreboard");
@@ -35,24 +36,18 @@ export default function DuelCard() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Join a Match 🎯</Text>
+          <Text style={styles.blockHeader}>Join a Match</Text>
           <Text style={styles.blockSubtitle}>
             The next generation of flight combat
           </Text>
           <Text style={[styles.blockSubtitle, styles.partySize]}>
-            Join with your friends, or enemies. Max Players: 3
+            Join with your friends, or enemies.
           </Text>
         </View>
-        <Pressable onPress={viewScoreboard}>
-          {/* <Image
-            source={whitePlaneIcon}
-            style={biggerDevice ? styles.largeScreen : styles.smallScreen}
-          /> */}
-        </Pressable>
+        <View style={styles.crosshairContainer}>
+          <Image source={whiteCrosshair}></Image>
+        </View>
       </View>
-      <Pressable style={styles.buttonContainer} onPress={changeImage}>
-        <Image source={joining} style={styles.startButton} />
-      </Pressable>
     </View>
   );
 }
@@ -66,7 +61,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     paddingLeft: 20,
     paddingRight: 20,
-    height: 170,
+    height: 115,
     borderRadius: 15,
     display: "flex",
     justifyContent: "space-between",
@@ -83,7 +78,7 @@ const styles = StyleSheet.create({
   },
   blockText: {
     paddingTop: 15,
-    width: 350,
+    width: 270,
     marginLeft: 10,
   },
   blockHeader: {
@@ -128,4 +123,9 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginLeft: 35,
   },
+  crosshairContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  }
 });
