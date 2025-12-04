@@ -2,6 +2,7 @@ import AeroduelHeader from "@/components/AeroduelHeader";
 import DuelCard from "@/components/DuelCard";
 import ScoreboardCard from "@/components/LinkCard";
 import NewsCard from "@/components/NewsCard";
+import WelcomeCard from "@/components/WelcomeCard";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { ScrollView, StyleSheet, View } from "react-native";
@@ -28,6 +29,7 @@ export default function HomeScreen() {
       >
         {/* MAIN CONTENT */}
         <View>
+          <WelcomeCard />
           <DuelCard />
           <ScoreboardCard />
           <NewsCard />

@@ -37,7 +37,7 @@ export default function DuelCard() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Join a Match 🎯</Text>
           <Text style={styles.blockSubtitle}>
-            Lock & Load. Initiate Combat.
+            The next generation of flight combat
           </Text>
           <Text style={[styles.blockSubtitle, styles.partySize]}>
             Join with your friends, or enemies. Max Players: 3

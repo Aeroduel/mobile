@@ -1,11 +1,14 @@
-import { auth } from "../config/FirebaseConfig";
+import { useState } from "react";
 import {
+  Alert,
   Image,
+  Pressable,
   StyleSheet,
   Text,
   useWindowDimensions,
   View,
 } from "react-native";
+import { auth } from "../config/FirebaseConfig";
 const userPlaceholder = require("../assets/images/user.png");
 
 export default function StatisticsCard() {
@@ -13,36 +16,38 @@ export default function StatisticsCard() {
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
 
+  const [profilePicture, setProfilePicture] = useState(userPlaceholder);
+
   // Check if the current user does not exist
   if (!auth.currentUser) {
-    return
+    return;
   }
+
+  const alertImage = () => {
+    Alert.alert(
+      "Open Camera Roll",
+      "Camera roll needs to open to select an image (needs implemented)"
+    );
+  };
 
   // Set the user to the current user from auth to access properties
   const user = auth.currentUser;
-
-  // Year the account was created in Firebase
-  // const accountCreated = user.metadata.creationTime;
-  // const createdAt = new Date(accountCreated).getFullYear();
 
   return (
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>{auth.currentUser.displayName}</Text>
-          <Text style={styles.blockSubtitle}>
-            {user.email}
-          </Text>
+          <Text style={styles.blockSubtitle}>{user.email}</Text>
           <View style={styles.onlineStatus}>
             <View style={styles.userStatus}></View>
             <Text style={styles.onlineText}>Online</Text>
           </View>
         </View>
         <View style={styles.imageContainer}>
-          <Image
-            source={userPlaceholder}
-            style={styles.userImage}
-          />
+          <Pressable onPress={alertImage}>
+            <Image source={profilePicture} style={styles.userImage} />
+          </Pressable>
         </View>
       </View>
     </View>
@@ -78,14 +83,14 @@ const styles = StyleSheet.create({
     fontWeight: 200,
     fontSize: 13,
     paddingTop: 3,
-    fontFamily: 'Coolvetica-Light'
+    fontFamily: "Coolvetica-Light",
   },
   onlineText: {
     color: "#FFFFFF",
     fontWeight: 200,
     fontSize: 13,
     paddingTop: 2,
-    fontFamily: 'Coolvetica-Light'
+    fontFamily: "Coolvetica-Light",
   },
   whitePlaneIcon: {
     width: 80,
@@ -97,16 +102,16 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   onlineStatus: {
-    display: 'flex',
-    flexDirection: 'row',
+    display: "flex",
+    flexDirection: "row",
     gap: 5,
     paddingTop: 5,
   },
   userStatus: {
-    backgroundColor: '#1aff00ff',
+    backgroundColor: "#1aff00ff",
     height: 8,
     width: 8,
-    borderRadius: '100%',
+    borderRadius: "100%",
     marginTop: 6,
   },
   userImage: {
@@ -115,8 +120,8 @@ const styles = StyleSheet.create({
     marginLeft: 30,
   },
   imageContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-  }
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  },
 });

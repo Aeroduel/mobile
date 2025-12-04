@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
           <Text style={styles.privacyMainHeader}>Privacy Policy</Text>
         </View>
         <View style={styles.dateContainer}>
-          <Text style={[styles.aboutText, styles.dateText]}>Effective: November 29th, 2025</Text>
+          <Text style={[styles.aboutText, styles.dateText]}>Effective: December 11th, 2025</Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
-            Your email address, username, and password are collected when you intentionally provide it,
+            Your name, email address, and password are collected when you intentionally provide it,
             such as when you create an account, or log into your account.
           </Text>
         </View>
@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
-            If you have any questions about this Privacy Policy, please contact us at: aeroduel@zytronium.dev
+            If you have any questions about this Privacy Policy, please contact us at: contact@aeroduel.com
           </Text>
         </View>
       </ScrollView>
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "left",
     width: "80%",
-    fontFamily: "Coolvetica-Regular",
+    fontFamily: "Coolvetica-Light",
     lineHeight: 35,
     fontSize: 15,
   },

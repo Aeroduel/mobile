@@ -5,7 +5,6 @@ import AccountInformationCard from "@/components/AccountInformationCard";
 import AccountCreationDateCard from "@/components/AccountCreationDate";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
 import { ScrollView, StyleSheet, View, Pressable } from "react-native";
 import { router } from "expo-router";
 
