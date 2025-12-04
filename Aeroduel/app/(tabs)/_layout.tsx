@@ -5,6 +5,7 @@ const houseIcon = require("../../assets/images/house-icon-white.png");
 const gearIcon = require("../../assets/images/settings-gear-white.png");
 const graphIcon = require("../../assets/images/stats.png");
 const userIcon = require("../../assets/images/user.png");
+const plusIcon = require("../../assets/images/plus.png")
 
 export default function TabLayout() {
   return (
@@ -37,6 +38,15 @@ export default function TabLayout() {
           title: "Statistics",
           tabBarIcon: ({ color }) => (
             <Image source={graphIcon} style={{ width: 25, height: 25 }}></Image>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="link"
+        options={{
+          title: "Link",
+          tabBarIcon: ({ color }) => (
+            <Image source={plusIcon} style={{ width: 35, height: 35 }}></Image>
           ),
         }}
       />

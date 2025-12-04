@@ -1,27 +1,12 @@
-import AeroduelHeader from "@/components/AeroduelHeader";
-import DuelCard from "@/components/DuelCard";
-import ScoreboardCard from "@/components/LinkCard";
-import NewsCard from "@/components/NewsCard";
-import WelcomeCard from "@/components/WelcomeCard";
+import LinkHeader from "@/components/LinkHeader";
+import LinkCard from "@/components/LinkCard";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { ScrollView, StyleSheet, View } from "react-native";
-import { auth } from "../../config/FirebaseConfig";
-import { router } from "expo-router";
-import { useEffect } from "react";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
-  const user = auth.currentUser;
-
-  useEffect(() => {
-    if (!user) {
-      router.replace('/login')
-    }
-  }, [user])
-
-
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -31,7 +16,7 @@ export default function HomeScreen() {
         style={styles.backgroundGradient}
       ></LinearGradient>
       {/* PAGE HEADER */}
-      <AeroduelHeader />
+      <LinkHeader />
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
@@ -41,10 +26,7 @@ export default function HomeScreen() {
       >
         {/* MAIN CONTENT */}
         <View>
-          <WelcomeCard />
-          <DuelCard />
-          <ScoreboardCard />
-          <NewsCard />
+          <LinkCard />
         </View>
       </ScrollView>
     </View>
@@ -52,6 +34,11 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "flex-start",
+    position: "relative",
+  },
   backgroundGradient: {
     position: "absolute",
     width: "100%",

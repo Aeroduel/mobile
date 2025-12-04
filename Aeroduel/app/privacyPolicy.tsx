@@ -73,7 +73,7 @@ export default function PrivacyPolicy() {
           <Text style={[styles.privacyHeader, styles.policyChanges]}>Contact Us</Text>
         </View>
         <View style={styles.aboutTextContainer}>
-          <Text style={styles.aboutText}>
+          <Text style={[styles.aboutText, styles.contactUs]}>
             If you have any questions about this Privacy Policy, please contact us at: contact@aeroduel.com
           </Text>
         </View>
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: 'center',
-    marginTop: 50,
+    marginTop: 20,
   },
   aboutHeader: {
     fontWeight: "bold",
@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
   },
   dateText: {
     textAlign: 'center',
+    paddingVertical: 10,
   },
   privacyMainHeader: {
     color: "white",
@@ -127,7 +128,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     width: "80%",
     fontFamily: "Coolvetica-Light",
-    lineHeight: 35,
+    lineHeight: 40,
     fontSize: 15,
   },
   privacyHeader: {
@@ -144,5 +145,8 @@ const styles = StyleSheet.create({
   },
   policyChanges: {
     fontSize: 34,
+  },
+  contactUs: {
+    paddingBottom: 80,
   }
 });

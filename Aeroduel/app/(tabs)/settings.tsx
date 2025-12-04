@@ -22,7 +22,6 @@ export default function TabTwoScreen() {
       >
         {/* MAIN CONTENT */}
         <View style={{ flex: 1 }}>
-          <SettingsHeaderCard />
           <SettingsOptions />
         </View>
       </ScrollView>

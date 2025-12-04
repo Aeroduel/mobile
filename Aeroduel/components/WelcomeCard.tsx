@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   blockText: {
-    width: 300,
     marginLeft: 10,
   },
   blockHeader: {

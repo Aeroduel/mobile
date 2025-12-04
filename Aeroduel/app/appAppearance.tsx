@@ -47,7 +47,7 @@ export default function AppAppearance() {
         {/* MAIN CONTENT */}
         <Pressable onPress={aeroduelAlert} style={styles.appearanceOption}>
           <Text style={styles.appearanceTitle}>Aeroduel Theme
-            <View style={styles.themePreviewBlocks}>
+            <View style={[styles.themePreviewBlocks, styles.aeroduel]}>
               <View style={[styles.colorPreview, styles.black]}></View>
               <View style={[styles.colorPreview, styles.red]}></View>
               <View style={[styles.colorPreview, styles.white]}></View>
@@ -57,7 +57,7 @@ export default function AppAppearance() {
         </Pressable>
         <Pressable onPress={duskAlert} style={styles.appearanceOption}>
           <Text style={styles.appearanceTitle}>Dusk Theme
-            <View style={styles.themePreviewBlocks}>
+            <View style={[styles.themePreviewBlocks, styles.dusk]}>
               <View style={[styles.colorPreview, styles.darkGrey]}></View>
               <View style={[styles.colorPreview, styles.lightGrey]}></View>
               <View style={[styles.colorPreview, styles.white]}></View>
@@ -67,7 +67,7 @@ export default function AppAppearance() {
         </Pressable>
         <Pressable onPress={lightAlert} style={styles.appearanceOption}>
           <Text style={styles.appearanceTitle}>Light Theme
-            <View style={styles.themePreviewBlocks}>
+            <View style={[styles.themePreviewBlocks, styles.light]}>
               <View style={[styles.colorPreview, styles.skyBlue]}></View>
               <View style={[styles.colorPreview, styles.white]}></View>
               <View style={[styles.colorPreview, styles.black]}></View>
@@ -139,13 +139,13 @@ const styles = StyleSheet.create({
   },
   themePreviewBlocks: {
     display: 'flex',
+    justifyContent: 'flex-end',
     flexDirection: 'row',
     gap: 10,
-    paddingLeft: 10,
   },
   colorPreview: {
-    width: 20,
-    height: 20,
+    width: 25,
+    height: 25,
     borderRadius: 4,
   },
   black: {
@@ -190,4 +190,13 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
     shadowRadius: 5,
   },
+  aeroduel: {
+    paddingLeft: 70,
+  },
+  dusk: {
+    paddingLeft: 110,
+  },
+  light: {
+    paddingLeft: 108,
+  }
 });
