@@ -4,11 +4,11 @@ import ScoreboardCard from "@/components/LinkCard";
 import NewsCard from "@/components/NewsCard";
 import WelcomeCard from "@/components/WelcomeCard";
 import { LinearGradient } from "expo-linear-gradient";
-import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View } from "react-native";
-import { auth } from "../../config/FirebaseConfig";
 import { router } from "expo-router";
-import { useEffect } from "react";
+import * as SplashScreen from "expo-splash-screen";
+import { useEffect, useState } from "react";
+import { RefreshControl, ScrollView, StyleSheet, View } from "react-native";
+import { auth } from "../../config/FirebaseConfig";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -17,10 +17,18 @@ export default function HomeScreen() {
 
   useEffect(() => {
     if (!user) {
-      router.replace('/login')
+      router.replace("/login");
     }
-  }, [user])
+  }, [user]);
 
+  const [refreshing, setRefreshing] = useState(false);
+
+  const onRefresh = () => {
+    setRefreshing(true);
+    setTimeout(() => {
+      setRefreshing(false);
+    }, 1500);
+  };
 
   return (
     <View style={{ flex: 1 }}>
@@ -38,6 +46,13 @@ export default function HomeScreen() {
           justifyContent: "flex-start",
           position: "relative",
         }}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={'white'}
+          />
+        }
       >
         {/* MAIN CONTENT */}
         <View>
