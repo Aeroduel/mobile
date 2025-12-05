@@ -1,4 +1,4 @@
-import BackHeader from "@/components/BackHeader";
+import BackHeader from "@/components/Headers/BackHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
@@ -29,7 +29,11 @@ export default function AboutPage() {
         <BackHeader />
         {/* MAIN CONTENT */}
         <View style={styles.gifContainer}>
-          <Image source={animatedAeroduelLogo} style={styles.animatedAeroduel} resizeMode="contain"></Image>
+          <Image
+            source={animatedAeroduelLogo}
+            style={styles.animatedAeroduel}
+            resizeMode="contain"
+          ></Image>
         </View>
         <View style={styles.aboutContainer}>
           <Text style={styles.aboutHeader}>What is Aeroduel?</Text>
@@ -42,12 +46,11 @@ export default function AboutPage() {
           </Text>
           <Text style={styles.aboutText}>
             We&apos;re equipping high-performance RC fighter jets with camera
-            systems that automatically detect targets equipped with
-            detection lights. This allows aircraft to use advanced computer
-            vision to lock onto targets and simulate aerial combat, keeping
-            score via a Wi-Fi connection to the host server back on the ground.
-            Add FPV cameras and pilots can get a cockpit experience and aim
-            like a pro.
+            systems that automatically detect targets equipped with detection
+            lights. This allows aircraft to use advanced computer vision to lock
+            onto targets and simulate aerial combat, keeping score via a Wi-Fi
+            connection to the host server back on the ground. Add FPV cameras
+            and pilots can get a cockpit experience and aim like a pro.
           </Text>
           <Text style={styles.aboutText}>
             Our mobile app allows users to register their planes equipped with
@@ -62,9 +65,21 @@ export default function AboutPage() {
           <Text style={styles.aboutHeader}>How It Works</Text>
         </View>
         <View style={styles.imagesContainer}>
-          <Image source={camera} style={[styles.techImage, styles.biggerTechImage]} resizeMode="contain"></Image>
-          <Image source={lora} style={styles.techImage} resizeMode="contain"></Image>
-          <Image source={arduino} style={[styles.techImage, styles.biggerTechImage]} resizeMode="contain"></Image>
+          <Image
+            source={camera}
+            style={[styles.techImage, styles.biggerTechImage]}
+            resizeMode="contain"
+          ></Image>
+          <Image
+            source={lora}
+            style={styles.techImage}
+            resizeMode="contain"
+          ></Image>
+          <Image
+            source={arduino}
+            style={[styles.techImage, styles.biggerTechImage]}
+            resizeMode="contain"
+          ></Image>
         </View>
         <View style={styles.imageDescriptionContainer}>
           <Text style={styles.descriptionText}>Vision Camera</Text>
@@ -134,7 +149,7 @@ const styles = StyleSheet.create({
   aboutText: {
     color: "white",
     textAlign: "left",
-    fontFamily: 'Coolvetica-Light',
+    fontFamily: "Coolvetica-Light",
     lineHeight: 35,
     fontSize: 15,
     paddingBottom: 10,
@@ -144,9 +159,9 @@ const styles = StyleSheet.create({
     fontSize: 44,
   },
   gifContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     paddingTop: 20,
   },
   animatedAeroduel: {
@@ -154,10 +169,10 @@ const styles = StyleSheet.create({
     height: 40,
   },
   imagesContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     gap: 10,
   },
   techImage: {
@@ -169,18 +184,18 @@ const styles = StyleSheet.create({
     height: 120,
   },
   imageDescriptionContainer: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    flexDirection: 'row',
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    flexDirection: "row",
     paddingVertical: 20,
   },
   descriptionText: {
-    fontFamily: 'Coolvetica-Regular',
-    color: 'white',
+    fontFamily: "Coolvetica-Regular",
+    color: "white",
     fontSize: 16,
   },
   lastText: {
     paddingBottom: 60,
-  }
+  },
 });

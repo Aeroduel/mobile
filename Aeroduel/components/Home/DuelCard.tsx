@@ -1,28 +1,22 @@
-import * as Haptics from "expo-haptics";
+// import * as Haptics from "expo-haptics";
 import { router } from "expo-router";
-import { useState } from "react";
+// import { useState } from "react";
 import {
   Image,
-  Pressable,
   StyleSheet,
   Text,
-  useWindowDimensions,
+  // useWindowDimensions,
   View,
 } from "react-native";
-const joinButton = require("../assets/images/join-btn.png");
-const joiningButton = require("../assets/images/joining-btn.png");
-const whiteCrosshair = require("../assets/images/crosshair-white.png");
-const arrowIcon = require("../assets/images/logout-icon-white.png");
-const swordsIcon = require("../assets/images/swords.png");
-const wifiIcon = require("../assets/images/wifi.png");
+const swordsIcon = require("../../assets/images/swords.png");
 
 export default function DuelCard() {
   // Declare window dimensions
-  const { width } = useWindowDimensions();
-  const biggerDevice = width >= 439;
+  // const { width } = useWindowDimensions();
+  // const biggerDevice = width >= 439;
 
-  const [joining, setJoining] = useState(joinButton);
-  const [isPressed, setIsPressed] = useState(false);
+  // const [joining, setJoining] = useState(joinButton);
+  // const [isPressed, setIsPressed] = useState(false);
 
   // const changeImage = () => {
   //   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -39,13 +33,16 @@ export default function DuelCard() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Link Plane</Text>
+          <Text style={styles.blockHeader}>Join a Match</Text>
+          <Text style={styles.blockSubtitle}>
+            The next generation of flight combat
+          </Text>
           <Text style={[styles.blockSubtitle, styles.partySize]}>
-            View nearby planes that are online, and ready to be connected.
+            Join with your friends, or enemies.
           </Text>
         </View>
         <View style={styles.crosshairContainer}>
-          <Image source={wifiIcon} style={styles.crosshair}></Image>
+          <Image source={swordsIcon} style={styles.crosshair}></Image>
         </View>
       </View>
     </View>
@@ -88,7 +85,7 @@ const styles = StyleSheet.create({
   },
   blockSubtitle: {
     color: "#FFFFFF",
-    fontFamily: 'Coolvetica-Light',
+    fontFamily: "Coolvetica-Light",
     fontSize: 15,
   },
   // whitePlaneIcon: {
@@ -129,5 +126,5 @@ const styles = StyleSheet.create({
   crosshair: {
     width: 40,
     height: 40,
-  }
+  },
 });

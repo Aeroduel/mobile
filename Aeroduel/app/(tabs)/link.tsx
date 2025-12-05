@@ -1,4 +1,4 @@
-import LinkHeader from "@/components/LinkHeader";
+import LinkHeader from "@/components/Headers/LinkHeader";
 import LinkHeaderCard from "@/components/LinkHeaderCard";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";

@@ -1,8 +1,8 @@
-import AeroduelHeader from "@/components/AeroduelHeader";
-import DuelCard from "@/components/DuelCard";
-import ScoreboardCard from "@/components/LinkCard";
-import NewsCard from "@/components/NewsCard";
-import WelcomeCard from "@/components/WelcomeCard";
+import AeroduelHeader from "@/components/Headers/AeroduelHeader";
+import DuelCard from "@/components/Home/DuelCard";
+import LinkCard from "@/components/Home/LinkCard";
+import NewsCard from "@/components/Home/NewsCard";
+import WelcomeCard from "@/components/Home/WelcomeCard";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -60,7 +60,7 @@ export default function HomeScreen() {
         <View>
           <WelcomeCard />
           <DuelCard />
-          <ScoreboardCard />
+          <LinkCard />
           <NewsCard />
         </View>
       </ScrollView>

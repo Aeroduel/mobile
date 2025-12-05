@@ -1,4 +1,4 @@
-import SettingsHeader from "@/components/SettingsHeader";
+import SettingsHeader from "@/components/Headers/SettingsHeader";
 import SettingsOptions from "@/components/SettingsOptions";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";

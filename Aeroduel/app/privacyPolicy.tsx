@@ -1,4 +1,4 @@
-import BackHeader from "@/components/BackHeader";
+import BackHeader from "@/components/Headers/BackHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
@@ -28,7 +28,9 @@ export default function PrivacyPolicy() {
           <Text style={styles.privacyMainHeader}>Privacy Policy</Text>
         </View>
         <View style={styles.dateContainer}>
-          <Text style={[styles.aboutText, styles.dateText]}>Effective: December 11th, 2025</Text>
+          <Text style={[styles.aboutText, styles.dateText]}>
+            Effective: December 11th, 2025
+          </Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
@@ -46,35 +48,48 @@ export default function PrivacyPolicy() {
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
-            Your name, email address, and password are collected when you intentionally provide it,
-            such as when you create an account, or log into your account.
+            Your name, email address, and password are collected when you
+            intentionally provide it, such as when you create an account, or log
+            into your account.
           </Text>
         </View>
         <View style={styles.aboutContainer}>
-          <Text style={[styles.privacyHeader, styles.informationUse]}>Use of Your Information</Text>
+          <Text style={[styles.privacyHeader, styles.informationUse]}>
+            Use of Your Information
+          </Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
-            We do not sell your personal data. We use the information we collect for the following purposes:
+            We do not sell your personal data. We use the information we collect
+            for the following purposes:
           </Text>
-          <Text style={styles.aboutText}>1. To Provide and Maintain the Services</Text>
+          <Text style={styles.aboutText}>
+            1. To Provide and Maintain the Services
+          </Text>
           <Text style={styles.aboutText}>2. Security and Fraud Prevention</Text>
           <Text style={styles.aboutText}>3. To Improve the App</Text>
         </View>
         <View style={styles.aboutContainer}>
-          <Text style={[styles.privacyHeader, styles.policyChanges]}>Changes to this Policy</Text>
+          <Text style={[styles.privacyHeader, styles.policyChanges]}>
+            Changes to this Policy
+          </Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
-            We may update our Privacy Policy from time to time. We will notify you of any chnages by posting the new Privacy Policy in the app and updagint the &quot;Effective Date&quot; at the top of this policy.
+            We may update our Privacy Policy from time to time. We will notify
+            you of any chnages by posting the new Privacy Policy in the app and
+            updagint the &quot;Effective Date&quot; at the top of this policy.
           </Text>
         </View>
         <View style={styles.aboutContainer}>
-          <Text style={[styles.privacyHeader, styles.policyChanges]}>Contact Us</Text>
+          <Text style={[styles.privacyHeader, styles.policyChanges]}>
+            Contact Us
+          </Text>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={[styles.aboutText, styles.contactUs]}>
-            If you have any questions about this Privacy Policy, please contact us at: contact@aeroduel.com
+            If you have any questions about this Privacy Policy, please contact
+            us at: contact@aeroduel.com
           </Text>
         </View>
       </ScrollView>
@@ -97,7 +112,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: 'center',
+    alignItems: "center",
     marginTop: 20,
   },
   aboutHeader: {
@@ -107,10 +122,10 @@ const styles = StyleSheet.create({
     fontSize: 50,
   },
   dateContainer: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   dateText: {
-    textAlign: 'center',
+    textAlign: "center",
     paddingVertical: 10,
   },
   privacyMainHeader: {
@@ -148,5 +163,5 @@ const styles = StyleSheet.create({
   },
   contactUs: {
     paddingBottom: 80,
-  }
+  },
 });

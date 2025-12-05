@@ -1,4 +1,4 @@
-import AeroduelHeader from "@/components/AeroduelHeader";
+import AeroduelHeader from "@/components/Headers/AeroduelHeader";
 import ScoreboardHeaderCard from "@/components/ScoreboardHeaderCard";
 import ScoreboardStats from "@/components/ScoreboardStats";
 import { LinearGradient } from "expo-linear-gradient";

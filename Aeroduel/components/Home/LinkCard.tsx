@@ -9,26 +9,12 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-const joinButton = require("../assets/images/join-btn.png");
-const joiningButton = require("../assets/images/joining-btn.png");
-const whiteCrosshair = require("../assets/images/crosshair-white.png");
-const arrowIcon = require("../assets/images/logout-icon-white.png");
-const swordsIcon = require("../assets/images/swords.png");
+const wifiIcon = require("../../assets/images/wifi.png");
 
 export default function DuelCard() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
-
-  const [joining, setJoining] = useState(joinButton);
-  const [isPressed, setIsPressed] = useState(false);
-
-  // const changeImage = () => {
-  //   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-  //   const image = !isPressed;
-  //   setJoining(image ? joinButton : joiningButton);
-  //   setIsPressed(image);
-  // };
 
   const viewScoreboard = () => {
     router.push("/scoreboard");
@@ -38,16 +24,13 @@ export default function DuelCard() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Join a Match</Text>
-          <Text style={styles.blockSubtitle}>
-            The next generation of flight combat
-          </Text>
+          <Text style={styles.blockHeader}>Link Plane</Text>
           <Text style={[styles.blockSubtitle, styles.partySize]}>
-            Join with your friends, or enemies.
+            View nearby planes that are online, and ready to be connected.
           </Text>
         </View>
         <View style={styles.crosshairContainer}>
-          <Image source={swordsIcon} style={styles.crosshair}></Image>
+          <Image source={wifiIcon} style={styles.crosshair}></Image>
         </View>
       </View>
     </View>

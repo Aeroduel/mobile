@@ -1,5 +1,5 @@
 import ProfileHeaderCard from "@/components/AccountHeaderCard";
-import ProfileHeader from "@/components/AccountHeader";
+import ProfileHeader from "@/components/Headers/AccountHeader";
 import StatisticsHeaderCard from "@/components/StatisticsOptionCard";
 import AccountInformationCard from "@/components/AccountInformationCard";
 import AccountCreationDateCard from "@/components/AccountCreationDate";

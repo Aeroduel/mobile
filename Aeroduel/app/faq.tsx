@@ -1,4 +1,4 @@
-import BackHeader from "@/components/BackHeader";
+import BackHeader from "@/components/Headers/BackHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   faqText: {
     color: "white",
     textAlign: "left",
-    fontFamily: 'Coolvetica-Light',
+    fontFamily: "Coolvetica-Light",
     lineHeight: 35,
     fontSize: 15,
     paddingBottom: 10,

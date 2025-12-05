@@ -1,4 +1,4 @@
-import StatisticsHeader from "@/components/StatisticsHeader";
+import StatisticsHeader from "@/components/Headers/StatisticsHeader";
 import StatisticsHeaderCard from "@/components/StatisticsHeaderCard";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";

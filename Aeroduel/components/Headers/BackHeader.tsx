@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-const whiteBackArrow = require("../assets/images/arrow-left-white.png");
+const whiteBackArrow = require("../../assets/images/arrow-left-white.png");
 
 export default function BackHeader() {
   // Route back to settings page

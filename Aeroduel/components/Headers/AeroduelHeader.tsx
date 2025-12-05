@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import LogoutElement from "./LogoutElement";
+import LogoutElement from './LogoutElement';
 
 export default function AeroduelHeader() {
   // Sign out
