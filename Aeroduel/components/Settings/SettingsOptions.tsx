@@ -8,7 +8,7 @@ export default function SettingsOptions() {
     { title: "FAQ", description: "Frequently asked questions", route: "/faq" },
     { title: "About", description: "Learn more about Aeroduel and our vision", route: "/about" },
     { title: "Privacy Policy", description: "Read our current privacy policy", route: "/privacyPolicy" },
-    { title: "Advanced", description: "Extended options to manage your account", route: "/deleteAccount" },
+    { title: "Advanced", description: "Extended options to manage your account", route: "/advancedSettings" },
   ];
 
   const settingsRouter = (route: string) => {

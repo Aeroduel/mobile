@@ -52,6 +52,7 @@ export default function RootLayout() {
         <Stack.Screen name="scoreboard" options={{ headerShown: false }} />
         <Stack.Screen name="faq" options={{ headerShown: false }} />
         <Stack.Screen name="appAppearance" options={{ headerShown: false }} />
+        <Stack.Screen name="advancedSettings" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );
