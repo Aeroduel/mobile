@@ -1,5 +1,5 @@
 import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
-import { auth } from "../config/FirebaseConfig";
+import { auth } from "../../config/FirebaseConfig";
 
 export default function LinkHeaderCard() {
   // Declare window dimensions

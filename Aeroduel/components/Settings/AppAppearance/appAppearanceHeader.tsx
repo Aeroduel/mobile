@@ -5,7 +5,7 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-const eyedropper = require("../assets/images/eyedropper.png")
+const eyedropper = require("../../../assets/images/eyedropper.png")
 
 export default function AppAppearanceHeader() {
   // Declare window dimensions

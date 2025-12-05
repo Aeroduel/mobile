@@ -1,8 +1,8 @@
-import ProfileHeaderCard from "@/components/AccountHeaderCard";
-import ProfileHeader from "@/components/Headers/AccountHeader";
-import StatisticsHeaderCard from "@/components/StatisticsOptionCard";
-import AccountInformationCard from "@/components/AccountInformationCard";
-import AccountCreationDateCard from "@/components/AccountCreationDate";
+import AccountHeaderCard from "@/components/Account/AccountHeaderCard";
+import AccountHeader from "@/components/Headers/AccountHeader";
+import StatisticsOptionCard from "@/components/Account/StatisticsOptionCard";
+import AccountInformationCard from "@/components/Account/AccountInformationCard";
+import AccountCreationDateCard from "@/components/Account/AccountCreationDate";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import {
@@ -40,7 +40,7 @@ export default function ProfilePage() {
         style={styles.backgroundGradient}
       ></LinearGradient>
       {/* PAGE HEADER */}
-      <ProfileHeader />
+      <AccountHeader />
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
@@ -57,10 +57,10 @@ export default function ProfilePage() {
       >
         {/* MAIN CONTENT */}
         <View>
-          <ProfileHeaderCard />
+          <AccountHeaderCard />
           <AccountCreationDateCard />
           <Pressable onPress={statisticsRoute}>
-            <StatisticsHeaderCard />
+            <StatisticsOptionCard />
           </Pressable>
           <AccountInformationCard />
         </View>

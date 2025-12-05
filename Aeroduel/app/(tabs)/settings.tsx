@@ -1,5 +1,5 @@
 import SettingsHeader from "@/components/Headers/SettingsHeader";
-import SettingsOptions from "@/components/SettingsOptions";
+import SettingsOptions from "@/components/Settings/SettingsOptions";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import { ScrollView, StyleSheet, View, RefreshControl } from "react-native";

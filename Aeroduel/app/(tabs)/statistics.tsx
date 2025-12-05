@@ -1,5 +1,5 @@
 import StatisticsHeader from "@/components/Headers/StatisticsHeader";
-import StatisticsHeaderCard from "@/components/StatisticsHeaderCard";
+import StatisticsHeaderCard from "@/components/Statistics/StatisticsHeaderCard";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { useState } from "react";

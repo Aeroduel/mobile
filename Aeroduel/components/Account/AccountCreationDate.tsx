@@ -1,30 +1,34 @@
-import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
-import { auth } from "../config/FirebaseConfig";
+import {
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
+import { auth } from "../../config/FirebaseConfig";
 
-export default function StatisticsHeaderCard() {
+export default function AccountCreationDateCard() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
 
   // Check if the current user does not exist
   if (!auth.currentUser) {
-    return;
-  }
-
-  if (!auth.currentUser.displayName) {
-    return;
+    return
   }
 
   // Set the user to the current user from auth to access properties
-  const userName = auth.currentUser.displayName.split(" ")[0];
+  const user = auth.currentUser;
+
+  const accountCreated = user.metadata.creationTime;
+  const createdAt = new Date(accountCreated || 'Account creation date not found...').toLocaleDateString();
 
   return (
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Match Statistics</Text>
+          <Text style={styles.blockHeader}>Active Since</Text>
           <Text style={styles.blockSubtitle}>
-            View the statistics of your past matches.
+            You created your account on: { createdAt }
           </Text>
         </View>
       </View>
@@ -36,8 +40,7 @@ const styles = StyleSheet.create({
   duelContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
     marginHorizontal: 10,
-    marginBottom: 5,
-    marginTop: 10,
+    marginVertical: 5,
     paddingLeft: 20,
     paddingVertical: 20,
     borderRadius: 15,
@@ -49,6 +52,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   blockText: {
+    width: 300,
     marginLeft: 10,
   },
   blockHeader: {
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: 300,
     fontSize: 13,
-    fontFamily: "Coolvetica-Light",
+    fontFamily: 'Coolvetica-Light',
   },
   // largeScreen: {
   //   width: 75,

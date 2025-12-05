@@ -1,5 +1,5 @@
 import LinkHeader from "@/components/Headers/LinkHeader";
-import LinkHeaderCard from "@/components/LinkHeaderCard";
+import LinkHeaderCard from "@/components/Link/LinkHeaderCard";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { ScrollView, StyleSheet, View } from "react-native";

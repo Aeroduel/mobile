@@ -8,8 +8,8 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-import { auth } from "../config/FirebaseConfig";
-const userPlaceholder = require("../assets/images/user.png");
+import { auth } from "../../config/FirebaseConfig";
+const userPlaceholder = require("../../assets/images/user.png");
 
 export default function StatisticsCard() {
   // Declare window dimensions

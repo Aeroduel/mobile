@@ -1,26 +1,30 @@
-// import * as Haptics from 'expo-haptics';
-// import { useState } from "react";
-import {
-  Image,
-  StyleSheet,
-  Text,
-  useWindowDimensions,
-  View,
-} from "react-native";
-const whitePlaneIcon = require("../assets/images/plane-white.png");
+import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import { auth } from "../../config/FirebaseConfig";
 
-export default function EditAccountCard() {
+export default function StatisticsHeaderCard() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
+
+  // Check if the current user does not exist
+  if (!auth.currentUser) {
+    return;
+  }
+
+  if (!auth.currentUser.displayName) {
+    return;
+  }
+
+  // Set the user to the current user from auth to access properties
+  const userName = auth.currentUser.displayName.split(" ")[0];
 
   return (
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Account Information</Text>
+          <Text style={styles.blockHeader}>Match Statistics</Text>
           <Text style={styles.blockSubtitle}>
-            Update your personal information.
+            View the statistics of your past matches.
           </Text>
         </View>
       </View>
@@ -32,7 +36,8 @@ const styles = StyleSheet.create({
   duelContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
     marginHorizontal: 10,
-    marginVertical: 5,
+    marginBottom: 5,
+    marginTop: 10,
     paddingLeft: 20,
     paddingVertical: 20,
     borderRadius: 15,
@@ -44,7 +49,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   blockText: {
-    width: 300,
     marginLeft: 10,
   },
   blockHeader: {
@@ -56,7 +60,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: 300,
     fontSize: 13,
-    fontFamily: 'Coolvetica-Light',
+    fontFamily: "Coolvetica-Light",
   },
   // largeScreen: {
   //   width: 75,

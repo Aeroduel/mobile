@@ -1,34 +1,24 @@
+// import * as Haptics from 'expo-haptics';
+// import { useState } from "react";
 import {
   StyleSheet,
   Text,
   useWindowDimensions,
   View,
 } from "react-native";
-import { auth } from "../config/FirebaseConfig";
 
-export default function AccountCreationDateCard() {
+export default function EditAccountCard() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
-
-  // Check if the current user does not exist
-  if (!auth.currentUser) {
-    return
-  }
-
-  // Set the user to the current user from auth to access properties
-  const user = auth.currentUser;
-
-  const accountCreated = user.metadata.creationTime;
-  const createdAt = new Date(accountCreated || 'Account creation date not found...').toLocaleDateString();
 
   return (
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Active Since</Text>
+          <Text style={styles.blockHeader}>Account Information</Text>
           <Text style={styles.blockSubtitle}>
-            You created your account on: { createdAt }
+            Update your personal information.
           </Text>
         </View>
       </View>

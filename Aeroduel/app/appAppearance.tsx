@@ -9,7 +9,7 @@ import {
   Text,
   View,
 } from "react-native";
-import AppAppearanceHeader from "@/components/appAppearanceHeader";
+import AppAppearanceHeader from "@/components/Settings/AppAppearance/appAppearanceHeader";
 
 SplashScreen.preventAutoHideAsync();
 
