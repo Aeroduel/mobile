@@ -4,6 +4,13 @@
 
 * The **Aeroduel** mobile app provides a dedicated interface for viewing the aerial combat simulation's scoreboard and statistics.
 
-## Usage
+## Getting Started
 ![Aeroduel Usage](Aeroduel/assets/images/AeroduelUsage.png)
 
+## Tech Stack
+* React Native - v0.81.5
+* Expo - v54.0.25
+* Firebase - v12.6.0
+
+## Learn More
+* ![Aeroduel Website](https://www.aeroduel.com)
