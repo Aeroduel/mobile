@@ -13,4 +13,4 @@
 * Firebase - v12.6.0
 
 ## Learn More
-* ![Aeroduel Website](https://www.aeroduel.com)
+* [Visit our website here](https://www.aeroduel.com)
