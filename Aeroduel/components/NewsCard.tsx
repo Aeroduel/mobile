@@ -11,17 +11,18 @@ export default function NewsCard() {
     <View style={styles.newsContainer}>
       <View style={styles.topRow}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Latest News 📰</Text>
+          <Text style={styles.blockHeader}>
+            Latest News
+          </Text>
           <Text style={styles.blockSubtitle}>
-            Great features are coming! Please be patient, as we are still
-            developing this app! We&apos;re working behind the scenes to
-            polish every feature and ensure a seamless experience.
-            We&apos;re committed to building a reliable application that
-            you&apos;ll love, and we can&apos;t wait for you to see the final product.
+            Great features are on the way! We&apos;re working behind the scenes to
+            ensure a seamless experience. We&apos;re committed to building a reliable
+            application that you&apos;ll love, and we can&apos;t wait for you to see
+            the final product.
           </Text>
           <Pressable onPress={aboutRedirect}>
-            <Text style={styles.blockSubtitle}>
-              Learn more about Aeroduel and our team <Text style={styles.linkText}>here</Text>
+            <Text style={[styles.blockSubtitle, styles.linkText]}>
+              Press the icon to learn more about how Aeroduel works, and our vision.
             </Text>
           </Pressable>
           <Text style={styles.blockSubtitle}>
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     display: "flex",
     justifyContent: "space-between",
-    flexDirection: "column",
+    flexDirection: "row",
     paddingBottom: 15,
     // Need to play with the shadow colors
     // shadowColor: '#512929ff',
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: 400,
     fontSize: 13,
-    width: 310,
+    width: 230,
     marginVertical: 10,
     fontFamily: 'Coolvetica-Light',
   },
@@ -121,6 +122,6 @@ const styles = StyleSheet.create({
     right: -20,
   },
   linkText: {
-    fontWeight: 'bold',
+    fontFamily: 'Coolvetica-Regular',
   }
 });

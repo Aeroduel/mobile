@@ -15,8 +15,8 @@ export default function HomeScreen() {
     setRefreshing(true);
     setTimeout(() => {
       setRefreshing(false);
-    }, 1500)
-  }
+    }, 1500);
+  };
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -37,7 +37,7 @@ export default function HomeScreen() {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            tintColor={'white'}
+            tintColor={"white"}
           />
         }
       >

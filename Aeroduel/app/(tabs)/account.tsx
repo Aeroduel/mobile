@@ -1,11 +1,17 @@
 import ProfileHeaderCard from "@/components/AccountHeaderCard";
 import ProfileHeader from "@/components/AccountHeader";
-import StatisticsHeaderCard from "@/components/StatisticsHeaderCard";
+import StatisticsHeaderCard from "@/components/StatisticsOptionCard";
 import AccountInformationCard from "@/components/AccountInformationCard";
 import AccountCreationDateCard from "@/components/AccountCreationDate";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
-import { ScrollView, StyleSheet, View, Pressable, RefreshControl } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  Pressable,
+  RefreshControl,
+} from "react-native";
 import { router } from "expo-router";
 import { useState } from "react";
 
@@ -13,8 +19,8 @@ SplashScreen.preventAutoHideAsync();
 
 export default function ProfilePage() {
   const statisticsRoute = () => {
-    router.push('/statistics')
-  }
+    router.push("/statistics");
+  };
 
   const [refreshing, setRefreshing] = useState(false);
 
@@ -45,7 +51,7 @@ export default function ProfilePage() {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            tintColor={'#white'}
+            tintColor={"#white"}
           />
         }
       >

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { auth } from "../config/FirebaseConfig";
 
-export default function LinkHeaderCard() {
+export default function StatisticsHeaderCard() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
@@ -22,8 +22,9 @@ export default function LinkHeaderCard() {
     <View style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>
-            View the statistics of past matches.
+          <Text style={styles.blockHeader}>Match Statistics</Text>
+          <Text style={styles.blockSubtitle}>
+            View the statistics of your past matches.
           </Text>
         </View>
       </View>
@@ -52,8 +53,8 @@ const styles = StyleSheet.create({
   },
   blockHeader: {
     color: "#FFFFFF",
-    fontSize: 18,
-    fontFamily: "Coolvetica-Light",
+    fontSize: 24,
+    fontFamily: "Coolvetica-Regular",
   },
   blockSubtitle: {
     color: "#FFFFFF",

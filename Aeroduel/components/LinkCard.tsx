@@ -1,46 +1,66 @@
 import * as Haptics from "expo-haptics";
 import { router } from "expo-router";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-const qrButton = require("../assets/images/qrcode-btn.png");
-const pinButton = require("../assets/images/pin-btn.png");
+import { useState } from "react";
+import {
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
+const joinButton = require("../assets/images/join-btn.png");
+const joiningButton = require("../assets/images/joining-btn.png");
+const whiteCrosshair = require("../assets/images/crosshair-white.png");
+const arrowIcon = require("../assets/images/logout-icon-white.png");
+const swordsIcon = require("../assets/images/swords.png");
+const wifiIcon = require("../assets/images/wifi.png");
 
-export default function SpectateCard() {
-  const openCamera = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    router.push("/qrEntry");
-  };
-  const enterPin = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+export default function DuelCard() {
+  // Declare window dimensions
+  const { width } = useWindowDimensions();
+  const biggerDevice = width >= 439;
+
+  const [joining, setJoining] = useState(joinButton);
+  const [isPressed, setIsPressed] = useState(false);
+
+  // const changeImage = () => {
+  //   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+  //   const image = !isPressed;
+  //   setJoining(image ? joinButton : joiningButton);
+  //   setIsPressed(image);
+  // };
+
+  const viewScoreboard = () => {
+    router.push("/scoreboard");
   };
 
   return (
-    <View style={styles.spectateContainer}>
-      <View style={styles.topRow}>
+    <View style={styles.duelContainer}>
+      <View style={styles.duelContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Link Your Plane 🛩️</Text>
-          <Text style={styles.blockSubtitle}>
-            View nearby planes that are online, and ready to be connected. Lights will flash when successful.
+          <Text style={styles.blockHeader}>Link Plane</Text>
+          <Text style={[styles.blockSubtitle, styles.partySize]}>
+            View nearby planes that are online, and ready to be connected.
           </Text>
         </View>
+        <View style={styles.crosshairContainer}>
+          <Image source={wifiIcon} style={styles.crosshair}></Image>
+        </View>
       </View>
-      {/* <View style={styles.buttonContainer}>
-        <Pressable onPress={openCamera}>
-          <Image source={qrButton} style={styles.qrCodeButton} />
-        </Pressable>
-        <Pressable onPress={enterPin}>
-          <Image source={pinButton} style={styles.pinButton} />
-        </Pressable>
-      </View> */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  spectateContainer: {
+  duelContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
-    marginHorizontal: 10,
-    marginVertical: 5,
-    paddingHorizontal: 20,
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 5,
+    marginBottom: 5,
+    paddingLeft: 20,
+    paddingRight: 20,
     height: 115,
     borderRadius: 15,
     display: "flex",
@@ -53,13 +73,12 @@ const styles = StyleSheet.create({
     // shadowOpacity: 10,
     // shadowRadius: 5,
   },
-  topRow: {
+  duelContent: {
     flexDirection: "row",
-    gap: 20,
   },
   blockText: {
     paddingTop: 15,
-    width: 250,
+    width: 270,
     marginLeft: 10,
   },
   blockHeader: {
@@ -69,53 +88,46 @@ const styles = StyleSheet.create({
   },
   blockSubtitle: {
     color: "#FFFFFF",
-    fontWeight: 400,
+    fontFamily: 'Coolvetica-Light',
     fontSize: 15,
-    width: 310,
-    paddingTop: 5,
-    fontFamily: "Coolvetica-Light"
   },
-  bottomRow: {
-    display: "flex",
-    flexDirection: "row",
-    gap: 7,
-    justifyContent: "center",
-    paddingBottom: 10,
-  },
-  qrButton: {
-    backgroundColor: "#333333ff",
-    paddingHorizontal: 35,
-    paddingVertical: 20,
-    borderBottomLeftRadius: 15,
-  },
-  buttonText: {
-    color: "white",
-    fontWeight: "bold",
-    fontSize: 20,
-  },
-  eyeIcon: {
-    width: 60,
-    height: 60,
-  },
+  // whitePlaneIcon: {
+  //   width: 80,
+  //   height: 75,
+  // },
   buttonContainer: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
-    flexDirection: "row",
-    bottom: 70,
   },
-  qrCodeButton: {
+  startButton: {
     width: 200,
-    height: 64,
-    transform: [{ scale: 0.7 }],
-    position: "absolute",
-    left: -20,
+    height: 46,
+    marginBottom: 15,
   },
-  pinButton: {
-    width: 200,
-    height: 64,
-    transform: [{ scale: 0.7 }],
-    position: "absolute",
-    right: -20,
+  partySize: {
+    paddingTop: 2,
   },
+  largeScreen: {
+    width: 75,
+    height: 70,
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+    marginTop: 13,
+    marginLeft: 80,
+  },
+  smallScreen: {
+    width: 80,
+    height: 75,
+    marginTop: 15,
+    marginLeft: 35,
+  },
+  crosshairContainer: {
+    marginTop: 35,
+  },
+  crosshair: {
+    width: 40,
+    height: 40,
+  }
 });

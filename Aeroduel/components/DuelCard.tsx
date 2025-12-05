@@ -12,6 +12,8 @@ import {
 const joinButton = require("../assets/images/join-btn.png");
 const joiningButton = require("../assets/images/joining-btn.png");
 const whiteCrosshair = require("../assets/images/crosshair-white.png");
+const arrowIcon = require("../assets/images/logout-icon-white.png");
+const swordsIcon = require("../assets/images/swords.png");
 
 export default function DuelCard() {
   // Declare window dimensions
@@ -45,7 +47,7 @@ export default function DuelCard() {
           </Text>
         </View>
         <View style={styles.crosshairContainer}>
-          <Image source={whiteCrosshair}></Image>
+          <Image source={swordsIcon} style={styles.crosshair}></Image>
         </View>
       </View>
     </View>
@@ -124,8 +126,10 @@ const styles = StyleSheet.create({
     marginLeft: 35,
   },
   crosshairContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
+    marginTop: 35,
+  },
+  crosshair: {
+    width: 40,
+    height: 40,
   }
 });
