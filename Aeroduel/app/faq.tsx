@@ -57,6 +57,15 @@ export default function FAQPage() {
             seconds.
           </Text>
         </View>
+        <View style={styles.faqTextContainer}>
+          <Text style={[styles.faqQuestion, styles.justPlanes]}>
+            What was this app built with?
+          </Text>
+          <Text style={styles.faqText}>
+            The Aeroduel mobile app was built with React Native, Expo, Google Firebase,
+            and a Firestore database.
+          </Text>
+        </View>
       </ScrollView>
     </View>
   );

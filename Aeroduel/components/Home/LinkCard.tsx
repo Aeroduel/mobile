@@ -11,14 +11,10 @@ import {
 } from "react-native";
 const wifiIcon = require("../../assets/images/wifi.png");
 
-export default function DuelCard() {
+export default function LinkCard() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
-
-  const viewScoreboard = () => {
-    router.push("/scoreboard");
-  };
 
   return (
     <View style={styles.duelContainer}>
@@ -29,8 +25,8 @@ export default function DuelCard() {
             View nearby planes that are online, and ready to be connected.
           </Text>
         </View>
-        <View style={styles.crosshairContainer}>
-          <Image source={wifiIcon} style={styles.crosshair}></Image>
+        <View style={styles.wifiContainer}>
+          <Image source={wifiIcon} style={styles.wifi}></Image>
         </View>
       </View>
     </View>
@@ -75,6 +71,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontFamily: 'Coolvetica-Light',
     fontSize: 15,
+    width: 220,
   },
   // whitePlaneIcon: {
   //   width: 80,
@@ -108,10 +105,10 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginLeft: 35,
   },
-  crosshairContainer: {
+  wifiContainer: {
     marginTop: 35,
   },
-  crosshair: {
+  wifi: {
     width: 40,
     height: 40,
   }

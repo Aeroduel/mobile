@@ -15,11 +15,13 @@ const AeroduelLogo = require("../assets/images/aeroduel-banner.png");
 SplashScreen.preventAutoHideAsync();
 
 export default function ForgotPassword() {
-  // route to the home screen for now
+  // Route to the login page
   const routeToLogin = () => {
     router.replace("/login");
   };
 
+  // Alert to confirm that the password reset email was sent
+  // Not currently working
   const emailSent = () => {
     Alert.alert(
       "Success!",

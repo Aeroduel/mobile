@@ -18,12 +18,15 @@ import { useState } from "react";
 SplashScreen.preventAutoHideAsync();
 
 export default function ProfilePage() {
+  // Route to the statistics page
   const statisticsRoute = () => {
     router.push("/statistics");
   };
 
+  // State variables for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
 
+  // RefreshControl handler function
   const onRefresh = () => {
     setRefreshing(true);
     setTimeout(() => {

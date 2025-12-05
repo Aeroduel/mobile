@@ -14,12 +14,15 @@ import AppAppearanceHeader from "@/components/Headers/AppearanceHeader";
 SplashScreen.preventAutoHideAsync();
 
 export default function AppAppearance() {
+  // Aeroduel theme confirmation
   const aeroduelAlert = () => {
     Alert.alert("Success!", "Theme was set to: Aeroduel");
   };
+  // Dusk theme confirmation
   const duskAlert = () => {
     Alert.alert("Success!", "Theme was set to: Dusk");
   };
+  // Light theme confirmation
   const lightAlert = () => {
     Alert.alert("Success!", "Theme was set to: Light");
   };

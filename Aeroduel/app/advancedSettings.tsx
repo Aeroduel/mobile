@@ -19,8 +19,10 @@ import {
 SplashScreen.preventAutoHideAsync();
 
 export default function AdvancedSettings() {
+  // State variables for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
 
+  // RefreshControl handler function
   const onRefresh = () => {
     setRefreshing(true);
     setTimeout(() => {
@@ -28,6 +30,8 @@ export default function AdvancedSettings() {
     }, 1500);
   };
 
+  // Password reset handler function - sends password reset email to user's inbox
+  // Not currently working
   const passwordReset = async () => {
     if (!auth.currentUser) {
       Alert.alert("Error", "No user found");
@@ -50,6 +54,7 @@ export default function AdvancedSettings() {
     }
   };
 
+  // Delete user handler function - deletes a user from Firebase
   const deleteCurrentUser = async () => {
     const user = auth.currentUser;
     if (!user) {
@@ -72,6 +77,7 @@ export default function AdvancedSettings() {
     }
   };
 
+  // Alert that cofirms that the user wants to delete their account
   const confirmDeletion = () => {
     Alert.alert(
       "Are you sure?", "We're sad to see you go, deleting your account is permanent.",

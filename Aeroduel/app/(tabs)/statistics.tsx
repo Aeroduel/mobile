@@ -8,9 +8,10 @@ import { ScrollView, StyleSheet, View, RefreshControl } from "react-native";
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
+  // State variables for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
 
-  // Refresh Control
+  // RefreshControl handler function
   const onRefresh = () => {
     setRefreshing(true);
     setTimeout(() => {

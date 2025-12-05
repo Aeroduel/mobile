@@ -16,6 +16,7 @@ export default function StatisticsCard() {
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
 
+  // State variables for setting the user's profile picture
   const [profilePicture, setProfilePicture] = useState(userPlaceholder);
 
   // Check if the current user does not exist
@@ -23,6 +24,8 @@ export default function StatisticsCard() {
     return;
   }
 
+  // Placeholder handler function for opening the camera roll
+  // Not yet implemented
   const alertImage = () => {
     Alert.alert(
       "Open Camera Roll",

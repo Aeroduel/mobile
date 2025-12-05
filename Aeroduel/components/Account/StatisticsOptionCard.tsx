@@ -11,12 +11,10 @@ export default function StatisticsHeaderCard() {
     return;
   }
 
+  // Check if the current user's name does not exist
   if (!auth.currentUser.displayName) {
     return;
   }
-
-  // Set the user to the current user from auth to access properties
-  const userName = auth.currentUser.displayName.split(" ")[0];
 
   return (
     <View style={styles.duelContainer}>

@@ -7,12 +7,13 @@ import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useState } from "react";
-import { RefreshControl, ScrollView, StyleSheet, View } from "react-native";
+import { Pressable, RefreshControl, ScrollView, StyleSheet, View } from "react-native";
 import { auth } from "../../config/FirebaseConfig";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
+  // Retrieve the current user from auth
   const user = auth.currentUser;
 
   // If not logged in, re-route to login
@@ -22,15 +23,21 @@ export default function HomeScreen() {
     }
   }, [user]);
 
+  // State variables for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
 
-  // Refresh Control
+  // RefreshControl handler function
   const onRefresh = () => {
     setRefreshing(true);
     setTimeout(() => {
       setRefreshing(false);
     }, 1500);
   };
+
+  // Route to the link page
+  const routeToLink = () => {
+    router.push("/link");
+  }
 
   return (
     <View style={{ flex: 1 }}>
@@ -60,7 +67,9 @@ export default function HomeScreen() {
         <View>
           <WelcomeCard />
           <DuelCard />
-          <LinkCard />
+          <Pressable onPress={routeToLink}>
+            <LinkCard />
+          </Pressable>
           <NewsCard />
         </View>
       </ScrollView>

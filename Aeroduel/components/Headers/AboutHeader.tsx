@@ -4,7 +4,7 @@ const backArrow = require("../../assets/images/arrow-left-white.png");
 
 export default function AdvancedHeader() {
 
-  // Back to the settings page
+  // Route back to the settings page
   const goBack = () => {
     router.replace('/settings');
   }

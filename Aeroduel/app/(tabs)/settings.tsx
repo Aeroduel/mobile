@@ -5,8 +5,10 @@ import { useState } from "react";
 import { ScrollView, StyleSheet, View, RefreshControl } from "react-native";
 
 export default function TabTwoScreen() {
+  // State variables for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
 
+  // RefreshControl handler function
   const onRefresh = () => {
     setRefreshing(true);
     setTimeout(() => {

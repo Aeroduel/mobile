@@ -1,5 +1,6 @@
 import { router } from "expo-router";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View, Image } from "react-native";
+const mailIcon = require("../../assets/images/mail-icon-white.png")
 
 export default function NewsCard() {
   // Route to the about page
@@ -15,20 +16,18 @@ export default function NewsCard() {
             Latest News
           </Text>
           <Text style={styles.blockSubtitle}>
-            Great features are on the way! We&apos;re working behind the scenes to
-            ensure a seamless experience. We&apos;re committed to building a reliable
+            Great features are on the way! We&apos;re committed to building a reliable
             application that you&apos;ll love, and we can&apos;t wait for you to see
-            the final product.
+            the final product. Press on the icon to the right to learn more about Aeroduel,
+            our team, and our vision with this project.
           </Text>
-          <Pressable onPress={aboutRedirect}>
-            <Text style={[styles.blockSubtitle, styles.linkText]}>
-              Press the icon to learn more about how Aeroduel works, and our vision.
-            </Text>
-          </Pressable>
           <Text style={styles.blockSubtitle}>
-            Updated: December 3rd, 2025
+            Updated: December 5th, 2025
           </Text>
         </View>
+        <Pressable style={[styles.blockText, styles.mailContainer]} onPress={aboutRedirect}>
+          <Image source={mailIcon} style={styles.mail}></Image>
+        </Pressable>
       </View>
     </View>
   );
@@ -123,5 +122,15 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontFamily: 'Coolvetica-Regular',
+  },
+  mailContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  mail: {
+    width: 40,
+    height: 40,
+    marginLeft: 40,
   }
 });
