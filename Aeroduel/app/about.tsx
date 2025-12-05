@@ -1,4 +1,4 @@
-import BackHeader from "@/components/Headers/BackHeader";
+import AboutHeader from "@/components/Headers/AboutHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
@@ -26,15 +26,8 @@ export default function AboutPage() {
         }}
       >
         {/* PAGE HEADER */}
-        <BackHeader />
+        <AboutHeader />
         {/* MAIN CONTENT */}
-        <View style={styles.gifContainer}>
-          <Image
-            source={animatedAeroduelLogo}
-            style={styles.animatedAeroduel}
-            resizeMode="contain"
-          ></Image>
-        </View>
         <View style={styles.aboutContainer}>
           <Text style={styles.aboutHeader}>What is Aeroduel?</Text>
         </View>
@@ -113,6 +106,13 @@ export default function AboutPage() {
             to building and testing our RC fighter jets. 🛩️
           </Text>
         </View>
+        <View style={styles.gifContainer}>
+          <Image
+            source={animatedAeroduelLogo}
+            style={styles.animatedAeroduel}
+            resizeMode="contain"
+          ></Image>
+        </View>
       </ScrollView>
     </View>
   );
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: 20,
+    paddingBottom: 60,
   },
   animatedAeroduel: {
     width: 350,
@@ -196,6 +196,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   lastText: {
-    paddingBottom: 60,
+    paddingBottom: 40,
   },
 });

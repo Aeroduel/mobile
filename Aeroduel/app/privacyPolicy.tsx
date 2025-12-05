@@ -1,4 +1,4 @@
-import BackHeader from "@/components/Headers/BackHeader";
+import PrivacyPolicyHeader from "@/components/Headers/PrivacyPolicyHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
@@ -22,11 +22,8 @@ export default function PrivacyPolicy() {
         }}
       >
         {/* PAGE HEADER */}
-        <BackHeader />
+        <PrivacyPolicyHeader />
         {/* MAIN CONTENT */}
-        <View style={styles.aboutContainer}>
-          <Text style={styles.privacyMainHeader}>Privacy Policy</Text>
-        </View>
         <View style={styles.dateContainer}>
           <Text style={[styles.aboutText, styles.dateText]}>
             Effective: December 11th, 2025
@@ -127,6 +124,7 @@ const styles = StyleSheet.create({
   dateText: {
     textAlign: "center",
     paddingVertical: 10,
+    fontFamily: 'Coolvetica-Regular',
   },
   privacyMainHeader: {
     color: "white",

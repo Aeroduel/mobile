@@ -9,7 +9,7 @@ import {
   Text,
   View,
 } from "react-native";
-import AppAppearanceHeader from "@/components/Settings/AppAppearance/appAppearanceHeader";
+import AppAppearanceHeader from "@/components/Headers/AppearanceHeader";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -40,7 +40,6 @@ export default function AppAppearance() {
         }}
       >
         {/* PAGE HEADER */}
-        <BackHeader />
         <AppAppearanceHeader />
         {/* MAIN CONTENT */}
         <Pressable onPress={aeroduelAlert} style={styles.appearanceOption}>

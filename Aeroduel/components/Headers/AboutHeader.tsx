@@ -15,7 +15,7 @@ export default function AdvancedHeader() {
         <Image source={backArrow} style={styles.backArrow}></Image>
       </Pressable>
       <Pressable>
-        <Text style={styles.headerText}>Advanced</Text>
+        <Text style={styles.headerText}>About</Text>
       </Pressable>
     </View>
   );

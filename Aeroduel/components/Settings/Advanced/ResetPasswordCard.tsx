@@ -1,5 +1,13 @@
-import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import {
+  Alert,
+  Pressable,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
 import { auth } from "../../../config/FirebaseConfig";
+import { sendPasswordResetEmail } from "@firebase/auth";
 
 export default function StatisticsHeaderCard() {
   // Declare window dimensions
@@ -15,11 +23,8 @@ export default function StatisticsHeaderCard() {
     return;
   }
 
-  // Set the user to the current user from auth to access properties
-  const userName = auth.currentUser.displayName.split(" ")[0];
-
   return (
-    <View style={styles.duelContainer}>
+    <Pressable style={styles.duelContainer}>
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Reset Password</Text>
@@ -28,7 +33,7 @@ export default function StatisticsHeaderCard() {
           </Text>
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 }
 

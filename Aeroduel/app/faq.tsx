@@ -1,4 +1,4 @@
-import BackHeader from "@/components/Headers/BackHeader";
+import FAQHeader from "@/components/Headers/FAQHeader";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
@@ -22,12 +22,9 @@ export default function FAQPage() {
         }}
       >
         {/* PAGE HEADER */}
-        <BackHeader />
+        <FAQHeader />
         {/* MAIN CONTENT */}
-        <View style={styles.faqContainer}>
-          <Text style={styles.faqTitle}>FAQ</Text>
-        </View>
-        <View style={styles.faqTextContainer}>
+        <View style={[styles.faqTextContainer, styles.firstTextContainer]}>
           <Text style={styles.faqQuestion}>
             Do the planes fly autonomously?
           </Text>
@@ -35,17 +32,6 @@ export default function FAQPage() {
             No. Humans are required to pilot the planes. This involves training
             and should not be attempted by someone who has never flown an RC
             plane before.
-          </Text>
-        </View>
-        <View style={styles.faqTextContainer}>
-          <Text style={styles.faqQuestion}>
-            What is the goal of this project?
-          </Text>
-          <Text style={styles.faqText}>
-            Onboard each plane is a computer vision camera, several LED lights,
-            a LoRa WiFi receiver, and an ESP32 arduino. When the camera detects
-            the color pattern of a participating plane, it locks on for several
-            seconds.
           </Text>
         </View>
         <View style={styles.faqTextContainer}>
@@ -58,6 +44,17 @@ export default function FAQPage() {
             build your own equipment to improve on ours and, for example,
             simulate surface to air combat with custom-built turrets. The
             possibilities are endless.
+          </Text>
+        </View>
+        <View style={styles.faqTextContainer}>
+          <Text style={styles.faqQuestion}>
+            What is the goal of this project?
+          </Text>
+          <Text style={styles.faqText}>
+            Onboard each plane is a computer vision camera, several LED lights,
+            a LoRa WiFi receiver, and an ESP32 arduino. When the camera detects
+            the color pattern of a participating plane, it locks on for several
+            seconds.
           </Text>
         </View>
       </ScrollView>
@@ -116,4 +113,7 @@ const styles = StyleSheet.create({
   justPlanes: {
     marginLeft: -25,
   },
+  firstTextContainer: {
+    marginTop: 20,
+  }
 });
