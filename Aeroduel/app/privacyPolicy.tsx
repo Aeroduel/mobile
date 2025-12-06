@@ -71,22 +71,11 @@ export default function PrivacyPolicy() {
             Changes to this Policy
           </Text>
         </View>
-        <View style={styles.aboutTextContainer}>
+        <View style={[styles.aboutTextContainer, styles.lastTextContainer]}>
           <Text style={styles.aboutText}>
             We may update our Privacy Policy from time to time. We will notify
             you of any chnages by posting the new Privacy Policy in the app and
             updagint the &quot;Effective Date&quot; at the top of this policy.
-          </Text>
-        </View>
-        <View style={styles.aboutContainer}>
-          <Text style={[styles.privacyHeader, styles.policyChanges]}>
-            Contact Us
-          </Text>
-        </View>
-        <View style={styles.aboutTextContainer}>
-          <Text style={[styles.aboutText, styles.contactUs]}>
-            If you have any questions about this Privacy Policy, please contact
-            us at: contact@aeroduel.com
           </Text>
         </View>
       </ScrollView>
@@ -159,7 +148,7 @@ const styles = StyleSheet.create({
   policyChanges: {
     fontSize: 34,
   },
-  contactUs: {
-    paddingBottom: 80,
-  },
+  lastTextContainer: {
+    paddingBottom: 50,
+  }
 });

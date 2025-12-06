@@ -53,6 +53,8 @@ export default function RootLayout() {
         <Stack.Screen name="faq" options={{ headerShown: false }} />
         <Stack.Screen name="appAppearance" options={{ headerShown: false }} />
         <Stack.Screen name="advancedSettings" options={{ headerShown: false }} />
+        <Stack.Screen name="availablePlanes" options={{ headerShown: false }} />
+        <Stack.Screen name="join" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );

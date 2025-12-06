@@ -2,10 +2,6 @@ import { router } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function OpenCameraButton() {
-  // const joinMatch = () => {
-  //   router.push("/join");
-  // };
-
   // Route to the QR entry page
   const startMatch = () => {
     router.push("/qrEntry");

@@ -5,7 +5,7 @@ export default function SettingsOptions() {
   // Declare settings options
   const settings = [
     { title: "App Appearance", description: "Set the theme of your Aeroduel app", route: "/appAppearance" },
-    { title: "FAQ", description: "Frequently asked questions", route: "/faq" },
+    { title: "FAQ", description: "Your frequently asked questions, answered", route: "/faq" },
     { title: "About", description: "Learn more about Aeroduel and our vision", route: "/about" },
     { title: "Privacy Policy", description: "Read our current privacy policy", route: "/privacyPolicy" },
     { title: "Advanced", description: "Extended options to manage your account", route: "/advancedSettings" },
@@ -29,7 +29,7 @@ export default function SettingsOptions() {
 
 const styles = StyleSheet.create({
   settingsContainer: {
-    backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
+    backgroundColor: "rgba(145, 72, 72, 0.5)",
     opacity: 100,
     marginHorizontal: 10,
     marginVertical: 5,

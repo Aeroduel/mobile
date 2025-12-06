@@ -47,8 +47,8 @@ export default function FAQPage() {
           </Text>
         </View>
         <View style={styles.faqTextContainer}>
-          <Text style={styles.faqQuestion}>
-            What is the goal of this project?
+          <Text style={[styles.faqQuestion, styles.howItWorks]}>
+            How does it work?
           </Text>
           <Text style={styles.faqText}>
             Onboard each plane is a computer vision camera, several LED lights,
@@ -58,12 +58,49 @@ export default function FAQPage() {
           </Text>
         </View>
         <View style={styles.faqTextContainer}>
+          <Text style={[styles.faqQuestion, styles.appPurpose]}>
+            What is the mobile app for?
+          </Text>
+          <Text style={styles.faqText}>
+            The Aeroduel mobile app allows users to register their planes
+            equipped with Aeroduel equipment and etner dogfights by scanning a
+            QR code or entering a game pin displayed on the host computer. This
+            requires at least one player to have our desktop app installed and
+            all players to have our mobile app installed, as well as the proper
+            Aeroduel equipment installed on their plane of choice.
+          </Text>
+        </View>
+        <View style={styles.faqTextContainer}>
+          <Text style={[styles.faqQuestion, styles.gameRules]}>
+            What are the rules of the game?
+          </Text>
+          <Text style={styles.faqText}>
+            The match timer begins when all planes have taken off. Pilots then
+            attempt to lock on to other planes by keeping them within view of
+            the cockpit. When a solid lock is initiated, the game simulates a
+            shot and logs a hit, giving the pilot 1 point. Though no physical
+            shots are fired, accidents happen, even in normal every day flights.
+            If a participating plane crashes, they are disqualified from the
+            match, though this currently cannot be detected automatically, and
+            that is up to the players to handle.
+          </Text>
+        </View>
+        <View style={styles.faqTextContainer}>
           <Text style={[styles.faqQuestion, styles.justPlanes]}>
             What was this app built with?
           </Text>
           <Text style={styles.faqText}>
-            The Aeroduel mobile app was built with React Native, Expo, Google Firebase,
-            and a Firestore database.
+            The Aeroduel mobile app was built with React Native, Expo, Google
+            Firebase, and a Firestore database.
+          </Text>
+        </View>
+        <View style={[styles.faqTextContainer, styles.lastTextContainer]}>
+          <Text style={[styles.faqQuestion, styles.askQuestion]}>
+            Have a question?
+          </Text>
+          <Text style={[styles.faqText, styles.contactEmail]}>
+            Contact us at:{" "}
+            <Text style={styles.boldText}>contact@aeroduel.com</Text>
           </Text>
         </View>
       </ScrollView>
@@ -116,13 +153,31 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingHorizontal: 33,
   },
-  howItWorks: {
-    fontSize: 44,
-  },
   justPlanes: {
     marginLeft: -25,
   },
   firstTextContainer: {
     marginTop: 20,
+  },
+  gameRules: {
+    marginLeft: -10,
+  },
+  appPurpose: {
+    marginLeft: -50,
+  },
+  howItWorks: {
+    marginLeft: -140,
+  },
+  askQuestion: {
+    marginLeft: -150,
+  },
+  contactEmail: {
+    marginLeft: -90,
+  },
+  lastTextContainer: {
+    paddingBottom: 50,
+  },
+  boldText: {
+    fontFamily: 'Coolvetica-Regular',
   }
 });

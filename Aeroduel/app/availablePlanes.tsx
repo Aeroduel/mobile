@@ -1,28 +1,24 @@
-import AeroduelHeader from "@/components/Headers/AeroduelHeader";
-import DuelCard from "@/components/Home/DuelCard";
-import LinkCard from "@/components/Home/LinkCard";
-import NewsCard from "@/components/Home/NewsCard";
-import WelcomeCard from "@/components/Home/WelcomeCard";
+import Plane1Card from "@/components/Link/Planes/Plane1Card";
+import Plane2Card from "@/components/Link/Planes/Plane2Card";
+import Plane3Card from "@/components/Link/Planes/Plane3Card";
+import LinkHeaderCard from "@/components/Link/LinkHeaderCard";
+import AvailablePlanesHeaderCard from "@/components/Link/Planes/AvailablePlanesHeaderCard";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect, useState } from "react";
-import { Pressable, RefreshControl, ScrollView, StyleSheet, View } from "react-native";
-import { auth } from "../../config/FirebaseConfig";
+import { useState } from "react";
+import PlanesHeader from '@/components/Headers/PlanesHeader';
+import {
+  Pressable,
+  RefreshControl,
+  ScrollView,
+  StyleSheet,
+  View,
+} from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
-  // Retrieve the current user from auth
-  const user = auth.currentUser;
-
-  // If not logged in, re-route to login
-  useEffect(() => {
-    if (!user) {
-      router.replace("/login");
-    }
-  }, [user]);
-
   // State variables for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
 
@@ -32,11 +28,6 @@ export default function HomeScreen() {
     setTimeout(() => {
       setRefreshing(false);
     }, 1500);
-  };
-
-  // Route to the link page
-  const routeToLink = () => {
-    router.push("/link");
   };
 
   const routeToJoin = () => {
@@ -52,7 +43,7 @@ export default function HomeScreen() {
         style={styles.backgroundGradient}
       ></LinearGradient>
       {/* PAGE HEADER */}
-      <AeroduelHeader />
+      <PlanesHeader />
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
@@ -63,20 +54,18 @@ export default function HomeScreen() {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            tintColor={"white"}
+            tintColor={"#white"}
           />
         }
       >
         {/* MAIN CONTENT */}
         <View>
-          <WelcomeCard />
+          <AvailablePlanesHeaderCard />
           <Pressable onPress={routeToJoin}>
-            <DuelCard />
+            <Plane1Card />
+            <Plane2Card />
+            <Plane3Card />
           </Pressable>
-          <Pressable onPress={routeToLink}>
-            <LinkCard />
-          </Pressable>
-          <NewsCard />
         </View>
       </ScrollView>
     </View>
@@ -84,6 +73,11 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "flex-start",
+    position: "relative",
+  },
   backgroundGradient: {
     position: "absolute",
     width: "100%",

@@ -31,7 +31,7 @@ export default function QrEntry() {
 
   // Return to the previous page
   const goBack = () => {
-    router.push("/");
+    router.push("/join");
   }
 
   return (
