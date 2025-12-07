@@ -24,7 +24,7 @@ export default function DeleteAccountCard() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Delete Account</Text>
           <Text style={styles.blockSubtitle}>
-            Delete your Aeroduel account.
+            Delete your Aeroduel account
           </Text>
         </View>
       </View>

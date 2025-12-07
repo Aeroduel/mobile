@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import { auth } from "../../../config/FirebaseConfig";
-import { sendPasswordResetEmail } from "@firebase/auth";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 export default function StatisticsHeaderCard() {
   // Declare window dimensions
@@ -29,7 +29,7 @@ export default function StatisticsHeaderCard() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Reset Password</Text>
           <Text style={styles.blockSubtitle}>
-            Reset the password that is associated with your account.
+            Reset the password associated with your account
           </Text>
         </View>
       </View>
