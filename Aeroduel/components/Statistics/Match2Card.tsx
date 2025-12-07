@@ -22,17 +22,17 @@ export default function Match1Card() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Match 2</Text>
           <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
-            <Text style={styles.boldText}>Match ID:</Text>
+            <Text style={styles.boldText}>Match ID: </Text>
             7b8a9c0d-1e2f-4345-6789-abcdef012345
           </Text>
           <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
             <Text style={styles.boldText}>Date:</Text> November 21st, 2025
           </Text>
           <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
-            <Text style={styles.boldText}>Challengers:</Text> Charlie-2 & Bravo-8
+            <Text style={styles.boldText}>Players:</Text> Charlie-2 & Bravo-8
           </Text>
           <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
-            <Text style={styles.boldText}>Winner:</Text> Charlie-2
+            <Text style={styles.boldText}>Champion:</Text> Charlie-2
           </Text>
         </View>
       </View>

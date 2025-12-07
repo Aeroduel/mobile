@@ -23,7 +23,7 @@ export default function LinkHeaderCard() {
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>
-            View the statistics of past matches.
+            Press on a match to view the scoreboard and statistics of past matches.
           </Text>
         </View>
       </View>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   blockText: {
-    marginLeft: 10,
+    width: 350,
   },
   blockHeader: {
     color: "#FFFFFF",
