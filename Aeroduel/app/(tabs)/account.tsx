@@ -1,7 +1,6 @@
 import AccountHeaderCard from "@/components/Account/AccountHeaderCard";
 import AccountHeader from "@/components/Headers/AccountHeader";
 import StatisticsOptionCard from "@/components/Account/StatisticsOptionCard";
-import AccountInformationCard from "@/components/Account/AccountInformationCard";
 import AccountCreationDateCard from "@/components/Account/AccountCreationDate";
 import { LinearGradient } from "expo-linear-gradient";
 import * as SplashScreen from "expo-splash-screen";
@@ -14,6 +13,7 @@ import {
 } from "react-native";
 import { router } from "expo-router";
 import { useState } from "react";
+import AccountLoginHistoryCard from "@/components/Account/AccountLoginHistoryCard";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -62,6 +62,7 @@ export default function ProfilePage() {
         <View>
           <AccountHeaderCard />
           <AccountCreationDateCard />
+          <AccountLoginHistoryCard />
           <Pressable onPress={statisticsRoute}>
             <StatisticsOptionCard />
           </Pressable>
