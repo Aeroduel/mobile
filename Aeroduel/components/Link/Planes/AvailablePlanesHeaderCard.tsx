@@ -23,7 +23,7 @@ export default function LinkHeaderCard() {
       <View style={styles.duelContent}>
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>
-            Available planes, ready to be connected
+            The connection status of available planes
           </Text>
         </View>
       </View>

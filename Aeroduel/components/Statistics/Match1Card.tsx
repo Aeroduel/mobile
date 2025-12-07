@@ -9,9 +9,9 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-const planeIcon = require("../../../assets/images/plane-white.png");
+const swordsIcon = require("../../assets/images/swords.png");
 
-export default function Plane1Card() {
+export default function Match1Card() {
   // Declare window dimensions
   const { width } = useWindowDimensions();
   const biggerDevice = width >= 439;
@@ -20,19 +20,20 @@ export default function Plane1Card() {
     <View style={styles.planeContainer}>
       <View style={styles.planeContent}>
         <View style={styles.blockText}>
-          <Text style={styles.blockHeader}>Delta-7</Text>
+          <Text style={styles.blockHeader}>Match 1</Text>
           <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
-            f8a5c3d2-e1b0-4a7b-9c6d-5e4f3a2b1c09
+            <Text style={styles.boldText}>Match ID:</Text>
+            8a7b6c5d-4e3f-4123-5678-90abcdef0123
           </Text>
-          <View style={styles.onlineContainer}>
-            <View style={styles.onlineDot}></View>
-            <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
-              Not Ready
-            </Text>
-          </View>
-        </View>
-        <View style={styles.bluetoothContainer}>
-          <Image source={planeIcon} style={styles.plane}></Image>
+          <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
+            <Text style={styles.boldText}>Date:</Text> December 7th, 2025
+          </Text>
+          <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
+            <Text style={styles.boldText}>Challengers:</Text> Foxtrot-4 & Echo-6
+          </Text>
+          <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
+            <Text style={styles.boldText}>Winner:</Text> Echo-6
+          </Text>
         </View>
       </View>
     </View>
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginVertical: 5,
     paddingHorizontal: 20,
-    height: 115,
+    height: 145,
     borderRadius: 15,
     display: "flex",
     justifyContent: "space-between",
@@ -104,26 +105,29 @@ const styles = StyleSheet.create({
     marginLeft: 35,
   },
   bluetoothContainer: {
-    marginTop: 20,
-    marginRight: 20,
+    marginTop: 30,
+    marginRight: 10,
   },
   plane: {
-    width: 70,
-    height: 70,
+    width: 50,
+    height: 50,
   },
   uuidContainer: {
-    width: 240,
+    width: 1000,
   },
   onlineContainer: {
-    display: 'flex',
-    flexDirection: 'row',
+    display: "flex",
+    flexDirection: "row",
     gap: 5,
   },
   onlineDot: {
     width: 9,
     height: 9,
-    backgroundColor: '#ff0000ff',
-    borderRadius: '100%',
+    backgroundColor: "#00ff11ff",
+    borderRadius: "100%",
     marginTop: 5,
-  }
+  },
+  boldText: {
+    fontFamily: "Coolvetica-Regular",
+  },
 });

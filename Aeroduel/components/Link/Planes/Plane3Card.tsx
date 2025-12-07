@@ -22,12 +22,12 @@ export default function Plane3Card() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Echo-6</Text>
           <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
-            f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+            3c1e2f4a-5b6d-4789-b0c1-2d3e4f5a6b7c
           </Text>
           <View style={styles.onlineContainer}>
             <View style={styles.onlineDot}></View>
             <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
-              Ready
+              Not Ready
             </Text>
           </View>
         </View>
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   onlineDot: {
     width: 9,
     height: 9,
-    backgroundColor: '#00ff11ff',
+    backgroundColor: '#ff0000ff',
     borderRadius: '100%',
     marginTop: 5,
   }

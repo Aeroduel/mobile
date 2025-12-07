@@ -22,12 +22,12 @@ export default function Plane2Card() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Foxtrot-4</Text>
           <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
-            f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+            02b9d4e7-a8f1-46c5-8e3d-7b2c1a0f9e8d
           </Text>
           <View style={styles.onlineContainer}>
             <View style={styles.onlineDot}></View>
             <Text style={[styles.blockSubtitle, styles.uuidContainer]}>
-              Ready
+              Not Ready
             </Text>
           </View>
         </View>
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   onlineDot: {
     width: 9,
     height: 9,
-    backgroundColor: '#00ff11ff',
+    backgroundColor: '#ff0000ff',
     borderRadius: '100%',
     marginTop: 5,
   }

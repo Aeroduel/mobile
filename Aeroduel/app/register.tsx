@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, updateProfile } from "@firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
