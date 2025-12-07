@@ -89,7 +89,7 @@ export default function AdvancedSettings() {
         },
         {
           text: "No",
-          onPress: () => console.log("No was pressed"),
+          onPress: () => console.log("Account will not be deleted"),
           style: "default"
         },
       ],

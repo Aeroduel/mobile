@@ -28,8 +28,12 @@ export default function AboutPage() {
         {/* PAGE HEADER */}
         <AboutHeader />
         {/* MAIN CONTENT */}
-        <View style={styles.aboutContainer}>
-          <Text style={styles.aboutHeader}>What is Aeroduel?</Text>
+        <View style={styles.gifContainer}>
+          <Image
+            source={animatedAeroduelLogo}
+            style={styles.animatedAeroduel}
+            resizeMode="contain"
+          ></Image>
         </View>
         <View style={styles.aboutTextContainer}>
           <Text style={styles.aboutText}>
@@ -106,13 +110,6 @@ export default function AboutPage() {
             to building and testing our RC fighter jets. 🛩️
           </Text>
         </View>
-        <View style={styles.gifContainer}>
-          <Image
-            source={animatedAeroduelLogo}
-            style={styles.animatedAeroduel}
-            resizeMode="contain"
-          ></Image>
-        </View>
       </ScrollView>
     </View>
   );
@@ -162,11 +159,11 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    paddingBottom: 60,
+    paddingVertical: 20,
   },
   animatedAeroduel: {
-    width: 350,
-    height: 40,
+    width: 352,
+    height: 42,
   },
   imagesContainer: {
     display: "flex",
