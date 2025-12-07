@@ -16,6 +16,8 @@ export default function ScoreboardPage() {
         end={{ x: 1, y: 1 }}
         style={styles.backgroundGradient}
       ></LinearGradient>
+      {/* PAGE HEADER */}
+      <AeroduelHeader />
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
@@ -23,8 +25,6 @@ export default function ScoreboardPage() {
           position: "relative",
         }}
       >
-        {/* PAGE HEADER */}
-        <AeroduelHeader />
         {/* MAIN CONTENT */}
         <ScoreboardHeaderCard />
         <ScoreboardStats />
@@ -57,16 +57,16 @@ const styles = StyleSheet.create({
     fontSize: 50,
   },
   aboutTextContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   aboutText: {
-    color: 'white',
-    textAlign: 'center',
-    width: '80%',
-    fontFamily: 'Coolvetica-Regular',
+    color: "white",
+    textAlign: "center",
+    width: "80%",
+    fontFamily: "Coolvetica-Regular",
     lineHeight: 35,
     fontSize: 20,
-  }
+  },
 });

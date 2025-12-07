@@ -71,10 +71,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     width: 220,
   },
-  // whitePlaneIcon: {
-  //   width: 80,
-  //   height: 75,
-  // },
   buttonContainer: {
     display: "flex",
     justifyContent: "center",

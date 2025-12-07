@@ -1,5 +1,6 @@
-import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import { StyleSheet, Text, useWindowDimensions, View, Image } from "react-native";
 import { auth } from "../../../config/FirebaseConfig";
+const brokenHeart = require("../../../assets/images/broken-heart.png");
 
 export default function DeleteAccountCard() {
   // Declare window dimensions
@@ -26,6 +27,9 @@ export default function DeleteAccountCard() {
           <Text style={styles.blockSubtitle}>
             Delete your Aeroduel account
           </Text>
+        </View>
+        <View style={styles.blockText}>
+          <Image source={brokenHeart} style={styles.brokenHeart}></Image>
         </View>
       </View>
     </View>
@@ -54,6 +58,7 @@ const styles = StyleSheet.create({
   blockHeader: {
     color: "#FFFFFF",
     fontSize: 24,
+    width: 260,
     fontFamily: "Coolvetica-Regular",
   },
   blockSubtitle: {
@@ -62,19 +67,9 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontFamily: "Coolvetica-Light",
   },
-  // largeScreen: {
-  //   width: 75,
-  //   height: 70,
-  //   display: "flex",
-  //   justifyContent: "flex-end",
-  //   alignItems: "flex-end",
-  //   marginTop: 13,
-  //   marginLeft: 80,
-  // },
-  // smallScreen: {
-  //   width: 80,
-  //   height: 75,
-  //   marginTop: 15,
-  //   marginLeft: 15,
-  // },
+  brokenHeart: {
+    height: 40,
+    width: 40,
+    marginTop: 3,
+  }
 });

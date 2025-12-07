@@ -65,7 +65,6 @@ export default function ProfilePage() {
           <Pressable onPress={statisticsRoute}>
             <StatisticsOptionCard />
           </Pressable>
-          <AccountInformationCard />
         </View>
       </ScrollView>
     </View>

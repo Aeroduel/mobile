@@ -5,9 +5,11 @@ import {
   Text,
   useWindowDimensions,
   View,
+  Image,
 } from "react-native";
 import { auth } from "../../../config/FirebaseConfig";
 import { sendPasswordResetEmail } from "firebase/auth";
+const pinIcon = require("../../../assets/images/pin.png");
 
 export default function StatisticsHeaderCard() {
   // Declare window dimensions
@@ -29,8 +31,11 @@ export default function StatisticsHeaderCard() {
         <View style={styles.blockText}>
           <Text style={styles.blockHeader}>Reset Password</Text>
           <Text style={styles.blockSubtitle}>
-            Reset the password associated with your account
+            Verify your details, and reset your password
           </Text>
+        </View>
+        <View>
+          <Image source={pinIcon} style={styles.pinIcon}></Image>
         </View>
       </View>
     </Pressable>
@@ -64,22 +69,13 @@ const styles = StyleSheet.create({
   blockSubtitle: {
     color: "#FFFFFF",
     fontWeight: 300,
+    width: 270,
     fontSize: 13,
     fontFamily: "Coolvetica-Light",
   },
-  // largeScreen: {
-  //   width: 75,
-  //   height: 70,
-  //   display: "flex",
-  //   justifyContent: "flex-end",
-  //   alignItems: "flex-end",
-  //   marginTop: 13,
-  //   marginLeft: 80,
-  // },
-  // smallScreen: {
-  //   width: 80,
-  //   height: 75,
-  //   marginTop: 15,
-  //   marginLeft: 15,
-  // },
+  pinIcon: {
+    width: 40,
+    height: 40,
+    marginTop: 3,
+  }
 });
