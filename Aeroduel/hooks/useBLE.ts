@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import * as Bluetooth from "expo-bluetooth"; // Expo BLE library
+import { BleManager } from "react-native-ble-plx"; // Expo BLE library
 
 // Define a TypeScript type for Bluetooth devices
 export type BLEDevice = {
