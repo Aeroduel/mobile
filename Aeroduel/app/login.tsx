@@ -111,21 +111,6 @@ export default function LoginPage() {
               </Pressable>
             </View>
           </View>
-          <View>
-            <View style={styles.formOptions}>
-              <Text style={styles.continueWith}>Or continue with</Text>
-            </View>
-          </View>
-          <View style={styles.authOptions}>
-            <Pressable style={styles.googleButton}>
-              <Image source={google} style={styles.googleIcon}></Image>
-              <Text style={styles.google}>Google</Text>
-            </Pressable>
-            <Pressable style={styles.facebookButton}>
-              <Image source={facebook} style={styles.facebookIcon}></Image>
-              <Text style={styles.facebook}>Facebook</Text>
-            </Pressable>
-          </View>
         </View>
       </View>
     </View>
