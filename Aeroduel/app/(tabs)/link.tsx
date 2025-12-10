@@ -1,5 +1,4 @@
 import LinkHeader from "@/components/Headers/LinkHeader";
-import BluetoothLinkCard from "@/components/Link/BluetoothLinkCard";
 import LinkHeaderCard from "@/components/Link/LinkHeaderCard";
 import PinLinkCard from "@/components/Link/Planes/Join/PinLinkCard";
 import QRLinkCard from "@/components/Link/Planes/Join/QRLinkCard";
@@ -13,15 +12,14 @@ import {
   ScrollView,
   StyleSheet,
   View,
+  Text,
 } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function HomeScreen() {
-  // State variables for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
 
-  // RefreshControl handler function
   const onRefresh = () => {
     setRefreshing(true);
     setTimeout(() => {
@@ -41,8 +39,10 @@ export default function HomeScreen() {
         end={{ x: 1, y: 1 }}
         style={styles.backgroundGradient}
       ></LinearGradient>
+
       {/* PAGE HEADER */}
       <LinkHeader />
+
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
@@ -57,12 +57,17 @@ export default function HomeScreen() {
           />
         }
       >
-        {/* MAIN CONTENT */}
         <View>
           <LinkHeaderCard />
-          <Pressable onPress={listAvailablePlanes}>
-            <BluetoothLinkCard />
+
+          {/* NEW — WiFi Plane Linking Button */}
+          <Pressable onPress={listAvailablePlanes} style={styles.button}>
+            <Text style={styles.buttonText}>Link a Plane (WiFi)</Text>
           </Pressable>
+
+          {/* You still have these join methods */}
+          <PinLinkCard />
+          <QRLinkCard />
         </View>
       </ScrollView>
     </View>
@@ -70,14 +75,24 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "flex-start",
-    position: "relative",
-  },
   backgroundGradient: {
     position: "absolute",
     width: "100%",
     height: "100%",
+  },
+  button: {
+    marginHorizontal: 20,
+    marginVertical: 10,
+    padding: 15,
+    borderRadius: 10,
+    backgroundColor: "#222",
+    borderWidth: 1,
+    borderColor: "#ff4444",
+  },
+  buttonText: {
+    textAlign: "center",
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
