@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
     marginHorizontal: 10,
     marginBottom: 5,
-    marginTop: 10,
+    marginTop: 5,
     paddingLeft: 20,
     paddingVertical: 20,
     borderRadius: 15,
