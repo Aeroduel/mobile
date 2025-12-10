@@ -27,31 +27,61 @@ export default function AvailablePlanesScreen() {
   const [scanning, setScanning] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
 
-  // ---- SCAN NETWORK FOR PLANES ----
-  const scanForPlanes = async () => {
+  const PLANE_MDNS = "foxtrotwhite.local";
+
+  // ------------------------------
+  // 1) Try instant mDNS discovery
+  // ------------------------------
+  const tryMdnsDiscovery = async () => {
+    try {
+      const res = await fetch(`http://${PLANE_MDNS}/id`);
+      const data = await res.json();
+
+      if (data?.name) {
+        console.log("🔥 FOUND via mDNS:", data);
+
+        setPlanes([
+          {
+            ip: PLANE_MDNS,
+            name: data.name,
+            model: data.model || "F22",
+          },
+        ]);
+
+        return true;
+      }
+    } catch (err) {
+      console.log("mDNS not found yet...");
+    }
+
+    return false;
+  };
+
+  // ------------------------------
+  // 2) Fallback: scan subnet
+  // ------------------------------
+  const scanSubnet = async () => {
     setScanning(true);
     const found: PlaneInfo[] = [];
 
-    // Your local network range (adjust later if needed)
     const base = "192.168.1.";
 
-    const fetchTimeout = (url: string, timeout = 300) =>
+    const fetchTimeout = (url: string, timeout = 200) =>
       Promise.race([
         fetch(url).then((res) => res.json()).catch(() => null),
         new Promise((resolve) => setTimeout(() => resolve(null), timeout)),
       ]);
 
-    for (let i = 2; i < 255; i++) {
+    for (let i = 2; i <= 254; i++) {
       const ip = `${base}${i}`;
-
       const data = await fetchTimeout(`http://${ip}/id`);
 
-      if (data && data.name) {
-        console.log("FOUND PLANE:", data);
+      if (data?.name) {
+        console.log("FOUND VIA SCAN:", data);
         found.push({
           ip,
           name: data.name,
-          model: data.model || "Unknown",
+          model: data.model || "F22",
         });
       }
     }
@@ -60,13 +90,27 @@ export default function AvailablePlanesScreen() {
     setScanning(false);
   };
 
+  // ------------------------------
+  // Main discovery flow
+  // ------------------------------
+  const discoverPlanes = async () => {
+    setPlanes([]);
+
+    // 1) Try mDNS first
+    const mdnsFound = await tryMdnsDiscovery();
+    if (mdnsFound) return;
+
+    // 2) Else scan network
+    await scanSubnet();
+  };
+
   useEffect(() => {
-    scanForPlanes();
+    discoverPlanes();
   }, []);
 
   const onRefresh = () => {
     setRefreshing(true);
-    scanForPlanes().then(() => setRefreshing(false));
+    discoverPlanes().then(() => setRefreshing(false));
   };
 
   const linkPlane = (plane: PlaneInfo) => {
@@ -93,7 +137,6 @@ export default function AvailablePlanesScreen() {
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
-          justifyContent: "flex-start",
           padding: 20,
         }}
         refreshControl={
@@ -102,22 +145,25 @@ export default function AvailablePlanesScreen() {
       >
         <AvailablePlanesHeaderCard />
 
-        {scanning && (
+        {/* SCANNING */}
+        {scanning && planes.length === 0 && (
           <View style={styles.center}>
             <ActivityIndicator size="large" color="#ff4444" />
             <Text style={styles.scanText}>Scanning for planes...</Text>
           </View>
         )}
 
+        {/* NO PLANES */}
         {!scanning && planes.length === 0 && (
           <View style={styles.center}>
             <Text style={styles.noPlane}>No planes detected</Text>
             <Text style={styles.noPlaneSmall}>
-              Make sure your board is powered and connected to WiFi
+              Make sure the plane is powered and on WiFi
             </Text>
           </View>
         )}
 
+        {/* FOUND PLANES */}
         {planes.map((plane, idx) => (
           <Pressable
             key={idx}
