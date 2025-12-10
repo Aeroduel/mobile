@@ -13,7 +13,9 @@ import {
   StyleSheet,
   View,
   Text,
+  Image,
 } from "react-native";
+const wifiIcon = require("../../assets/images/wifi.png");
 
 SplashScreen.preventAutoHideAsync();
 
@@ -62,7 +64,13 @@ export default function HomeScreen() {
 
           {/* NEW — WiFi Plane Linking Button */}
           <Pressable onPress={listAvailablePlanes} style={styles.button}>
-            <Text style={styles.buttonText}>Link a Plane (WiFi)</Text>
+            <View>
+              <Text style={styles.buttonText}>Link with WiFi</Text>
+              <Text style={styles.buttonSubtitle}>Search for nearby planes, through WiFi</Text>
+            </View>
+            <View>
+              <Image source={wifiIcon} style={styles.wifi}></Image>
+            </View>
           </Pressable>
 
           {/* You still have these join methods */}
@@ -81,18 +89,29 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   button: {
-    marginHorizontal: 20,
-    marginVertical: 10,
-    padding: 15,
-    borderRadius: 10,
-    backgroundColor: "#222",
-    borderWidth: 1,
-    borderColor: "#ff4444",
+    marginHorizontal: 10,
+    marginVertical: 5,
+    paddingVertical: 30,
+    paddingHorizontal: 30,
+    borderRadius: 15,
+    backgroundColor: "rgba(145, 72, 72, 0.5)",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   buttonText: {
-    textAlign: "center",
     color: "white",
-    fontSize: 16,
+    fontSize: 30,
     fontWeight: "bold",
+    fontFamily: 'Coolvetica-Regular',
   },
+  buttonSubtitle: {
+    fontSize: 14,
+    color: 'white',
+    fontFamily: 'Coolvetica-Light',
+  },
+  wifi: {
+    width: 45,
+    height: 45,
+  }
 });

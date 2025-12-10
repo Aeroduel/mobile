@@ -34,15 +34,13 @@ export default function LinkHeaderCard() {
 const styles = StyleSheet.create({
   duelContainer: {
     backgroundColor: "rgba(145, 72, 72, 0.5)", // rgba to set opacity for background
-    marginHorizontal: 10,
     marginBottom: 5,
     marginTop: 10,
-    paddingLeft: 20,
     paddingVertical: 20,
     borderRadius: 15,
     display: "flex",
     justifyContent: "center",
-    flexDirection: "column",
+    flexDirection: "row",
   },
   duelContent: {
     flexDirection: "row",
@@ -61,19 +59,4 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontFamily: "Coolvetica-Light",
   },
-  // largeScreen: {
-  //   width: 75,
-  //   height: 70,
-  //   display: "flex",
-  //   justifyContent: "flex-end",
-  //   alignItems: "flex-end",
-  //   marginTop: 13,
-  //   marginLeft: 80,
-  // },
-  // smallScreen: {
-  //   width: 80,
-  //   height: 75,
-  //   marginTop: 15,
-  //   marginLeft: 15,
-  // },
 });
