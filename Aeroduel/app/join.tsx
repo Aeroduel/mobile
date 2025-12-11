@@ -17,6 +17,62 @@ import {
 
 SplashScreen.preventAutoHideAsync();
 
+function JoinButton() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [planeLinked, setPlaneLinked] = useState(true);
+  const [playerData, setPlayerData] = useState({
+    planeId: 'sim-plane-001',
+    playerName: 'Delta-2',
+    userId: 'sim-user-001'
+  });
+
+  const handleJoin = async () => {
+    if (!planeLinked)
+      return;
+
+    setIsLoading(true);
+    try {
+      const response = await fetch('http://aeroduel.local:45045/api/join-match', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(playerData),
+      });
+
+      if (response.ok) {
+        router.push('/scoreboard');
+      }
+    } catch (error) {
+      console.error('Failed to join match:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <Pressable
+      onPress={handleJoin}
+      disabled={!planeLinked || isLoading}
+      style={({ pressed }) => [
+        {
+          opacity: (!planeLinked || isLoading) ? 0.5 : pressed ? 0.8 : 1,
+          backgroundColor: '#FF0000',
+          padding: 15,
+          borderRadius: 8,
+          marginHorizontal: 20,
+          marginVertical: 10,
+          alignItems: 'center',
+        },
+      ]}
+    >
+      <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold' }}>
+        {isLoading ? 'Joining...' : 'Join Match'}
+      </Text>
+    </Pressable>
+  );
+}
+
 export default function JoinPage() {
   // Read plane data from router params
   const { planeName, planeIP } = useLocalSearchParams();
@@ -146,11 +202,7 @@ export default function JoinPage() {
           </Pressable>
 
           <JoinHeaderCard />
-          <PinLinkCard />
-
-          <Pressable onPress={openCamera}>
-            <QRLinkCard />
-          </Pressable>
+          <JoinButton />
         </View>
       </ScrollView>
     </View>
@@ -158,6 +210,11 @@ export default function JoinPage() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "flex-start",
+    position: "relative",
+  },
   backgroundGradient: {
     position: "absolute",
     width: "100%",
